@@ -22,7 +22,7 @@
 
         public override string ToString()
         {
-            return $"Course name: {_courseName}\nCredits: {_credits}\nStart date: {_startDate}\nEnd date: {_endDate}\nIsCompleted: {(IsCompleted ? "Yes" : "No")}";
+            return $"Course name: {_courseName}\nCredits: {_credits}\nStart date: {_startDate}\nEnd date: {_endDate}\nIsCompleted: {(IsCompleted ? "Yes" : "No")}\n";
         }
     }
 }

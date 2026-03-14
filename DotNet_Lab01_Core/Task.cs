@@ -1,6 +1,6 @@
 namespace DotNet_Lab01_Core
 {
-    public class Task
+    public class ParacTask
     {
         private string? _taskName;
         private DateTime _deadline;
@@ -13,8 +13,8 @@ namespace DotNet_Lab01_Core
         public string? TaskDescription { get; set; }
         public bool IsCompleted { get; set; }
 
-        public Task(){}
-        public Task(string taskName,DateTime deadline,int difficulty,int credits,string taskDescription)
+        public ParacTask(){}
+        public ParacTask(string taskName,DateTime deadline,int difficulty,int credits,string taskDescription)
         {
             if(difficulty > 0 && difficulty <= 100){_difficulty = difficulty;}
             if(credits > 0){_credits = credits;}
@@ -22,6 +22,11 @@ namespace DotNet_Lab01_Core
             TaskName = taskName;
             _deadline = deadline;
             IsCompleted = false;
+        }
+
+        public override string ToString()
+        {
+            return $"Task name: {_taskName}\nDeadline: {_deadline}\nDifficulty: {_difficulty}\nCredits: {_credits}\nDescription: {TaskDescription}\nIs Completed: {(IsCompleted ? "Yes" : "No")}\n";
         }
     }
 }

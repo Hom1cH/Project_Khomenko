@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../DotNet_Lab01_Core/Core.csproj",
+      "msbuildProject": "../DotNet_Lab01_Core/Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\bogda\\.nuget\\packages\\": {},
@@ -36,7 +55,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
+              "projectPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

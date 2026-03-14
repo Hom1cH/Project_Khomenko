@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet_Lab01_Core\Core.csproj" />
+  </ItemGroup>
+
 </Project>

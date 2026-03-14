@@ -20,5 +20,10 @@ namespace DotNet_Lab01_Core
             Priority = priority;
             IsTriggered = false;
         }
+
+        public override string ToString()
+        {
+            return $"Reminder: {Message}\nTime: {ReminderTime}\nPriority: {Priority}\nIs Triggered: {(IsTriggered ? "Yes" : "No")}\n";
+        }
     }
 }
