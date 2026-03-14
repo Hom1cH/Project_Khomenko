@@ -1,0 +1,11 @@
+D:\education\.NET\Project_Khomenko\Core\bin\Debug\net10.0\Core.deps.json
+D:\education\.NET\Project_Khomenko\Core\bin\Debug\net10.0\Core.dll
+D:\education\.NET\Project_Khomenko\Core\bin\Debug\net10.0\Core.pdb
+D:\education\.NET\Project_Khomenko\Core\obj\Debug\net10.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\education\.NET\Project_Khomenko\Core\obj\Debug\net10.0\Core.AssemblyInfoInputs.cache
+D:\education\.NET\Project_Khomenko\Core\obj\Debug\net10.0\Core.AssemblyInfo.cs
+D:\education\.NET\Project_Khomenko\Core\obj\Debug\net10.0\Core.csproj.CoreCompileInputs.cache
+D:\education\.NET\Project_Khomenko\Core\obj\Debug\net10.0\Core.dll
+D:\education\.NET\Project_Khomenko\Core\obj\Debug\net10.0\refint\Core.dll
+D:\education\.NET\Project_Khomenko\Core\obj\Debug\net10.0\Core.pdb
+D:\education\.NET\Project_Khomenko\Core\obj\Debug\net10.0\ref\Core.dll

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DotNet_Lab01_ConsoleUI/ConsoleUI.csproj" />
+  <Project Path="DotNet_Lab01_Core/Core.csproj" />
+</Solution>
