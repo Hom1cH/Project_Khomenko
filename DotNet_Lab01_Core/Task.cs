@@ -13,6 +13,8 @@ namespace DotNet_Lab01_Core
         public string? TaskDescription { get; set; }
         public bool IsCompleted { get; set; }
 
+        public TaskProgress Progress { get; set; }
+
         public ParacTask(){}
         public ParacTask(string taskName,DateTime deadline,int difficulty,int credits,string taskDescription)
         {
@@ -28,5 +30,13 @@ namespace DotNet_Lab01_Core
         {
             return $"Task name: {_taskName}\nDeadline: {_deadline}\nDifficulty: {_difficulty}\nCredits: {_credits}\nDescription: {TaskDescription}\nIs Completed: {(IsCompleted ? "Yes" : "No")}\n";
         }
+
+        public void ModifyProgress(TaskProgress progress)
+        {
+            progress.Percent = 100;
+            progress.IsCompleted = true;
+        }
+
+        
     }
 }

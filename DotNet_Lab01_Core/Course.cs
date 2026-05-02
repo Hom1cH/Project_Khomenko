@@ -7,6 +7,16 @@
         
         private DateTime _startDate;
         private DateTime _endDate;
+        public string CourseName
+        {
+            get => _courseName ?? string.Empty;
+            set { if (value != null) _courseName = value; }
+        }
+        public int Credits
+        {
+            get => _credits;
+            set { if (value > 0) _credits = value; }
+        }
         public int ReceivedCredits { get; set; }
         public bool IsCompleted { get; set; }
         public Course(){}

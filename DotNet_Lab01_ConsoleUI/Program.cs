@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using DotNet_Lab01_Core;
 
 class Program
@@ -14,6 +17,9 @@ class Program
         Console.WriteLine(reminder.ToString());
         
         Console.WriteLine($"OS: {Environment.OSVersion}");
-        Console.WriteLine($"Memory used: {GC.GetTotalMemory(false) / 1024 } KB");
+        Console.WriteLine($"Memory used: {GC.GetTotalMemory(false) / 1024 } KB\n");
+        
+        //var task_2 = new ParacTask("Дослідити роботу структур", new DateTime(2026, 4, 25), 10, 8, "Create a console application.");
+        
     }
 }
