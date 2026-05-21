@@ -1,42 +1,72 @@
 namespace DotNet_Lab01_Core
 {
-    public class ParacTask
+    public class ParacTask : EducationUnit, ICompute
     {
-        private string? _taskName;
-        private DateTime _deadline;
-        private int _difficulty;
         private int _credits;
-        public string TaskName { 
-            get { return _taskName; }
-			set { if(value != null) _taskName = value; }
+        public string TaskName
+        {
+            get => Title;
+            set { if (value != null) Title = value; }
         }
-        public string? TaskDescription { get; set; }
+
+        public string? TaskDescription
+        {
+            get => Description;
+            set { if (value != null) Description = value; }
+        }
+
         public bool IsCompleted { get; set; }
 
-        public TaskProgress Progress { get; set; }
-
-        public ParacTask(){}
-        public ParacTask(string taskName,DateTime deadline,int difficulty,int credits,string taskDescription)
+        public int Credits
         {
-            if(difficulty > 0 && difficulty <= 100){_difficulty = difficulty;}
-            if(credits > 0){_credits = credits;}
-            TaskDescription = taskDescription;
-            TaskName = taskName;
-            _deadline = deadline;
+            get => _credits;
+            set { if (value > 0) _credits = value; }
+        }
+
+        public ParacTask() : base(string.Empty, string.Empty, DateTime.Now) { }
+
+        public ParacTask(string taskName, DateTime deadline, int difficulty, int credits, string taskDescription)
+            : base(taskName, taskDescription, deadline)
+        {
+            if (credits > 0) _credits = credits;
+            Difficulty = difficulty;
             IsCompleted = false;
+            Start();
+        }
+
+        public override void Start()
+        {
+            Activate();
+            UpdateProgress(0);
+            Console.WriteLine($"Task '{TaskName}' started.");
+        }
+        public override void Complete()
+        {
+            MarkCompleted();
+        }
+
+        public override void ShowInfo()
+        {
+            Console.WriteLine("====================================================");
+            Console.WriteLine($"Task №{Id}:");
+            base.ShowInfo();
+            Console.WriteLine(
+                $"Credits: {Credits}\n" +
+                $"Workload: {ComputeWorkload()}\n"
+            );
+        }
+
+        public double ComputeWorkload()
+        {
+            return Math.Round(
+                Difficulty * Credits / (Deadline - CreatedAt).TotalDays
+            );
         }
 
         public override string ToString()
         {
-            return $"Task name: {_taskName}\nDeadline: {_deadline}\nDifficulty: {_difficulty}\nCredits: {_credits}\nDescription: {TaskDescription}\nIs Completed: {(IsCompleted ? "Yes" : "No")}\n";
+            return $"Task name: {TaskName}\nDeadline: {Deadline}\nDifficulty: {Difficulty}\nCredits: {Credits}\nWorkload: {ComputeWorkload()}\nDescription: {TaskDescription}\nIs Completed: {(IsCompleted ? "Yes" : "No")}\n";
         }
 
-        public void ModifyProgress(TaskProgress progress)
-        {
-            progress.Percent = 100;
-            progress.IsCompleted = true;
-        }
-
-        
     }
 }

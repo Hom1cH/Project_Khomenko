@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 
 namespace DotNet_Lab01_Core;
 
@@ -41,7 +42,15 @@ public class CourseManager : IEnumerable<Course>
     public List<Course> GetUncompletedCourses()
     {
         return _courseDictionary
-            .Where(pair => pair.Value.IsCompleted == false)
+            .Where(pair => pair.Value.Status != UnitStatus.Completed)
+            .Select(pair => pair.Value)
+            .ToList();
+    }
+
+    public List<Course> GetCompletedCourses()
+    {
+        return _courseDictionary
+            .Where(pair => pair.Value.Status == UnitStatus.Completed)
             .Select(pair => pair.Value)
             .ToList();
     }

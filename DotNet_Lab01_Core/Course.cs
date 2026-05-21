@@ -1,55 +1,87 @@
-﻿namespace DotNet_Lab01_Core
+namespace DotNet_Lab01_Core
 {
-    public class Course
+    public class Course : EducationUnit, ICompute
     {
-        private string? _courseName;
         private int _credits;
-        private static int _nextId = 0;
-        public int Id { get; }
 
-        private DateTime _startDate;
-        private DateTime _endDate;
         public string CourseName
         {
-            get => _courseName ?? string.Empty;
-            set { if (value != null) _courseName = value; }
+            get => Title;
+            set { if (value != null) Title = value; }
         }
+
+        public string? CourseDescription
+        {
+            get => Description;
+            set { if (value != null) Description = value; }
+        }
+
         public int Credits
         {
             get => _credits;
             set { if (value > 0) _credits = value; }
         }
 
-        public DateTime StartDate
-        {
-            get => _startDate;
-            set { _startDate = value; }
-        }
-
-        public DateTime EndDate
-        {
-            get => _endDate;
-            set { _endDate = value; }
-        }
-        
         public int ReceivedCredits { get; set; }
         public bool IsCompleted { get; set; }
-        public Course(){}
-        public Course(string coursename,int credits,DateTime startdate,DateTime enddate)
+
+        public Course() : base(string.Empty, string.Empty, DateTime.Now) { }
+
+        public Course(string coursename, int credits, DateTime enddate)
+            : base(coursename, $"Course with {credits} credits", enddate)
         {
-            Id = _nextId++;
-            if(coursename != null){_courseName = coursename;}
-            if(credits > 0){_credits = credits;}
-            _startDate = startdate;
-            _endDate = enddate;
+            if (credits > 0) _credits = credits;
+            Difficulty = 50;
             ReceivedCredits = 0;
             IsCompleted = false;
         }
 
+        public override void Start()
+        {
+            Activate();
+            UpdateProgress(0);
+            Console.WriteLine($"Course '{CourseName}' started.");
+        }
+
+        public override void Complete()
+        {
+            IsCompleted = true;
+            ReceivedCredits = Credits;
+            MarkCompleted();
+            Console.WriteLine($"Course '{CourseName}' completed.");
+        }
+
+        public override void ShowInfo()
+        {
+            Console.WriteLine("====================================================");
+            Console.WriteLine($"Course №{Id}:");
+            base.ShowInfo();
+            Console.Write(
+                $"Credits: {Credits}\n" +
+                $"Course workload: {ComputeWorkload()}\n" +
+                $"Received credits: {ReceivedCredits}\n"
+            );
+        }
+        
+        public double ComputeWorkload()
+        {
+            int days = (Deadline - CreatedAt).Days;
+
+            if (days < 0)
+                days = 0;
+
+            return Math.Round(Credits * Difficulty * days / 360.0);
+        }
+
         public override string ToString()
         {
-            return $"ID: {Id}\nCourse name: {_courseName}\nCredits: {_credits}\nStart date: {_startDate}\nEnd date: {_endDate}\nIsCompleted: {(IsCompleted ? "Yes" : "No")}\n";
+            return $"ID: {Id}\nCourse name: {CourseName}\nCredits: {_credits}\nDifficulty: {Difficulty}\nWorkload: {ComputeWorkload()}\nStart date: {CreatedAt}\nDeadline: {Deadline}\nIsCompleted: {(IsCompleted ? "Yes" : "No")}\n";
+        }
+
+        public void UpdateReceivedCredits(int value){
+            if(value <= ReceivedCredits && value >=0 ){
+                ReceivedCredits = value;
+            }
         }
     }
 }
-
