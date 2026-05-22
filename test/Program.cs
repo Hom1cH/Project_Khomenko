@@ -4,18 +4,26 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("----------------------------------------------------------");
+        string dataDirectory = Path.Combine(AppContext.BaseDirectory, "data");
+        Directory.CreateDirectory(dataDirectory);
 
-        List<IShowable> items = new List<IShowable>();
+        string filePathJSON = Path.Combine(dataDirectory, "courses.json");
+        string filePathXML = Path.Combine(dataDirectory, "courses.xml");
+        string logFilePath = Path.Combine(dataDirectory, "logs.log");
 
-        items.Add(new Course("C# Basics", 5, DateTime.Now.AddMonths(3)));
-        items.Add(new ParacTask("Lab 1", DateTime.Now.AddDays(7), 80, 3, "Create console app"));
+        using ResourceManager logger = new ResourceManager(logFilePath);
 
-        Console.WriteLine("\nPolymorphism :\n");
+        CourseManager manager = new CourseManager(logger);
+        TaskManager taskManager = new TaskManager(manager, logger);
 
-        foreach (IShowable item in items)
-        {
-            item.ShowInfo(); 
-        }
+        CourseJsonStorage.LoadCourses(filePathJSON, manager, taskManager, logger);
+        manager.EnableJsonAutoSave(filePathJSON);
+
+        CourseController controller = new CourseController(manager, taskManager, logger);
+        
+        CourseXmlExporter.ExportActiveCourses(manager.GetCourses(), filePathXML, logger);
+
+
+
     }
 }

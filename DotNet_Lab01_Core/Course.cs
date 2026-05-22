@@ -24,6 +24,7 @@ namespace DotNet_Lab01_Core
 
         public int ReceivedCredits { get; set; }
         public bool IsCompleted { get; set; }
+        public List<ParacTask> Tasks { get; set; } = new();
 
         public Course() : base(string.Empty, string.Empty, DateTime.Now) { }
 
@@ -31,6 +32,16 @@ namespace DotNet_Lab01_Core
             : base(coursename, $"Course with {credits} credits", enddate)
         {
             if (credits > 0) _credits = credits;
+            Difficulty = 50;
+            ReceivedCredits = 0;
+            IsCompleted = false;
+        }
+
+        public Course(string coursename,string description, int credits, DateTime enddate)
+            : base(coursename, description, enddate)
+        {
+            if (credits > 0) _credits = credits;
+            Description = description;
             Difficulty = 50;
             ReceivedCredits = 0;
             IsCompleted = false;
@@ -59,7 +70,8 @@ namespace DotNet_Lab01_Core
             Console.Write(
                 $"Credits: {Credits}\n" +
                 $"Course workload: {ComputeWorkload()}\n" +
-                $"Received credits: {ReceivedCredits}\n"
+                $"Received credits: {ReceivedCredits}\n" +
+                $"Tasks count: {Tasks.Count}\n"
             );
         }
         
@@ -75,13 +87,54 @@ namespace DotNet_Lab01_Core
 
         public override string ToString()
         {
-            return $"ID: {Id}\nCourse name: {CourseName}\nCredits: {_credits}\nDifficulty: {Difficulty}\nWorkload: {ComputeWorkload()}\nStart date: {CreatedAt}\nDeadline: {Deadline}\nIsCompleted: {(IsCompleted ? "Yes" : "No")}\n";
+            return $"ID: {Id}\nCourse name: {CourseName}\nCredits: {_credits}\nDifficulty: {Difficulty}\nWorkload: {ComputeWorkload()}\nStart date: {CreatedAt}\nDeadline: {Deadline}\nTasks count: {Tasks.Count}\nIsCompleted: {(IsCompleted ? "Yes" : "No")}\n";
         }
 
         public void UpdateReceivedCredits(int value){
-            if(value <= ReceivedCredits && value >=0 ){
+            if(value <= Credits && value >=0 ){
                 ReceivedCredits = value;
             }
+        }
+
+        public void AddTask(ParacTask task)
+        {
+            task.CourseId = Id;
+            Tasks.Add(task);
+        }
+
+        public bool RemoveTask(int taskId)
+        {
+            ParacTask? task = Tasks.FirstOrDefault(item => item.Id == taskId);
+
+            if (task == null)
+                return false;
+
+            task.CourseId = null;
+            return Tasks.Remove(task);
+        }
+
+        public void ClearTasks()
+        {
+            foreach (ParacTask task in Tasks)
+            {
+                task.CourseId = null;
+            }
+
+            Tasks.Clear();
+        }
+
+        public List<ParacTask> GetTasksSortedByDeadline()
+        {
+            return Tasks
+                .OrderBy(task => task.Deadline)
+                .ToList();
+        }
+
+        public List<ParacTask> GetTasksSortedByDifficulty()
+        {
+            return Tasks
+                .OrderByDescending(task => task.Difficulty)
+                .ToList();
         }
     }
 }

@@ -1,0 +1,130 @@
+[2026-05-23 01:11:04] Logger started.
+[2026-05-23 01:11:04] CourseManager: CourseManager initialized.
+[2026-05-23 01:11:04] TaskManager: TaskManager initialized.
+[2026-05-23 01:11:04] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 01:11:04] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 01:11:04] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 01:11:04] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 01:11:04] CourseManager: EnableJsonAutoSave filePath=courses.json
+[2026-05-23 01:11:04] CourseController: CourseController initialized.
+[2026-05-23 01:11:04] Logger stopped.
+[2026-05-23 01:15:56] Logger started.
+[2026-05-23 01:15:56] CourseManager: CourseManager initialized.
+[2026-05-23 01:15:56] TaskManager: TaskManager initialized.
+[2026-05-23 01:15:56] CourseJsonStorage: LoadCourses start filePath=courses.json
+[2026-05-23 01:15:57] CourseJsonStorage: LoadCourses completed filePath=courses.json count=2
+[2026-05-23 01:15:57] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 01:15:57] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 01:15:57] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 01:15:57] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 01:15:57] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 01:15:57] CourseManager: EnableJsonAutoSave filePath=courses.json
+[2026-05-23 01:15:57] CourseController: CourseController initialized.
+[2026-05-23 01:15:57] CourseXmlExporter: ExportActiveCourses start filePath=courses.xml
+[2026-05-23 01:15:57] CourseXmlExporter: ExportActiveCourses completed filePath=courses.xml
+[2026-05-23 01:15:57] Logger stopped.
+[2026-05-23 02:03:03] Logger started.
+[2026-05-23 02:03:03] CourseManager: CourseManager initialized.
+[2026-05-23 02:03:03] TaskManager: TaskManager initialized.
+[2026-05-23 02:03:03] CourseJsonStorage: LoadCourses start filePath=\test\courses.json
+[2026-05-23 02:03:03] CourseJsonStorage: LoadCourses file not found filePath=\test\courses.json
+[2026-05-23 02:03:03] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 02:03:03] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-05-23 02:03:03] TaskManager: LoadTasksFromStorage start count=0
+[2026-05-23 02:03:03] TaskManager: LoadTasksFromStorage completed count=0
+[2026-05-23 02:03:03] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-05-23 02:03:03] CourseManager: EnableJsonAutoSave filePath=\test\courses.json
+[2026-05-23 02:03:03] CourseController: CourseController initialized.
+[2026-05-23 02:03:03] CourseXmlExporter: ExportActiveCourses start filePath=courses.xml
+[2026-05-23 02:03:03] CourseXmlExporter: ExportActiveCourses completed filePath=courses.xml
+[2026-05-23 02:03:03] Logger stopped.
+[2026-05-23 02:03:26] Logger started.
+[2026-05-23 02:03:26] CourseManager: CourseManager initialized.
+[2026-05-23 02:03:26] TaskManager: TaskManager initialized.
+[2026-05-23 02:03:26] CourseJsonStorage: LoadCourses start filePath=courses.json
+[2026-05-23 02:03:26] CourseJsonStorage: LoadCourses completed filePath=courses.json count=2
+[2026-05-23 02:03:26] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 02:03:26] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 02:03:26] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 02:03:26] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 02:03:26] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 02:03:26] CourseManager: EnableJsonAutoSave filePath=courses.json
+[2026-05-23 02:03:26] CourseController: CourseController initialized.
+[2026-05-23 02:03:26] CourseXmlExporter: ExportActiveCourses start filePath=courses.xml
+[2026-05-23 02:03:26] CourseXmlExporter: ExportActiveCourses completed filePath=courses.xml
+[2026-05-23 02:03:26] Logger stopped.
+[2026-05-23 02:16:09] Logger started.
+[2026-05-23 02:16:09] CourseManager: CourseManager initialized.
+[2026-05-23 02:16:09] TaskManager: TaskManager initialized.
+[2026-05-23 02:16:09] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:16:09] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json count=2
+[2026-05-23 02:16:09] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 02:16:09] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 02:16:09] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 02:16:09] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 02:16:09] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 02:16:09] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:16:09] CourseController: CourseController initialized.
+[2026-05-23 02:16:09] CourseXmlExporter: ExportActiveCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:16:09] CourseXmlExporter: ExportActiveCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:16:09] Logger stopped.
+[2026-05-23 02:16:34] Logger started.
+[2026-05-23 02:16:35] CourseManager: CourseManager initialized.
+[2026-05-23 02:16:35] TaskManager: TaskManager initialized.
+[2026-05-23 02:16:35] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:16:35] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json count=2
+[2026-05-23 02:16:35] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 02:16:35] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 02:16:35] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 02:16:35] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 02:16:35] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 02:16:35] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:16:35] CourseController: CourseController initialized.
+[2026-05-23 02:16:35] CourseXmlExporter: ExportActiveCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:16:35] CourseXmlExporter: ExportActiveCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:16:35] Logger stopped.
+[2026-05-23 02:16:52] Logger started.
+[2026-05-23 02:16:52] CourseManager: CourseManager initialized.
+[2026-05-23 02:16:52] TaskManager: TaskManager initialized.
+[2026-05-23 02:16:52] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:16:52] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json count=2
+[2026-05-23 02:16:52] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 02:16:52] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 02:16:52] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 02:16:52] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 02:16:52] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 02:16:52] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:16:52] CourseController: CourseController initialized.
+[2026-05-23 02:16:52] CourseXmlExporter: ExportActiveCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:16:52] CourseXmlExporter: ExportActiveCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:16:52] Logger stopped.
+[2026-05-23 02:17:17] Logger started.
+[2026-05-23 02:17:17] CourseManager: CourseManager initialized.
+[2026-05-23 02:17:17] TaskManager: TaskManager initialized.
+[2026-05-23 02:17:17] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:17:17] CourseJsonStorage: invalid JSON filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json. Error: The JSON value could not be converted to System.Collections.Generic.List`1[DotNet_Lab01_Core.Course]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+[2026-05-23 02:17:17] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 02:17:17] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-05-23 02:17:17] TaskManager: LoadTasksFromStorage start count=0
+[2026-05-23 02:17:17] TaskManager: LoadTasksFromStorage completed count=0
+[2026-05-23 02:17:17] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-05-23 02:17:17] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:17:17] CourseController: CourseController initialized.
+[2026-05-23 02:17:17] CourseXmlExporter: ExportActiveCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:17:17] CourseXmlExporter: ExportActiveCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:17:17] Logger stopped.
+[2026-05-23 02:23:03] Logger started.
+[2026-05-23 02:23:03] CourseManager: CourseManager initialized.
+[2026-05-23 02:23:03] TaskManager: TaskManager initialized.
+[2026-05-23 02:23:03] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:23:03] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json count=2
+[2026-05-23 02:23:03] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 02:23:03] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 02:23:03] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 02:23:03] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 02:23:03] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 02:23:03] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.json
+[2026-05-23 02:23:03] CourseController: CourseController initialized.
+[2026-05-23 02:23:03] CourseXmlExporter: ExportActiveCourses start filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:23:03] CourseXmlExporter: ExportActiveCourses completed filePath=D:\education\.NET\Project_Khomenko\test\bin\Debug\net10.0\data\courses.xml
+[2026-05-23 02:23:03] Logger stopped.

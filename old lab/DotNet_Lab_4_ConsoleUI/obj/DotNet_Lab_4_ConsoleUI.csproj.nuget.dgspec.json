@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab_4_ConsoleUI\\DotNet_Lab_4_ConsoleUI.csproj": {}
+    "D:\\education\\.NET\\Project_Khomenko\\old lab\\DotNet_Lab_4_ConsoleUI\\DotNet_Lab_4_ConsoleUI.csproj": {}
   },
   "projects": {
-    "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab_4_ConsoleUI\\DotNet_Lab_4_ConsoleUI.csproj": {
+    "D:\\education\\.NET\\Project_Khomenko\\old lab\\DotNet_Lab_4_ConsoleUI\\DotNet_Lab_4_ConsoleUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab_4_ConsoleUI\\DotNet_Lab_4_ConsoleUI.csproj",
+        "projectUniqueName": "D:\\education\\.NET\\Project_Khomenko\\old lab\\DotNet_Lab_4_ConsoleUI\\DotNet_Lab_4_ConsoleUI.csproj",
         "projectName": "DotNet_Lab_4_ConsoleUI",
-        "projectPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab_4_ConsoleUI\\DotNet_Lab_4_ConsoleUI.csproj",
+        "projectPath": "D:\\education\\.NET\\Project_Khomenko\\old lab\\DotNet_Lab_4_ConsoleUI\\DotNet_Lab_4_ConsoleUI.csproj",
         "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-        "outputPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab_4_ConsoleUI\\obj\\",
+        "outputPath": "D:\\education\\.NET\\Project_Khomenko\\old lab\\DotNet_Lab_4_ConsoleUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

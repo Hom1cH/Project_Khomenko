@@ -16,6 +16,7 @@ namespace DotNet_Lab01_Core
         }
 
         public bool IsCompleted { get; set; }
+        public int? CourseId { get; set; }
 
         public int Credits
         {
@@ -51,6 +52,7 @@ namespace DotNet_Lab01_Core
             Console.WriteLine($"Task №{Id}:");
             base.ShowInfo();
             Console.WriteLine(
+                $"Course ID: {CourseId?.ToString() ?? "None"}\n" +
                 $"Credits: {Credits}\n" +
                 $"Workload: {ComputeWorkload()}\n"
             );
@@ -65,7 +67,7 @@ namespace DotNet_Lab01_Core
 
         public override string ToString()
         {
-            return $"Task name: {TaskName}\nDeadline: {Deadline}\nDifficulty: {Difficulty}\nCredits: {Credits}\nWorkload: {ComputeWorkload()}\nDescription: {TaskDescription}\nIs Completed: {(IsCompleted ? "Yes" : "No")}\n";
+            return $"Task name: {TaskName}\nCourse ID: {CourseId?.ToString() ?? "None"}\nDeadline: {Deadline}\nDifficulty: {Difficulty}\nCredits: {Credits}\nWorkload: {ComputeWorkload()}\nDescription: {TaskDescription}\nIs Completed: {(IsCompleted ? "Yes" : "No")}\n";
         }
 
     }

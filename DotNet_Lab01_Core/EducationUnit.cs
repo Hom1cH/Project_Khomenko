@@ -8,15 +8,15 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
 
     // ===== BASIC INFO =====
 
-    public int Id { get; }
+    public int Id { get; set;}
     public string Title { get; set; }
     public string Description { get; set; }
-    public DateTime CreatedAt { get; protected set; }
-    public DateTime? EndedAt { get; private set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime? EndedAt { get;  set; }
     public DateTime Deadline { get; set; }
     public bool IsActive { get; set; }
-    public UnitStatus Status { get; private set; }
-    public int Progress { get; private set; } // 0 - 100
+    public UnitStatus Status { get; set; }
+    public int Progress { get; set; } // 0 - 100
     public List<string> Tags { get; set; } = new();
     
     public int Difficulty
@@ -26,7 +26,6 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
     }
 
     // ===== CONSTRUCTOR =====
-
     protected EducationUnit(string title, string description, DateTime deadline)
     {
         Id = _nextId++;
