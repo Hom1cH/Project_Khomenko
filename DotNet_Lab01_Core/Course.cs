@@ -37,6 +37,18 @@ namespace DotNet_Lab01_Core
             IsCompleted = false;
         }
 
+        // Compatibility constructor: accepts explicit start date and end date (used by older sample projects)
+        public Course(string coursename, int credits, DateTime startDate, DateTime endDate)
+            : base(coursename, $"Course with {credits} credits", endDate)
+        {
+            if (credits > 0) _credits = credits;
+            CreatedAt = startDate;
+            Deadline = endDate;
+            Difficulty = 50;
+            ReceivedCredits = 0;
+            IsCompleted = false;
+        }
+
         public Course(string coursename,string description, int credits, DateTime enddate)
             : base(coursename, description, enddate)
         {
@@ -45,6 +57,12 @@ namespace DotNet_Lab01_Core
             Difficulty = 50;
             ReceivedCredits = 0;
             IsCompleted = false;
+        }
+
+        // Compatibility method for older code samples
+        public int GetCourseDuration()
+        {
+            return (Deadline - CreatedAt).Days;
         }
 
         public override void Start()

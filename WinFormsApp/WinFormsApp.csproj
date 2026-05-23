@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+    <!-- Обновляем метаданные существующих файлов формы, не дублируя элементы Compile -->
+    <ItemGroup>
+        <Compile Update="Form1.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Update="Form1.Designer.cs">
+            <DependentUpon>Form1.cs</DependentUpon>
+        </Compile>
+        <EmbeddedResource Update="Form1.resx">
+            <DependentUpon>Form1.cs</DependentUpon>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+		<ProjectReference Include="..\DotNet_Lab01_Core\Core.csproj" />
+    </ItemGroup>
+</Project>

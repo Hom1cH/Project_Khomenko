@@ -3,3 +3,4 @@ D:\education\.NET\Project_Khomenko\old lab\DotNet_Lab_03_ConsoleUI\obj\Debug\net
 D:\education\.NET\Project_Khomenko\old lab\DotNet_Lab_03_ConsoleUI\obj\Debug\net10.0\DotNet_Lab_03_ConsoleUI.AssemblyInfo.cs
 D:\education\.NET\Project_Khomenko\old lab\DotNet_Lab_03_ConsoleUI\obj\Debug\net10.0\DotNet_Lab_03_ConsoleUI.csproj.CoreCompileInputs.cache
 D:\education\.NET\Project_Khomenko\old lab\DotNet_Lab_03_ConsoleUI\obj\Debug\net10.0\DotNet_Lab_03_ConsoleUI.sourcelink.json
+D:\education\.NET\Project_Khomenko\old lab\DotNet_Lab_03_ConsoleUI\obj\Debug\net10.0\DotNet_Lab_03_ConsoleUI.csproj.AssemblyReference.cache

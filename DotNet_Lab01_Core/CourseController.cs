@@ -54,6 +54,27 @@ public class CourseController
         return course;
     }
 
+    public Course CreateCourse(
+        string name,
+        string description,
+        int credits,
+        int difficulty,
+        DateTime deadline)
+    {
+        Log($"CreateCourse start name={name} credits={credits} difficulty={difficulty} deadline={deadline:O}");
+
+        Course course = new Course(name, description, credits, deadline)
+        {
+            Difficulty = difficulty
+        };
+
+        ConfigureCourse(course);
+        _courseManager.AddCourse(course);
+
+        Log($"CreateCourse completed id={course.Id} name={name}");
+        return course;
+    }
+
     public ParacTask CreateTaskForCourse(
         int courseId,
         string taskName,

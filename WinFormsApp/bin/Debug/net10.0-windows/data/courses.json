@@ -57,8 +57,8 @@
   },
   {
     "CourseName": "C#",
-    "CourseDescription": "Course with 1 credits",
-    "Credits": 1,
+    "CourseDescription": "",
+    "Credits": 50,
     "ReceivedCredits": 0,
     "IsCompleted": false,
     "Tasks": [
@@ -83,14 +83,14 @@
     ],
     "Id": 2,
     "Title": "C#",
-    "Description": "Course with 1 credits",
+    "Description": "",
     "CreatedAt": "2026-05-22T22:10:34.6234763+03:00",
     "EndedAt": null,
-    "Deadline": "2026-08-20T22:10:34.6234697+03:00",
+    "Deadline": "2026-08-30T22:10:34.623",
     "IsActive": true,
     "Status": 0,
     "Progress": 0,
     "Tags": [],
-    "Difficulty": 50
+    "Difficulty": 60
   }
 ]

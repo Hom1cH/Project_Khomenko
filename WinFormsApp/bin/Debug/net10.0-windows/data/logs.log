@@ -1,0 +1,411 @@
+[2026-05-23 20:40:52] Logger started.
+[2026-05-23 20:40:52] CourseManager: CourseManager initialized.
+[2026-05-23 20:40:52] TaskManager: TaskManager initialized.
+[2026-05-23 20:40:52] CourseController: CourseController initialized.
+[2026-05-23 20:40:52] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:40:52] CourseJsonStorage: LoadCourses file not found filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:40:52] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 20:40:52] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-05-23 20:40:52] TaskManager: LoadTasksFromStorage start count=0
+[2026-05-23 20:40:52] TaskManager: LoadTasksFromStorage completed count=0
+[2026-05-23 20:40:52] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-05-23 20:40:52] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:40:52] WinForms main form initialized.
+[2026-05-23 20:40:59] Logger stopped.
+[2026-05-23 20:44:16] Logger started.
+[2026-05-23 20:44:16] CourseManager: CourseManager initialized.
+[2026-05-23 20:44:16] TaskManager: TaskManager initialized.
+[2026-05-23 20:44:16] CourseController: CourseController initialized.
+[2026-05-23 20:44:16] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:44:16] CourseJsonStorage: LoadCourses file not found filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:44:16] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 20:44:16] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-05-23 20:44:16] TaskManager: LoadTasksFromStorage start count=0
+[2026-05-23 20:44:16] TaskManager: LoadTasksFromStorage completed count=0
+[2026-05-23 20:44:16] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-05-23 20:44:16] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:44:16] WinForms main form initialized.
+[2026-05-23 20:44:33] Logger stopped.
+[2026-05-23 20:45:15] Logger started.
+[2026-05-23 20:45:15] CourseManager: CourseManager initialized.
+[2026-05-23 20:45:15] TaskManager: TaskManager initialized.
+[2026-05-23 20:45:15] CourseController: CourseController initialized.
+[2026-05-23 20:45:15] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:45:15] CourseJsonStorage: LoadCourses file not found filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:45:15] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 20:45:15] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-05-23 20:45:15] TaskManager: LoadTasksFromStorage start count=0
+[2026-05-23 20:45:15] TaskManager: LoadTasksFromStorage completed count=0
+[2026-05-23 20:45:15] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-05-23 20:45:15] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:45:15] WinForms main form initialized.
+[2026-05-23 20:46:33] Logger stopped.
+[2026-05-23 20:46:56] Logger started.
+[2026-05-23 20:46:56] CourseManager: CourseManager initialized.
+[2026-05-23 20:46:56] TaskManager: TaskManager initialized.
+[2026-05-23 20:46:56] CourseController: CourseController initialized.
+[2026-05-23 20:46:56] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:46:56] CourseJsonStorage: LoadCourses file not found filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:46:56] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 20:46:56] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-05-23 20:46:56] TaskManager: LoadTasksFromStorage start count=0
+[2026-05-23 20:46:56] TaskManager: LoadTasksFromStorage completed count=0
+[2026-05-23 20:46:56] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-05-23 20:46:56] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:46:56] WinForms main form initialized.
+[2026-05-23 20:47:21] Logger stopped.
+[2026-05-23 20:52:42] Logger started.
+[2026-05-23 20:52:42] CourseManager: CourseManager initialized.
+[2026-05-23 20:52:42] TaskManager: TaskManager initialized.
+[2026-05-23 20:52:42] CourseController: CourseController initialized.
+[2026-05-23 20:52:42] WinForms main form initialized.
+[2026-05-23 20:52:42] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:52:42] CourseJsonStorage: LoadCourses file not found filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:52:42] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 20:52:42] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-05-23 20:52:42] TaskManager: LoadTasksFromStorage start count=0
+[2026-05-23 20:52:42] TaskManager: LoadTasksFromStorage completed count=0
+[2026-05-23 20:52:42] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-05-23 20:52:42] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:52:42] Form1_Load completed. Courses count: 0
+[2026-05-23 20:52:46] Logger stopped.
+[2026-05-23 20:53:35] Logger started.
+[2026-05-23 20:53:35] CourseManager: CourseManager initialized.
+[2026-05-23 20:53:35] TaskManager: TaskManager initialized.
+[2026-05-23 20:53:35] CourseController: CourseController initialized.
+[2026-05-23 20:53:35] WinForms main form initialized.
+[2026-05-23 20:53:35] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:53:35] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 20:53:35] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 20:53:35] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 20:53:35] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 20:53:35] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 20:53:35] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 20:53:35] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:53:35] Form1_Load completed. Courses count: 2
+[2026-05-23 20:53:51] Logger stopped.
+[2026-05-23 20:57:28] Logger started.
+[2026-05-23 20:57:28] CourseManager: CourseManager initialized.
+[2026-05-23 20:57:28] TaskManager: TaskManager initialized.
+[2026-05-23 20:57:28] CourseController: CourseController initialized.
+[2026-05-23 20:57:28] WinForms main form initialized.
+[2026-05-23 20:57:28] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:57:28] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 20:57:28] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 20:57:28] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 20:57:28] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 20:57:28] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 20:57:28] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 20:57:28] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 20:57:28] Form1_Load completed. Courses count: 2
+[2026-05-23 20:57:35] Logger stopped.
+[2026-05-23 21:04:01] Logger started.
+[2026-05-23 21:04:01] CourseManager: CourseManager initialized.
+[2026-05-23 21:04:01] TaskManager: TaskManager initialized.
+[2026-05-23 21:04:01] CourseController: CourseController initialized.
+[2026-05-23 21:04:01] WinForms main form initialized.
+[2026-05-23 21:04:01] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:04:01] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:04:01] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:04:01] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:04:01] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:04:01] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:04:01] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:04:01] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:04:01] Form1_Load completed. Courses count: 2
+[2026-05-23 21:04:20] Logger stopped.
+[2026-05-23 21:10:32] Logger started.
+[2026-05-23 21:10:32] CourseManager: CourseManager initialized.
+[2026-05-23 21:10:32] TaskManager: TaskManager initialized.
+[2026-05-23 21:10:32] CourseController: CourseController initialized.
+[2026-05-23 21:10:32] WinForms main form initialized.
+[2026-05-23 21:10:32] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:10:32] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:10:32] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:10:32] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:10:32] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:10:32] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:10:32] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:10:32] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:10:32] Form1_Load completed. Courses count: 2
+[2026-05-23 21:10:36] CourseController: CreateCourse start name=AddCourseForm
+[2026-05-23 21:10:36] CourseController: ConfigureCourse start courseId=6 name=AddCourseForm
+[2026-05-23 21:10:36] CourseController: ConfigureCourse completed courseId=6 difficulty=50
+[2026-05-23 21:10:36] CourseManager: AddCourse start id=6 name=AddCourseForm
+[2026-05-23 21:10:36] CourseManager: SaveChanges writing 3 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:10:37] CourseManager: AddCourse completed id=6
+[2026-05-23 21:10:37] CourseController: CreateCourse completed id=6 name=AddCourseForm
+[2026-05-23 21:11:52] CourseController: CreateCourse start name=AddCourseForm
+[2026-05-23 21:11:52] CourseController: ConfigureCourse start courseId=7 name=AddCourseForm
+[2026-05-23 21:11:52] CourseController: ConfigureCourse completed courseId=7 difficulty=50
+[2026-05-23 21:11:52] CourseManager: AddCourse start id=7 name=AddCourseForm
+[2026-05-23 21:11:52] CourseManager: SaveChanges writing 4 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:11:52] CourseManager: AddCourse completed id=7
+[2026-05-23 21:11:52] CourseController: CreateCourse completed id=7 name=AddCourseForm
+[2026-05-23 21:13:34] Logger stopped.
+[2026-05-23 21:13:34] Logger started.
+[2026-05-23 21:13:34] CourseManager: CourseManager initialized.
+[2026-05-23 21:13:34] TaskManager: TaskManager initialized.
+[2026-05-23 21:13:34] CourseController: CourseController initialized.
+[2026-05-23 21:13:34] WinForms main form initialized.
+[2026-05-23 21:13:34] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:13:34] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=4
+[2026-05-23 21:13:34] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:13:34] CourseManager: LoadCoursesFromStorage completed count=4
+[2026-05-23 21:13:34] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:13:34] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:13:34] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:13:34] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:13:34] Form1_Load completed. Courses count: 4
+[2026-05-23 21:13:41] CourseController: CreateCourse start name=NEW
+[2026-05-23 21:13:41] CourseController: ConfigureCourse start courseId=8 name=NEW
+[2026-05-23 21:13:41] CourseController: ConfigureCourse completed courseId=8 difficulty=50
+[2026-05-23 21:13:41] CourseManager: AddCourse start id=8 name=NEW
+[2026-05-23 21:13:41] CourseManager: SaveChanges writing 5 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:13:41] CourseManager: AddCourse completed id=8
+[2026-05-23 21:13:41] CourseController: CreateCourse completed id=8 name=NEW
+[2026-05-23 21:13:44] Logger stopped.
+[2026-05-23 21:34:38] Logger started.
+[2026-05-23 21:34:38] CourseManager: CourseManager initialized.
+[2026-05-23 21:34:38] TaskManager: TaskManager initialized.
+[2026-05-23 21:34:38] CourseController: CourseController initialized.
+[2026-05-23 21:34:38] WinForms main form initialized.
+[2026-05-23 21:34:38] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:34:38] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:34:38] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:34:38] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:34:38] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:34:38] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:34:38] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:34:38] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:34:38] Form1_Load completed. Courses count: 2
+[2026-05-23 21:35:04] CourseController: CreateCourse start name=New credits=2 difficulty=10 deadline=2026-08-21T21:35:04.7126313+03:00
+[2026-05-23 21:35:04] CourseController: ConfigureCourse start courseId=6 name=New
+[2026-05-23 21:35:04] CourseController: ConfigureCourse completed courseId=6 difficulty=10
+[2026-05-23 21:35:04] CourseManager: AddCourse start id=6 name=New
+[2026-05-23 21:35:04] CourseManager: SaveChanges writing 3 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:35:04] CourseManager: AddCourse completed id=6
+[2026-05-23 21:35:04] CourseController: CreateCourse completed id=6 name=New
+[2026-05-23 21:35:09] CourseManager: RemoveCourse start id=6
+[2026-05-23 21:35:09] CourseManager: SaveChanges writing 2 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:35:09] CourseManager: RemoveCourse completed id=6
+[2026-05-23 21:35:20] Logger stopped.
+[2026-05-23 21:35:33] Logger started.
+[2026-05-23 21:35:33] CourseManager: CourseManager initialized.
+[2026-05-23 21:35:33] TaskManager: TaskManager initialized.
+[2026-05-23 21:35:33] CourseController: CourseController initialized.
+[2026-05-23 21:35:33] WinForms main form initialized.
+[2026-05-23 21:35:33] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:35:33] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:35:33] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:35:33] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:35:33] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:35:33] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:35:33] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:35:33] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:35:33] Form1_Load completed. Courses count: 2
+[2026-05-23 21:35:36] Logger stopped.
+[2026-05-23 21:37:56] Logger started.
+[2026-05-23 21:37:56] CourseManager: CourseManager initialized.
+[2026-05-23 21:37:56] TaskManager: TaskManager initialized.
+[2026-05-23 21:37:56] CourseController: CourseController initialized.
+[2026-05-23 21:37:56] WinForms main form initialized.
+[2026-05-23 21:37:56] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:37:56] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:37:56] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:37:56] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:37:56] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:37:56] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:37:56] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:37:56] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:37:56] Form1_Load completed. Courses count: 2
+[2026-05-23 21:37:57] CourseJsonStorage: SaveCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:37:57] CourseJsonStorage: SaveCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:37:57] CourseXmlExporter: ExportActiveCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.xml
+[2026-05-23 21:37:57] CourseXmlExporter: ExportActiveCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.xml
+[2026-05-23 21:38:27] CourseController: CreateCourse start name=New credits=4 difficulty=23 deadline=2026-08-21T21:38:27.3337596+03:00
+[2026-05-23 21:38:27] CourseController: ConfigureCourse start courseId=6 name=New
+[2026-05-23 21:38:27] CourseController: ConfigureCourse completed courseId=6 difficulty=23
+[2026-05-23 21:38:27] CourseManager: AddCourse start id=6 name=New
+[2026-05-23 21:38:27] CourseManager: SaveChanges writing 3 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:38:27] CourseManager: AddCourse completed id=6
+[2026-05-23 21:38:27] CourseController: CreateCourse completed id=6 name=New
+[2026-05-23 21:38:34] CourseManager: RemoveCourse start id=6
+[2026-05-23 21:38:34] CourseManager: SaveChanges writing 2 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:38:34] CourseManager: RemoveCourse completed id=6
+[2026-05-23 21:38:35] Logger stopped.
+[2026-05-23 21:39:28] Logger started.
+[2026-05-23 21:39:28] CourseManager: CourseManager initialized.
+[2026-05-23 21:39:28] TaskManager: TaskManager initialized.
+[2026-05-23 21:39:28] CourseController: CourseController initialized.
+[2026-05-23 21:39:28] WinForms main form initialized.
+[2026-05-23 21:39:28] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:39:28] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:39:28] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:39:28] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:39:28] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:39:28] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:39:28] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:39:28] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:39:28] Form1_Load completed. Courses count: 2
+[2026-05-23 21:39:47] Logger stopped.
+[2026-05-23 21:41:44] Logger started.
+[2026-05-23 21:41:44] CourseManager: CourseManager initialized.
+[2026-05-23 21:41:44] TaskManager: TaskManager initialized.
+[2026-05-23 21:41:44] CourseController: CourseController initialized.
+[2026-05-23 21:41:44] WinForms main form initialized.
+[2026-05-23 21:41:44] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:41:44] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:41:44] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:41:44] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:41:44] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:41:44] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:41:44] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:41:44] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:41:44] Form1_Load completed. Courses count: 2
+[2026-05-23 21:41:59] CourseController: CreateCourse start name=1 credits=1 difficulty=1 deadline=2026-08-21T21:41:59.2648251+03:00
+[2026-05-23 21:41:59] CourseController: ConfigureCourse start courseId=6 name=1
+[2026-05-23 21:41:59] CourseController: ConfigureCourse completed courseId=6 difficulty=1
+[2026-05-23 21:41:59] CourseManager: AddCourse start id=6 name=1
+[2026-05-23 21:41:59] CourseManager: SaveChanges writing 3 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:41:59] CourseManager: AddCourse completed id=6
+[2026-05-23 21:41:59] CourseController: CreateCourse completed id=6 name=1
+[2026-05-23 21:42:29] CourseManager: RemoveCourse start id=6
+[2026-05-23 21:42:29] CourseManager: SaveChanges writing 2 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:42:29] CourseManager: RemoveCourse completed id=6
+[2026-05-23 21:42:31] Logger stopped.
+[2026-05-23 21:47:28] Logger started.
+[2026-05-23 21:47:28] CourseManager: CourseManager initialized.
+[2026-05-23 21:47:28] TaskManager: TaskManager initialized.
+[2026-05-23 21:47:28] CourseController: CourseController initialized.
+[2026-05-23 21:47:28] WinForms main form initialized.
+[2026-05-23 21:47:28] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:47:28] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:47:28] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:47:28] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:47:28] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:47:28] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:47:28] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:47:28] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:47:28] Form1_Load completed. Courses count: 2
+[2026-05-23 21:48:27] CourseManager: RenameCourse start courseId=2 name=C#
+[2026-05-23 21:48:27] CourseManager: SaveChanges writing 2 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:48:27] CourseManager: RenameCourse completed courseId=2 name=C#
+[2026-05-23 21:48:27] CourseManager: ChangeCourseDescription start courseId=2 description=
+[2026-05-23 21:48:27] CourseManager: SaveChanges writing 2 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:48:27] CourseManager: ChangeCourseDescription completed courseId=2
+[2026-05-23 21:48:27] CourseManager: UpdateCourseCredits start courseId=2 credits=50
+[2026-05-23 21:48:27] CourseManager: SaveChanges writing 2 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:48:27] CourseManager: UpdateCourseCredits completed courseId=2 credits=50
+[2026-05-23 21:48:27] CourseManager: UpdateCourseDifficulty start courseId=2 difficulty=60
+[2026-05-23 21:48:27] CourseManager: SaveChanges writing 2 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:48:27] CourseManager: UpdateCourseDifficulty completed courseId=2 difficulty=60
+[2026-05-23 21:48:27] CourseManager: ChangeCourseDeadline start courseId=2 deadline=2026-08-30T22:10:34.6230000
+[2026-05-23 21:48:27] CourseManager: SaveChanges writing 2 courses to D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:48:27] CourseManager: ChangeCourseDeadline completed courseId=2 deadline=2026-08-30T22:10:34.6230000
+[2026-05-23 21:51:05] Logger started.
+[2026-05-23 21:51:05] CourseManager: CourseManager initialized.
+[2026-05-23 21:51:05] TaskManager: TaskManager initialized.
+[2026-05-23 21:51:05] CourseController: CourseController initialized.
+[2026-05-23 21:51:05] WinForms main form initialized.
+[2026-05-23 21:51:05] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:51:05] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:51:05] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:51:05] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:51:05] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:51:05] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:51:05] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:51:05] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:51:05] Form1_Load completed. Courses count: 2
+[2026-05-23 21:51:23] Logger stopped.
+[2026-05-23 21:53:30] Logger started.
+[2026-05-23 21:53:30] CourseManager: CourseManager initialized.
+[2026-05-23 21:53:30] TaskManager: TaskManager initialized.
+[2026-05-23 21:53:30] CourseController: CourseController initialized.
+[2026-05-23 21:53:30] WinForms main form initialized.
+[2026-05-23 21:53:30] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:53:30] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 21:53:30] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 21:53:30] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 21:53:30] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 21:53:30] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 21:53:30] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 21:53:30] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 21:53:30] Form1_Load completed. Courses count: 2
+[2026-05-23 21:53:50] Logger stopped.
+[2026-05-23 22:05:16] Logger started.
+[2026-05-23 22:05:16] CourseManager: CourseManager initialized.
+[2026-05-23 22:05:16] TaskManager: TaskManager initialized.
+[2026-05-23 22:05:16] CourseController: CourseController initialized.
+[2026-05-23 22:05:16] WinForms main form initialized.
+[2026-05-23 22:05:16] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:05:16] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 22:05:16] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 22:05:16] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 22:05:16] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 22:05:16] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 22:05:16] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 22:05:16] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:05:16] Form1_Load completed. Courses count: 2
+[2026-05-23 22:05:40] Logger stopped.
+[2026-05-23 22:05:54] Logger started.
+[2026-05-23 22:05:54] CourseManager: CourseManager initialized.
+[2026-05-23 22:05:54] TaskManager: TaskManager initialized.
+[2026-05-23 22:05:54] CourseController: CourseController initialized.
+[2026-05-23 22:05:54] WinForms main form initialized.
+[2026-05-23 22:05:54] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:05:54] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 22:05:54] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 22:05:54] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 22:05:54] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 22:05:54] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 22:05:54] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 22:05:54] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:05:54] Form1_Load completed. Courses count: 2
+[2026-05-23 22:06:02] Logger stopped.
+[2026-05-23 22:07:15] Logger started.
+[2026-05-23 22:07:15] CourseManager: CourseManager initialized.
+[2026-05-23 22:07:15] TaskManager: TaskManager initialized.
+[2026-05-23 22:07:15] CourseController: CourseController initialized.
+[2026-05-23 22:07:15] WinForms main form initialized.
+[2026-05-23 22:07:15] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:07:15] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 22:07:15] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 22:07:15] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 22:07:15] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 22:07:15] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 22:07:15] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 22:07:15] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:07:15] Form1_Load completed. Courses count: 2
+[2026-05-23 22:07:16] Logger stopped.
+[2026-05-23 22:07:21] Logger started.
+[2026-05-23 22:07:21] CourseManager: CourseManager initialized.
+[2026-05-23 22:07:21] TaskManager: TaskManager initialized.
+[2026-05-23 22:07:21] CourseController: CourseController initialized.
+[2026-05-23 22:07:21] WinForms main form initialized.
+[2026-05-23 22:07:21] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:07:21] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 22:07:21] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 22:07:21] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 22:07:21] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 22:07:21] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 22:07:21] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 22:07:21] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:07:21] Form1_Load completed. Courses count: 2
+[2026-05-23 22:07:51] Logger stopped.
+[2026-05-23 22:09:23] Logger started.
+[2026-05-23 22:09:23] CourseManager: CourseManager initialized.
+[2026-05-23 22:09:23] TaskManager: TaskManager initialized.
+[2026-05-23 22:09:23] CourseController: CourseController initialized.
+[2026-05-23 22:09:23] WinForms main form initialized.
+[2026-05-23 22:09:23] CourseJsonStorage: LoadCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:09:23] CourseJsonStorage: LoadCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json count=2
+[2026-05-23 22:09:23] CourseManager: LoadCoursesFromStorage start.
+[2026-05-23 22:09:23] CourseManager: LoadCoursesFromStorage completed count=2
+[2026-05-23 22:09:23] TaskManager: LoadTasksFromStorage start count=3
+[2026-05-23 22:09:23] TaskManager: LoadTasksFromStorage completed count=3
+[2026-05-23 22:09:23] CourseJsonStorage: LoadCourses load completed with 3 tasks from json.
+[2026-05-23 22:09:23] CourseManager: EnableJsonAutoSave filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-23 22:09:24] Form1_Load completed. Courses count: 2
+[2026-05-23 22:09:45] CourseXmlExporter: ExportActiveCourses start filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.xml
+[2026-05-23 22:09:45] CourseXmlExporter: ExportActiveCourses completed filePath=D:\education\.NET\Project_Khomenko\WinFormsApp\bin\Debug\net10.0-windows\data\courses.xml

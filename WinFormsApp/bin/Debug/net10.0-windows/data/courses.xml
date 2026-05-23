@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Courses>
+  <Course Id="1">
+    <Title>OOP</Title>
+    <Description>Course with 1 credits</Description>
+    <Credits>1</Credits>
+    <Difficulty>50</Difficulty>
+    <Progress>0</Progress>
+    <Status>NotStarted</Status>
+    <Deadline>2026-08-20T22:10:34.5754977+03:00</Deadline>
+    <Workload>12</Workload>
+  </Course>
+  <Course Id="2">
+    <Title>C#</Title>
+    <Description></Description>
+    <Credits>50</Credits>
+    <Difficulty>60</Difficulty>
+    <Progress>0</Progress>
+    <Status>NotStarted</Status>
+    <Deadline>2026-08-30T22:10:34.623</Deadline>
+    <Workload>825</Workload>
+  </Course>
+</Courses>
