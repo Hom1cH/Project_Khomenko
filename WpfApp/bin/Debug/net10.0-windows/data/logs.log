@@ -1,0 +1,227 @@
+[2026-05-24 01:46:56] Logger started.
+[2026-05-24 01:46:56] CourseManager: CourseManager initialized.
+[2026-05-24 01:46:56] TaskManager: TaskManager initialized.
+[2026-05-24 01:46:56] CourseController: CourseController initialized.
+[2026-05-24 01:46:56] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseJsonStorage: LoadCourses file not found filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 01:46:56] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-05-24 01:46:56] TaskManager: LoadTasksFromStorage start count=0
+[2026-05-24 01:46:56] TaskManager: LoadTasksFromStorage completed count=0
+[2026-05-24 01:46:56] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-05-24 01:46:56] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseController: CreateCourse start name=C# Fundamentals credits=5 difficulty=55 deadline=2026-08-24T01:46:56.6332569+03:00
+[2026-05-24 01:46:56] CourseController: ConfigureCourse start courseId=1 name=C# Fundamentals
+[2026-05-24 01:46:56] CourseController: ConfigureCourse completed courseId=1 difficulty=55
+[2026-05-24 01:46:56] CourseManager: AddCourse start id=1 name=C# Fundamentals
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 1 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: AddCourse completed id=1
+[2026-05-24 01:46:56] CourseController: CreateCourse completed id=1 name=C# Fundamentals
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse start courseId=1 taskName=Console CRUD
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse start courseId=1 taskName=Console CRUD
+[2026-05-24 01:46:56] TaskManager: CreateTask start name=Console CRUD deadline=2026-06-02T01:46:56.6972159+03:00 difficulty=45 credits=2
+[2026-05-24 01:46:56] TaskManager: AddTask start taskId=2 taskName=Console CRUD
+[2026-05-24 01:46:56] TaskManager: SaveChanges called.
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 1 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] TaskManager: AddTask completed taskId=2
+[2026-05-24 01:46:56] TaskManager: CreateTask completed id=2 name=Console CRUD
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById start courseId=1 taskId=2
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 1 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById completed courseId=1 taskId=2
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse completed courseId=1 taskId=2
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse completed taskId=2 courseId=1
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse start courseId=1 taskName=JSON persistence
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse start courseId=1 taskName=JSON persistence
+[2026-05-24 01:46:56] TaskManager: CreateTask start name=JSON persistence deadline=2026-06-09T01:46:56.7060840+03:00 difficulty=70 credits=3
+[2026-05-24 01:46:56] TaskManager: AddTask start taskId=3 taskName=JSON persistence
+[2026-05-24 01:46:56] TaskManager: SaveChanges called.
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 1 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] TaskManager: AddTask completed taskId=3
+[2026-05-24 01:46:56] TaskManager: CreateTask completed id=3 name=JSON persistence
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById start courseId=1 taskId=3
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 1 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById completed courseId=1 taskId=3
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse completed courseId=1 taskId=3
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse completed taskId=3 courseId=1
+[2026-05-24 01:46:56] CourseController: CreateCourse start name=Object-Oriented Design credits=4 difficulty=68 deadline=2026-09-24T01:46:56.7068598+03:00
+[2026-05-24 01:46:56] CourseController: ConfigureCourse start courseId=4 name=Object-Oriented Design
+[2026-05-24 01:46:56] CourseController: ConfigureCourse completed courseId=4 difficulty=68
+[2026-05-24 01:46:56] CourseManager: AddCourse start id=4 name=Object-Oriented Design
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 2 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: AddCourse completed id=4
+[2026-05-24 01:46:56] CourseController: CreateCourse completed id=4 name=Object-Oriented Design
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse start courseId=4 taskName=Polymorphism demo
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse start courseId=4 taskName=Polymorphism demo
+[2026-05-24 01:46:56] TaskManager: CreateTask start name=Polymorphism demo deadline=2026-06-05T01:46:56.7073866+03:00 difficulty=65 credits=2
+[2026-05-24 01:46:56] TaskManager: AddTask start taskId=5 taskName=Polymorphism demo
+[2026-05-24 01:46:56] TaskManager: SaveChanges called.
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 2 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] TaskManager: AddTask completed taskId=5
+[2026-05-24 01:46:56] TaskManager: CreateTask completed id=5 name=Polymorphism demo
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById start courseId=4 taskId=5
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 2 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById completed courseId=4 taskId=5
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse completed courseId=4 taskId=5
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse completed taskId=5 courseId=4
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse start courseId=4 taskName=Course-task relation
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse start courseId=4 taskName=Course-task relation
+[2026-05-24 01:46:56] TaskManager: CreateTask start name=Course-task relation deadline=2026-06-13T01:46:56.7137910+03:00 difficulty=75 credits=3
+[2026-05-24 01:46:56] TaskManager: AddTask start taskId=6 taskName=Course-task relation
+[2026-05-24 01:46:56] TaskManager: SaveChanges called.
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 2 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] TaskManager: AddTask completed taskId=6
+[2026-05-24 01:46:56] TaskManager: CreateTask completed id=6 name=Course-task relation
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById start courseId=4 taskId=6
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 2 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById completed courseId=4 taskId=6
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse completed courseId=4 taskId=6
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse completed taskId=6 courseId=4
+[2026-05-24 01:46:56] CourseController: CreateCourse start name=Desktop UI credits=3 difficulty=60 deadline=2026-07-24T01:46:56.7145748+03:00
+[2026-05-24 01:46:56] CourseController: ConfigureCourse start courseId=7 name=Desktop UI
+[2026-05-24 01:46:56] CourseController: ConfigureCourse completed courseId=7 difficulty=60
+[2026-05-24 01:46:56] CourseManager: AddCourse start id=7 name=Desktop UI
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 3 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: AddCourse completed id=7
+[2026-05-24 01:46:56] CourseController: CreateCourse completed id=7 name=Desktop UI
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse start courseId=7 taskName=WinForms grid
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse start courseId=7 taskName=WinForms grid
+[2026-05-24 01:46:56] TaskManager: CreateTask start name=WinForms grid deadline=2026-05-31T01:46:56.7207541+03:00 difficulty=50 credits=2
+[2026-05-24 01:46:56] TaskManager: AddTask start taskId=8 taskName=WinForms grid
+[2026-05-24 01:46:56] TaskManager: SaveChanges called.
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 3 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] TaskManager: AddTask completed taskId=8
+[2026-05-24 01:46:56] TaskManager: CreateTask completed id=8 name=WinForms grid
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById start courseId=7 taskId=8
+[2026-05-24 01:46:56] CourseManager: SaveChanges writing 3 courses to C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:46:56] CourseManager: AddTaskToCourseById completed courseId=7 taskId=8
+[2026-05-24 01:46:56] TaskManager: CreateTaskForCourse completed courseId=7 taskId=8
+[2026-05-24 01:46:56] CourseController: CreateTaskForCourse completed taskId=8 courseId=7
+[2026-05-24 01:48:45] Logger started.
+[2026-05-24 01:48:45] CourseManager: CourseManager initialized.
+[2026-05-24 01:48:45] TaskManager: TaskManager initialized.
+[2026-05-24 01:48:45] CourseController: CourseController initialized.
+[2026-05-24 01:48:45] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:48:45] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 01:48:45] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 01:48:45] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 01:48:45] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 01:48:45] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 01:48:45] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 01:48:45] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:54:53] Logger started.
+[2026-05-24 01:54:53] CourseManager: CourseManager initialized.
+[2026-05-24 01:54:53] TaskManager: TaskManager initialized.
+[2026-05-24 01:54:53] CourseController: CourseController initialized.
+[2026-05-24 01:54:53] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:54:53] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 01:54:53] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 01:54:53] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 01:54:53] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 01:54:53] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 01:54:53] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 01:54:53] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:55:46] Logger stopped.
+[2026-05-24 01:57:20] Logger started.
+[2026-05-24 01:57:20] CourseManager: CourseManager initialized.
+[2026-05-24 01:57:20] TaskManager: TaskManager initialized.
+[2026-05-24 01:57:20] CourseController: CourseController initialized.
+[2026-05-24 01:57:20] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:57:20] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 01:57:20] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 01:57:20] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 01:57:20] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 01:57:20] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 01:57:20] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 01:57:20] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:57:25] Logger stopped.
+[2026-05-24 01:58:32] Logger started.
+[2026-05-24 01:58:32] CourseManager: CourseManager initialized.
+[2026-05-24 01:58:32] TaskManager: TaskManager initialized.
+[2026-05-24 01:58:32] CourseController: CourseController initialized.
+[2026-05-24 01:58:32] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:58:32] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 01:58:32] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 01:58:32] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 01:58:32] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 01:58:32] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 01:58:32] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 01:58:32] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:59:43] Logger stopped.
+[2026-05-24 01:59:54] Logger started.
+[2026-05-24 01:59:54] CourseManager: CourseManager initialized.
+[2026-05-24 01:59:54] TaskManager: TaskManager initialized.
+[2026-05-24 01:59:54] CourseController: CourseController initialized.
+[2026-05-24 01:59:54] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 01:59:54] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 01:59:54] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 01:59:54] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 01:59:54] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 01:59:54] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 01:59:54] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 01:59:54] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:07:21] Logger stopped.
+[2026-05-24 02:07:32] Logger started.
+[2026-05-24 02:07:32] CourseManager: CourseManager initialized.
+[2026-05-24 02:07:32] TaskManager: TaskManager initialized.
+[2026-05-24 02:07:32] CourseController: CourseController initialized.
+[2026-05-24 02:07:32] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:07:32] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 02:07:32] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 02:07:32] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 02:07:32] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 02:07:32] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 02:07:32] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 02:07:32] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:12:38] Logger stopped.
+[2026-05-24 02:14:31] Logger started.
+[2026-05-24 02:14:31] CourseManager: CourseManager initialized.
+[2026-05-24 02:14:31] TaskManager: TaskManager initialized.
+[2026-05-24 02:14:31] CourseController: CourseController initialized.
+[2026-05-24 02:14:31] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:14:31] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 02:14:31] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 02:14:31] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 02:14:31] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 02:14:31] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 02:14:31] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 02:14:31] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:14:46] Logger stopped.
+[2026-05-24 02:15:08] Logger started.
+[2026-05-24 02:15:08] CourseManager: CourseManager initialized.
+[2026-05-24 02:15:08] TaskManager: TaskManager initialized.
+[2026-05-24 02:15:08] CourseController: CourseController initialized.
+[2026-05-24 02:15:08] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:15:08] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 02:15:08] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 02:15:08] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 02:15:08] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 02:15:08] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 02:15:08] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 02:15:08] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:15:15] Logger stopped.
+[2026-05-24 02:20:13] Logger started.
+[2026-05-24 02:20:13] CourseManager: CourseManager initialized.
+[2026-05-24 02:20:13] TaskManager: TaskManager initialized.
+[2026-05-24 02:20:13] CourseController: CourseController initialized.
+[2026-05-24 02:20:13] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:20:13] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 02:20:13] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 02:20:13] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 02:20:13] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 02:20:13] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 02:20:13] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 02:20:13] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:20:25] Logger stopped.
+[2026-05-24 02:20:31] Logger started.
+[2026-05-24 02:20:31] CourseManager: CourseManager initialized.
+[2026-05-24 02:20:31] TaskManager: TaskManager initialized.
+[2026-05-24 02:20:31] CourseController: CourseController initialized.
+[2026-05-24 02:20:31] CourseJsonStorage: LoadCourses start filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:20:31] CourseJsonStorage: LoadCourses completed filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json count=3
+[2026-05-24 02:20:31] CourseManager: LoadCoursesFromStorage start.
+[2026-05-24 02:20:31] CourseManager: LoadCoursesFromStorage completed count=3
+[2026-05-24 02:20:31] TaskManager: LoadTasksFromStorage start count=5
+[2026-05-24 02:20:31] TaskManager: LoadTasksFromStorage completed count=5
+[2026-05-24 02:20:31] CourseJsonStorage: LoadCourses load completed with 5 tasks from json.
+[2026-05-24 02:20:31] CourseManager: EnableJsonAutoSave filePath=C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WpfApp\bin\Debug\net10.0-windows\data\courses.json
+[2026-05-24 02:20:39] Logger stopped.

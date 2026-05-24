@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj",
+      "projectUniqueName": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj",
       "projectName": "WinFormsApp",
-      "projectPath": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj",
+      "projectPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj",
       "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-      "outputPath": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\obj\\",
+      "outputPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\WinFormsApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,8 +54,8 @@
           "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
           "projectReferences": {
-            "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
-              "projectPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj"
+            "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj"
             }
           }
         }

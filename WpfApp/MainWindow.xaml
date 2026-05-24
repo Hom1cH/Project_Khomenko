@@ -1,0 +1,289 @@
+<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Education Dashboard"
+        Height="760"
+        Width="1180"
+        MinHeight="680"
+        MinWidth="980"
+        Background="#F4F7FB">
+    <Window.Resources>
+        <Style x:Key="MetricLabel" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#667085" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+
+        <Style x:Key="MetricValue" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#111827" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="84" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Background="#152238"
+                Padding="28,18" Height="90">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Left">
+                    <TextBlock Text="Education Dashboard"
+                               Foreground="White"
+                               FontSize="26"
+                               FontWeight="SemiBold" FontFamily="Constantia" />
+                    <TextBlock x:Name="HeaderSubtitle"
+                               Text="Courses overview"
+                               Foreground="#B8C7DA"
+                               FontSize="13"
+                               />
+                </StackPanel>
+                <Border DockPanel.Dock="Right"
+                        Background="#203451"
+                        CornerRadius="8"
+                        Padding="14,8" Width="724" Height="34">
+                    <TextBlock x:Name="HeaderCounter"
+                               Text="0 courses"
+                               Foreground="White"
+                               FontWeight="SemiBold" />
+                </Border>
+            </DockPanel>
+        </Border>
+
+        <Border Grid.Row="1"
+                Grid.Column="0"
+                Background="#FFFFFF"
+                BorderBrush="#E5E7EB"
+                BorderThickness="0,0,1,0"
+                Padding="20">
+            <StackPanel>
+                <TextBlock Text="Navigation"
+                           Foreground="#667085"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Margin="0,0,0,14" />
+                <Button x:Name="CoursesNavButton"
+                        Content="Courses"
+                        Height="40"
+                        HorizontalContentAlignment="Left"
+                        Padding="12,0"
+                        Click="BackToCourses_Click" />
+                <TextBlock Text="Summary"
+                           Foreground="#667085"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Margin="0,28,0,12" />
+                <UniformGrid Columns="1" Rows="4">
+                    <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <StackPanel>
+                            <TextBlock Text="Courses" Style="{StaticResource MetricLabel}" />
+                            <TextBlock x:Name="TotalCoursesText" Text="0" Style="{StaticResource MetricValue}" />
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <StackPanel>
+                            <TextBlock Text="Tasks" Style="{StaticResource MetricLabel}" />
+                            <TextBlock x:Name="TotalTasksText" Text="0" Style="{StaticResource MetricValue}" />
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <StackPanel>
+                            <TextBlock Text="Avg progress" Style="{StaticResource MetricLabel}" />
+                            <TextBlock x:Name="AverageProgressText" Text="0%" Style="{StaticResource MetricValue}" />
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#F9FAFB" Padding="12" CornerRadius="6">
+                        <StackPanel>
+                            <TextBlock Text="Active" Style="{StaticResource MetricLabel}" />
+                            <TextBlock x:Name="ActiveCoursesText" Text="0" Style="{StaticResource MetricValue}" />
+                        </StackPanel>
+                    </Border>
+                </UniformGrid>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="1"
+              Grid.Column="1"
+              Margin="26">
+            <Grid x:Name="CoursesView">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Margin="0,0,0,18">
+                    <TextBlock Text="All courses"
+                               FontSize="28"
+                               FontWeight="SemiBold"
+                               Foreground="#101828" />
+                    <TextBlock Text="Click a course card to inspect its tasks."
+                               Foreground="#667085"
+                               Margin="0,4,0,0" />
+                </StackPanel>
+
+                <ScrollViewer Grid.Row="1"
+                              VerticalScrollBarVisibility="Auto">
+                    <ItemsControl x:Name="CourseCards">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button Click="CourseCard_Click"
+                                        Tag="{Binding}"
+                                        Width="200"
+                                        MinHeight="100"
+                                        Margin="0,0,18,18"
+                                        Padding="0"
+                                        BorderThickness="0"
+                                        Background="Transparent"
+                                        Cursor="Hand">
+                                    <Border Background="White"
+                                            CornerRadius="8"
+                                            BorderBrush="#E5E7EB"
+                                            BorderThickness="1"
+                                            Padding="18">
+                                        <StackPanel>
+                                            <DockPanel>
+                                                <TextBlock Text="{Binding Title}"
+                                                           FontSize="19"
+                                                           FontWeight="SemiBold"
+                                                           Foreground="#111827"
+                                                           TextTrimming="CharacterEllipsis" />
+                                                <Border DockPanel.Dock="Right"
+                                                        Background="#ECFDF3"
+                                                        CornerRadius="5"
+                                                        Padding="8,3">
+                                                    <TextBlock Text="{Binding Status}"
+                                                               FontSize="11"
+                                                               Foreground="#027A48"
+                                                               FontWeight="SemiBold" />
+                                                </Border>
+                                            </DockPanel>
+                                            <TextBlock Text="{Binding Description}"
+                                                       Foreground="#667085"
+                                                       TextWrapping="Wrap"
+                                                       MaxHeight="42"
+                                                       Margin="0,8,0,14" />
+                                            <ProgressBar Value="{Binding Progress}"
+                                                         Height="8"
+                                                         Maximum="100"
+                                                         Margin="0,0,0,14" />
+                                            <UniformGrid Columns="3">
+                                                <StackPanel>
+                                                    <TextBlock Text="Progress" Style="{StaticResource MetricLabel}" />
+                                                    <TextBlock Text="{Binding ProgressText}" Style="{StaticResource MetricValue}" />
+                                                </StackPanel>
+                                                <StackPanel>
+                                                    <TextBlock Text="Tasks" Style="{StaticResource MetricLabel}" />
+                                                    <TextBlock Text="{Binding TaskCount}" Style="{StaticResource MetricValue}" />
+                                                </StackPanel>
+                                                <StackPanel>
+                                                    <TextBlock Text="Difficulty" Style="{StaticResource MetricLabel}" />
+                                                    <TextBlock Text="{Binding Difficulty}" Style="{StaticResource MetricValue}" />
+                                                </StackPanel>
+                                            </UniformGrid>
+                                        </StackPanel>
+                                    </Border>
+                                </Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+
+            <Grid x:Name="TasksView"
+                  Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <DockPanel Margin="0,0,0,18">
+                    <Button Content="Back"
+                            Width="86"
+                            Height="34"
+                            DockPanel.Dock="Left"
+                            Click="BackToCourses_Click" />
+                    <StackPanel Margin="16,0,0,0">
+                        <TextBlock x:Name="SelectedCourseTitle"
+                                   Text="Course tasks"
+                                   FontSize="28"
+                                   FontWeight="SemiBold"
+                                   Foreground="#101828" />
+                        <TextBlock x:Name="SelectedCourseSubtitle"
+                                   Text="Tasks overview"
+                                   Foreground="#667085"
+                                   Margin="0,4,0,0" />
+                    </StackPanel>
+                </DockPanel>
+
+                <ScrollViewer Grid.Row="1"
+                              VerticalScrollBarVisibility="Auto">
+                    <ItemsControl x:Name="TaskCards">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Width="300"
+                                        MinHeight="176"
+                                        Margin="0,0,18,18"
+                                        Background="White"
+                                        CornerRadius="8"
+                                        BorderBrush="#E5E7EB"
+                                        BorderThickness="1"
+                                        Padding="18">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Title}"
+                                                   FontSize="18"
+                                                   FontWeight="SemiBold"
+                                                   Foreground="#111827"
+                                                   TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding Description}"
+                                                   Foreground="#667085"
+                                                   TextWrapping="Wrap"
+                                                   MaxHeight="42"
+                                                   Margin="0,8,0,14" />
+                                        <UniformGrid Columns="3">
+                                            <StackPanel>
+                                                <TextBlock Text="Credits" Style="{StaticResource MetricLabel}" />
+                                                <TextBlock Text="{Binding Credits}" Style="{StaticResource MetricValue}" />
+                                            </StackPanel>
+                                            <StackPanel>
+                                                <TextBlock Text="Difficulty" Style="{StaticResource MetricLabel}" />
+                                                <TextBlock Text="{Binding Difficulty}" Style="{StaticResource MetricValue}" />
+                                            </StackPanel>
+                                            <StackPanel>
+                                                <TextBlock Text="Deadline" Style="{StaticResource MetricLabel}" />
+                                                <TextBlock Text="{Binding DeadlineText}"
+                                                           Foreground="#111827"
+                                                           FontWeight="SemiBold"
+                                                           FontSize="14" />
+                                            </StackPanel>
+                                        </UniformGrid>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

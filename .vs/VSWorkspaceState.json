@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WinFormsApp",
-    "\\WinFormsApp\\bin\\Debug",
-    "\\WinFormsApp\\bin\\Debug\\net10.0-windows",
-    "\\WinFormsApp\\bin\\Debug\\net10.0-windows\\data"
+    "\\WpfApp"
   ],
-  "SelectedNode": "\\DotNet_Lab01_Core",
+  "SelectedNode": "\\WpfApp\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

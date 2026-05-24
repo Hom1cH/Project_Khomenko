@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj",
+      "projectPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj",
       "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-      "outputPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\obj\\",
+      "outputPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",
