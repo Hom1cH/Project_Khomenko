@@ -1,9 +1,7 @@
 <Solution>
+  <Project Path="Core.Tests/Core.Tests.csproj" />
   <Project Path="DotNet_Lab01_Core/Core.csproj" />
-  <Project Path="old lab/DotNet_Lab01_ConsoleUI/ConsoleUI.csproj" />
-  <Project Path="old lab/DotNet_Lab02_ConsoleUI/DotNet_Lab02_ConsoleUI.csproj" />
-  <Project Path="old lab/DotNet_Lab_03_ConsoleUI/DotNet_Lab_03_ConsoleUI.csproj" />
-  <Project Path="old lab/DotNet_Lab_4_ConsoleUI/DotNet_Lab_4_ConsoleUI.csproj" />
   <Project Path="test/test.csproj" />
   <Project Path="WinFormsApp/WinFormsApp.csproj" Id="676f6527-623c-4dde-aab5-ae464884d5c1" />
+  <Project Path="WpfApp/WpfApp.csproj" />
 </Solution>

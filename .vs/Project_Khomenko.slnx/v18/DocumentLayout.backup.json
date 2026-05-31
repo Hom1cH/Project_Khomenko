@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\education\\.NET\\Project_Khomenko\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{676F6527-623C-4DDE-AAB5-AE464884D5C1}|WinFormsApp\\WinFormsApp.csproj|d:\\education\\.net\\project_khomenko\\winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{676F6527-623C-4DDE-AAB5-AE464884D5C1}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{676F6527-623C-4DDE-AAB5-AE464884D5C1}|WinFormsApp\\WinFormsApp.csproj|d:\\education\\.net\\project_khomenko\\winformsapp\\addcourseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{676F6527-623C-4DDE-AAB5-AE464884D5C1}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\addcourseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{676F6527-623C-4DDE-AAB5-AE464884D5C1}|WinFormsApp\\WinFormsApp.csproj|d:\\education\\.net\\project_khomenko\\winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{676F6527-623C-4DDE-AAB5-AE464884D5C1}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{676F6527-623C-4DDE-AAB5-AE464884D5C1}|WinFormsApp\\WinFormsApp.csproj|d:\\education\\.net\\project_khomenko\\winformsapp\\addcourseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{676F6527-623C-4DDE-AAB5-AE464884D5C1}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\addcourseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|d:\\education\\.net\\project_khomenko\\dotnet_lab01_core\\educationunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|solutionrelative:dotnet_lab01_core\\educationunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +25,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 164,
           "SelectedChildIndex": 7,
           "Children": [
             {
@@ -51,52 +51,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AddCourseForm.cs",
-              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\AddCourseForm.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\AddCourseForm.cs",
-              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\AddCourseForm.cs",
-              "RelativeToolTip": "WinFormsApp\\AddCourseForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAA/AAAAAAAAAA==",
+              "Title": "EducationUnit.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\EducationUnit.cs",
+              "RelativeDocumentMoniker": "DotNet_Lab01_Core\\EducationUnit.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\EducationUnit.cs",
+              "RelativeToolTip": "DotNet_Lab01_Core\\EducationUnit.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAwKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T17:33:49.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-30T21:05:14.943Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\Form1.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\Form1.cs",
-              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\Form1.cs",
-              "RelativeToolTip": "WinFormsApp\\Form1.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAIwOEAAAAyAAAAAAAAAA==",
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\MainViewModel.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainViewModel.cs",
+              "RelativeToolTip": "WpfApp\\MainViewModel.cs",
+              "ViewState": "AgIAAM4BAAAAAAAAAAAmwPMBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T17:33:43.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-30T22:37:27.259Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\Form1.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\Form1.cs",
-              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "WinFormsApp\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T18:33:17.723Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-05-30T22:15:53.766Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AddCourseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\AddCourseForm.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\AddCourseForm.cs",
-              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\AddCourseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "WinFormsApp\\AddCourseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T18:23:18.346Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-30T20:29:56.631Z"
             }
           ]
         }

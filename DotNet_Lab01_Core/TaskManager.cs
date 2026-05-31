@@ -114,8 +114,8 @@ public class TaskManager : IEnumerable<ParacTask>
         if (task.CourseId.HasValue)
         {
             Course? course = _courseManager.FindById(task.CourseId.Value);
-            course?.RemoveTask(taskId);
             Log($"RemoveTask removed task from courseId={task.CourseId.Value}");
+            course?.RemoveTask(taskId);
         }
 
         _taskDictionary.Remove(taskId);
@@ -302,7 +302,6 @@ public class TaskManager : IEnumerable<ParacTask>
         }
 
         task.Complete();
-        task.IsCompleted = true;
         SaveChanges();
         Log($"CompleteTask completed taskId={taskId}");
         return true;
@@ -357,6 +356,52 @@ public class TaskManager : IEnumerable<ParacTask>
             return false;
 
         task.RemoveTag(tag);
+        SaveChanges();
+        return true;
+    }
+
+    public bool UpdateTaskStatus(int taskId, UnitStatus status)
+    {
+        Log($"UpdateTaskStatus start taskId={taskId} status={status}");
+        ParacTask? task = FindById(taskId);
+
+        if (task == null)
+        {
+            Log($"UpdateTaskStatus failed not found taskId={taskId}");
+            return false;
+        }
+
+        task.Status = status;
+
+        if (status == UnitStatus.Completed)
+        {
+            task.Progress = 100;
+            task.EndedAt = DateTime.Now;
+        }
+        else if (status == UnitStatus.InProgress || status == UnitStatus.Paused)
+        {
+            task.Progress = 1;
+            task.EndedAt = null;
+        }
+        else
+        {
+            task.Progress = 0;
+            task.EndedAt = null;
+        }
+
+        SaveChanges();
+        Log($"UpdateTaskStatus completed taskId={taskId} status={status}");
+        return true;
+    }
+
+    public bool UpdateTaskTags(int taskId, IEnumerable<string> tags)
+    {
+        ParacTask? task = FindById(taskId);
+
+        if (task == null)
+            return false;
+
+        task.SetTags(tags);
         SaveChanges();
         return true;
     }

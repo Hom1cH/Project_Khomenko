@@ -370,6 +370,52 @@ public class CourseManager : IEnumerable<Course>
         return true;
     }
 
+    public bool UpdateCourseStatus(int courseId, UnitStatus status)
+    {
+        Log($"UpdateCourseStatus start courseId={courseId} status={status}");
+        Course? course = FindById(courseId);
+
+        if (course == null)
+        {
+            Log($"UpdateCourseStatus failed not found courseId={courseId}");
+            return false;
+        }
+
+        course.Status = status;
+
+        if (status == UnitStatus.Completed)
+        {
+            course.Progress = 100;
+            course.EndedAt = DateTime.Now;
+        }
+        else if(status == UnitStatus.InProgress || status == UnitStatus.Paused)
+        {
+            course.Progress = 1;
+            course.EndedAt = null;
+        }
+        else
+        {
+            course.Progress = 0;
+            course.EndedAt = null;
+        }
+
+        SaveChanges();
+        Log($"UpdateCourseStatus completed courseId={courseId} status={status}");
+        return true;
+    }
+
+    public bool UpdateCourseTags(int courseId, IEnumerable<string> tags)
+    {
+        Course? course = FindById(courseId);
+
+        if (course == null)
+            return false;
+
+        course.SetTags(tags);
+        SaveChanges();
+        return true;
+    }
+
     public void ShowTasksByCourseName(string courseName)
     {
         Course? course = FindByName(courseName);

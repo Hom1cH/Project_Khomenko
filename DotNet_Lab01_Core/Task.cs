@@ -15,7 +15,7 @@ namespace DotNet_Lab01_Core
             set { if (value != null) Description = value; }
         }
 
-        public bool IsCompleted { get; set; }
+        
         public int? CourseId { get; set; }
 
         public int Credits
@@ -31,7 +31,6 @@ namespace DotNet_Lab01_Core
         {
             if (credits > 0) _credits = credits;
             Difficulty = difficulty;
-            IsCompleted = false;
             Start();
         }
 
@@ -60,14 +59,12 @@ namespace DotNet_Lab01_Core
 
         public double ComputeWorkload()
         {
-            return Math.Round(
-                Difficulty * Credits / (Deadline - CreatedAt).TotalDays
-            );
+            return WorkloadCalculator.CalculateImportance(Credits, Difficulty, CreatedAt, Deadline);
         }
 
         public override string ToString()
         {
-            return $"Task name: {TaskName}\nCourse ID: {CourseId?.ToString() ?? "None"}\nDeadline: {Deadline}\nDifficulty: {Difficulty}\nCredits: {Credits}\nWorkload: {ComputeWorkload()}\nDescription: {TaskDescription}\nIs Completed: {(IsCompleted ? "Yes" : "No")}\n";
+            return $"Task name: {TaskName}\nCourse ID: {CourseId?.ToString() ?? "None"}\nDeadline: {Deadline}\nDifficulty: {Difficulty}\nCredits: {Credits}\nWorkload: {ComputeWorkload()}\nDescription: {TaskDescription}\n";
         }
 
     }

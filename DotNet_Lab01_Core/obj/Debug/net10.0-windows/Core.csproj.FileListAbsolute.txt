@@ -1,0 +1,15 @@
+D:\education\.NET\Project_Khomenko\WpfApp\bin\CheckBuild\Core.deps.json
+D:\education\.NET\Project_Khomenko\WpfApp\bin\CheckBuild\Core.dll
+D:\education\.NET\Project_Khomenko\WpfApp\bin\CheckBuild\Core.pdb
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\Core.AssemblyInfoInputs.cache
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\Core.AssemblyInfo.cs
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\Core.csproj.CoreCompileInputs.cache
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\Core.sourcelink.json
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\Core.dll
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\refint\Core.dll
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\Core.pdb
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\obj\Debug\net10.0-windows\ref\Core.dll
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\bin\Debug\net10.0-windows\Core.deps.json
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\bin\Debug\net10.0-windows\Core.dll
+D:\education\.NET\Project_Khomenko\DotNet_Lab01_Core\bin\Debug\net10.0-windows\Core.pdb

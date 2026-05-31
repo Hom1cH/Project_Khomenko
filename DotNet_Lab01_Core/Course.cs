@@ -23,7 +23,6 @@ namespace DotNet_Lab01_Core
         }
 
         public int ReceivedCredits { get; set; }
-        public bool IsCompleted { get; set; }
         public List<ParacTask> Tasks { get; set; } = new();
 
         public Course() : base(string.Empty, string.Empty, DateTime.Now) { }
@@ -34,7 +33,6 @@ namespace DotNet_Lab01_Core
             if (credits > 0) _credits = credits;
             Difficulty = 50;
             ReceivedCredits = 0;
-            IsCompleted = false;
         }
 
         // Compatibility constructor: accepts explicit start date and end date (used by older sample projects)
@@ -46,7 +44,6 @@ namespace DotNet_Lab01_Core
             Deadline = endDate;
             Difficulty = 50;
             ReceivedCredits = 0;
-            IsCompleted = false;
         }
 
         public Course(string coursename,string description, int credits, DateTime enddate)
@@ -56,7 +53,6 @@ namespace DotNet_Lab01_Core
             Description = description;
             Difficulty = 50;
             ReceivedCredits = 0;
-            IsCompleted = false;
         }
 
         // Compatibility method for older code samples
@@ -74,7 +70,6 @@ namespace DotNet_Lab01_Core
 
         public override void Complete()
         {
-            IsCompleted = true;
             ReceivedCredits = Credits;
             MarkCompleted();
             Console.WriteLine($"Course '{CourseName}' completed.");
@@ -95,17 +90,12 @@ namespace DotNet_Lab01_Core
         
         public double ComputeWorkload()
         {
-            int days = (Deadline - CreatedAt).Days;
-
-            if (days < 0)
-                days = 0;
-
-            return Math.Round(Credits * Difficulty * days / 360.0);
+            return WorkloadCalculator.CalculateImportance(Credits, Difficulty, CreatedAt, Deadline);
         }
 
         public override string ToString()
         {
-            return $"ID: {Id}\nCourse name: {CourseName}\nCredits: {_credits}\nDifficulty: {Difficulty}\nWorkload: {ComputeWorkload()}\nStart date: {CreatedAt}\nDeadline: {Deadline}\nTasks count: {Tasks.Count}\nIsCompleted: {(IsCompleted ? "Yes" : "No")}\n";
+            return $"ID: {Id}\nCourse name: {CourseName}\nCredits: {_credits}\nDifficulty: {Difficulty}\nWorkload: {ComputeWorkload()}\nStart date: {CreatedAt}\nDeadline: {Deadline}\nTasks count: {Tasks.Count}\n";
         }
 
         public void UpdateReceivedCredits(int value){

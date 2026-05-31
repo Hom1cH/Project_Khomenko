@@ -226,7 +226,7 @@ namespace WinFormsApp
                 return;
             }
 
-            CourseXmlExporter.ExportActiveCourses(_courseManager.GetCourses(), filePath, _logger);
+            CourseXmlExporter.ExportCurrentCourses(_courseManager.GetCourses(), filePath, _logger);
         }
 
         private void label1_Click(object sender, EventArgs e)
