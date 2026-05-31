@@ -44,3 +44,9 @@ C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WinFormsApp\obj\Debug\net1
 C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WinFormsApp\obj\Debug\net10.0-windows\WinFormsApp.pdb
 C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WinFormsApp\obj\Debug\net10.0-windows\WinFormsApp.genruntimeconfig.cache
 C:\Users\bogda\.codex\worktrees\50cb\Project_Khomenko\WinFormsApp\obj\Debug\net10.0-windows\ref\WinFormsApp.dll
+D:\education\.NET\Project_Khomenko\WinFormsApp\bin\CheckBuild\WinFormsApp.exe
+D:\education\.NET\Project_Khomenko\WinFormsApp\bin\CheckBuild\WinFormsApp.deps.json
+D:\education\.NET\Project_Khomenko\WinFormsApp\bin\CheckBuild\WinFormsApp.runtimeconfig.json
+D:\education\.NET\Project_Khomenko\WinFormsApp\bin\CheckBuild\WinFormsApp.dll
+D:\education\.NET\Project_Khomenko\WinFormsApp\bin\CheckBuild\WinFormsApp.pdb
+D:\education\.NET\Project_Khomenko\WinFormsApp\bin\CheckBuild\Core.pdb

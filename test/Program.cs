@@ -21,7 +21,7 @@ class Program
 
         CourseController controller = new CourseController(manager, taskManager, logger);
         
-        CourseXmlExporter.ExportActiveCourses(manager.GetCourses(), filePathXML, logger);
+        CourseXmlExporter.ExportCurrentCourses(manager.GetCourses(), filePathXML, logger);
 
 
 

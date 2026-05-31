@@ -4,16 +4,16 @@ namespace DotNet_Lab01_Core;
 
 public static class CourseXmlExporter
 {
-    public static void ExportActiveCourses(IEnumerable<Course> courses, string filePath, ResourceManager? logger = null)
+    public static void ExportCurrentCourses(IEnumerable<Course> courses, string filePath, ResourceManager? logger = null)
     {
         if (string.IsNullOrWhiteSpace(filePath))
         {
-            logger?.WriteLog("CourseXmlExporter: ExportActiveCourses failed because file path is empty.");
+            logger?.WriteLog("CourseXmlExporter: ExportCurrentCourses failed because file path is empty.");
             Console.WriteLine("Cannot export courses to XML: file path is empty.");
             return;
         }
 
-        logger?.WriteLog($"CourseXmlExporter: ExportActiveCourses start filePath={filePath}");
+        logger?.WriteLog($"CourseXmlExporter: ExportCurrentCourses start filePath={filePath}");
 
         try
         {
@@ -22,7 +22,7 @@ public static class CourseXmlExporter
             XDocument document = new XDocument(
                 new XElement("Courses",
                     courseList
-                        .Where(course => course.IsActive)
+                        .Where(course => course.Status != UnitStatus.Completed && course.Status != UnitStatus.Archived)
                         .Select(course =>
                             new XElement("Course",
                                 new XAttribute("Id", course.Id),
@@ -47,7 +47,7 @@ public static class CourseXmlExporter
             using FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write);
             document.Save(stream);
 
-            logger?.WriteLog($"CourseXmlExporter: ExportActiveCourses completed filePath={filePath}");
+            logger?.WriteLog($"CourseXmlExporter: ExportCurrentCourses completed filePath={filePath}");
         }
         catch (UnauthorizedAccessException exception)
         {

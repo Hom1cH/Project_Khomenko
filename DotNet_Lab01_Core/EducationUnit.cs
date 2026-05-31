@@ -14,7 +14,6 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
     public DateTime CreatedAt { get; set; }
     public DateTime? EndedAt { get;  set; }
     public DateTime Deadline { get; set; }
-    public bool IsActive { get; set; }
     public UnitStatus Status { get; set; }
     public int Progress { get; set; } // 0 - 100
     public List<string> Tags { get; set; } = new();
@@ -35,7 +34,6 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
         Deadline = deadline;
 
         CreatedAt = DateTime.Now;
-        IsActive = true;
         Status = UnitStatus.NotStarted;
         Progress = 0;
     }
@@ -82,6 +80,15 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
         Tags.Remove(tag);
     }
 
+    public void SetTags(IEnumerable<string> tags)
+    {
+        Tags = tags
+            .Where(tag => !string.IsNullOrWhiteSpace(tag))
+            .Select(tag => tag.Trim())
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+    }
+
     // ===== VIRTUAL METHODS =====
 
     public virtual void ShowInfo()
@@ -95,20 +102,19 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
             $"Difficulty: {Difficulty}\n" +
             $"Tags: {(Tags.Any() ? string.Join(", ", Tags) : "None")}\n" +
             $"Created at: {CreatedAt}\n" +
-            $"Deadline: {Deadline}\n" +
-            $"Active: {(IsActive ? "Yes" : "No")}"
+            $"Deadline: {Deadline}"
         );
     }
 
     public virtual void Activate()
     {
-        IsActive = true;
+        Status = Progress == 0 ? UnitStatus.NotStarted : UnitStatus.InProgress;
         Console.WriteLine($"{Title} activated.");
     }
 
     public virtual void Deactivate()
     {
-        IsActive = false;
+        Status = UnitStatus.Paused;
         Console.WriteLine($"{Title} deactivated.");
     }
 
@@ -151,8 +157,7 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
             $"[{Id}] {Title} | " +
             $"Status: {Status} | " +
             $"Progress: {Progress}% | " +
-            $"Created: {CreatedAt:d} | " +
-            $"Active: {(IsActive ? "Yes" : "No")}";
+            $"Created: {CreatedAt:d}";
     }
 }
 
@@ -160,7 +165,7 @@ public enum UnitStatus
 {
     NotStarted,
     InProgress,
-    Completed,
     Paused,
+    Completed,
     Archived
 }

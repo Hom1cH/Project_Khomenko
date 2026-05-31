@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj": {}
+    "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
+    "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj",
+        "projectUniqueName": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj",
+        "projectPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj",
         "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\obj\\",
+        "outputPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -341,14 +341,14 @@
         }
       }
     },
-    "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj": {
+    "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj",
+        "projectUniqueName": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj",
         "projectName": "WinFormsApp",
-        "projectPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj",
+        "projectPath": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\WinFormsApp.csproj",
         "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\WinFormsApp\\obj\\",
+        "outputPath": "D:\\education\\.NET\\Project_Khomenko\\WinFormsApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -366,8 +366,8 @@
             "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj"
+              "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
+                "projectPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj"
               }
             }
           }

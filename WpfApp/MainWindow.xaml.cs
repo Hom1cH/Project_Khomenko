@@ -1,155 +1,348 @@
-using System.IO;
 using System.Windows;
-using System.ComponentModel;
+using System.Windows.Controls;
+using System.Windows.Input;
 using DotNet_Lab01_Core;
+using Button = System.Windows.Controls.Button;
+using ContextMenu = System.Windows.Controls.ContextMenu;
+using MenuItem = System.Windows.Controls.MenuItem;
+using MessageBox = System.Windows.MessageBox;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 
 namespace WpfApp;
 
 public partial class MainWindow : Window
 {
-    private readonly string _dataDirectory;
-    private readonly string _jsonFilePath;
-    private readonly string _logFilePath;
-    private readonly ResourceManager _logger;
-    private readonly CourseManager _courseManager;
-    private readonly TaskManager _taskManager;
-    private readonly CourseController _courseController;
+    private readonly Reminder _reminder;
+    private readonly System.Windows.Threading.DispatcherTimer _deadlineTimer;
+    private readonly MainViewModel _viewModel;
 
     public MainWindow()
     {
         InitializeComponent();
+        _viewModel = (MainViewModel)DataContext;
+        _viewModel.AddObjectRequested += AddObject;
+        _viewModel.ImportRequested += ImportCourses;
+        _viewModel.CoursesSaved += ShowSaveMessage;
+        _viewModel.BackToCoursesRequested += ShowCoursesPanel;
+        _viewModel.CurrentViewChanged += ShowCurrentPanel;
+        _viewModel.ConfirmDeleteCourse = ConfirmDeleteCourse;
+        _viewModel.ConfirmDeleteTask = ConfirmDeleteTask;
 
-        _dataDirectory = Path.Combine(AppContext.BaseDirectory, "data");
-        Directory.CreateDirectory(_dataDirectory);
+        _reminder = new Reminder(new WindowsReminderNotifier());
+        _deadlineTimer = new System.Windows.Threading.DispatcherTimer
+        {
+            Interval = TimeSpan.FromMinutes(30)
+        };
+        _deadlineTimer.Tick += (_, _) => CheckDeadlineReminders();
 
-        _jsonFilePath = Path.Combine(_dataDirectory, "courses.json");
-        _logFilePath = Path.Combine(_dataDirectory, "logs.log");
-
-        _logger = new ResourceManager(_logFilePath);
-        _courseManager = new CourseManager(_logger);
-        _taskManager = new TaskManager(_courseManager, _logger);
-        _courseController = new CourseController(_courseManager, _taskManager, _logger);
-
-        LoadData();
-        RenderCourses();
+        _viewModel.LoadData();
+        ShowCourses();
+        CheckDeadlineReminders();
+        _deadlineTimer.Start();
     }
 
     protected override void OnClosed(EventArgs e)
     {
-        _logger.Dispose();
+        _deadlineTimer.Stop();
+        _viewModel.AddObjectRequested -= AddObject;
+        _viewModel.ImportRequested -= ImportCourses;
+        _viewModel.CoursesSaved -= ShowSaveMessage;
+        _viewModel.BackToCoursesRequested -= ShowCoursesPanel;
+        _viewModel.CurrentViewChanged -= ShowCurrentPanel;
+        _viewModel.ConfirmDeleteCourse = null;
+        _viewModel.ConfirmDeleteTask = null;
+        _reminder.Dispose();
+        _viewModel.Dispose();
         base.OnClosed(e);
     }
 
-    private void LoadData()
+    private void ShowCourses()
     {
-        CourseJsonStorage.LoadCourses(_jsonFilePath, _courseManager, _taskManager, _logger);
-        _courseManager.EnableJsonAutoSave(_jsonFilePath);
-
-        if (_courseManager.GetCourses().Count > 0)
-            return;
-
-        Course csharp = _courseController.CreateCourse("C# Fundamentals", "Base syntax, classes, LINQ and files.", 5, 55, DateTime.Now.AddMonths(3));
-        _courseController.CreateTaskForCourse(csharp.Id, "Console CRUD", DateTime.Now.AddDays(9), 45, 2, "Create a console manager for courses.");
-        _courseController.CreateTaskForCourse(csharp.Id, "JSON persistence", DateTime.Now.AddDays(16), 70, 3, "Save and load data with JsonSerializer.");
-
-        Course oop = _courseController.CreateCourse("Object-Oriented Design", "Inheritance, interfaces and composition.", 4, 68, DateTime.Now.AddMonths(4));
-        _courseController.CreateTaskForCourse(oop.Id, "Polymorphism demo", DateTime.Now.AddDays(12), 65, 2, "Use a common interface for several models.");
-        _courseController.CreateTaskForCourse(oop.Id, "Course-task relation", DateTime.Now.AddDays(20), 75, 3, "Bind tasks to courses and cascade delete.");
-
-        Course ui = _courseController.CreateCourse("Desktop UI", "WinForms and WPF interfaces for the model.", 3, 60, DateTime.Now.AddMonths(2));
-        _courseController.CreateTaskForCourse(ui.Id, "WinForms grid", DateTime.Now.AddDays(7), 50, 2, "Display courses in a DataGridView.");
-    }
-
-    private void RenderCourses()
-    {
-        List<Course> courses = _courseManager.GetCourses();
-        CourseCards.ItemsSource = courses.Select(course => new CourseCardViewModel(course)).ToList();
-        UpdateSummary(courses);
-
-        HeaderSubtitle.Text = "Courses overview";
-        HeaderCounter.Text = $"{courses.Count} courses";
+        _viewModel.ShowCourses();
         CoursesView.Visibility = Visibility.Visible;
         TasksView.Visibility = Visibility.Collapsed;
+        ShowSummarySidebar();
     }
 
-    private void RenderTasks(Course course)
+    private void ShowTasks(Course course)
     {
-        TaskCards.ItemsSource = course.Tasks.Select(task => new TaskCardViewModel(task)).ToList();
-        SelectedCourseTitle.Text = course.CourseName;
-        SelectedCourseSubtitle.Text = $"{course.Tasks.Count} tasks attached to this course";
-        HeaderSubtitle.Text = "Task details";
-        HeaderCounter.Text = $"{course.Tasks.Count} tasks";
+        _viewModel.ShowTasks(course);
         CoursesView.Visibility = Visibility.Collapsed;
         TasksView.Visibility = Visibility.Visible;
+        ShowCourseSidebar(course);
     }
 
-    private void UpdateSummary(List<Course> courses)
+    private void ShowSummarySidebar()
     {
-        int totalTasks = courses.Sum(course => course.Tasks.Count);
-        int activeCourses = courses.Count(course => course.IsActive);
-        double averageProgress = courses.Count == 0 ? 0 : courses.Average(course => course.Progress);
+        SummaryPanel.Visibility = Visibility.Visible;
+        SelectedCoursePanel.Visibility = Visibility.Collapsed;
+    }
 
-        TotalCoursesText.Text = courses.Count.ToString();
-        TotalTasksText.Text = totalTasks.ToString();
-        ActiveCoursesText.Text = activeCourses.ToString();
-        AverageProgressText.Text = $"{Math.Round(averageProgress)}%";
+    private void ShowCourseSidebar(Course course)
+    {
+        SummaryPanel.Visibility = Visibility.Collapsed;
+        SelectedCoursePanel.Visibility = Visibility.Visible;
+
+        _viewModel.ShowSelectedCourse(course);
     }
 
     private void CourseCard_Click(object sender, RoutedEventArgs e)
     {
-        if (sender is FrameworkElement { Tag: CourseCardViewModel viewModel })
-            RenderTasks(viewModel.Course);
+        if (sender is FrameworkElement { Tag: WpfApp.CourseCardViewModel viewModel })
+            ShowTasks(viewModel.Course);
     }
 
-    private void BackToCourses_Click(object sender, RoutedEventArgs e)
+    private void ImportCourses()
     {
-        RenderCourses();
+        OpenFileDialog dialog = new OpenFileDialog
+        {
+            Title = "Import courses from JSON",
+            Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*",
+            InitialDirectory = _viewModel.DataDirectory
+        };
+
+        if (dialog.ShowDialog(this) != true)
+            return;
+
+        _viewModel.ImportCoursesAndRefresh(dialog.FileName);
+        ShowCoursesPanel();
+        MessageBox.Show($"Courses imported from:\n{dialog.FileName}", "Import", MessageBoxButton.OK, MessageBoxImage.Information);
     }
 
-    private sealed class CourseCardViewModel : INotifyPropertyChanged
+    private void SettingsButton_Click(object sender, RoutedEventArgs e)
     {
-        public CourseCardViewModel(Course course)
-        {
-            Course = course;
-        }
-
-        public Course Course { get; }
-        public string Title => Course.CourseName;
-        public string Description => Course.CourseDescription ?? "";
-        public int Progress
-        {
-            get => Course.Progress;
-            set
-            {
-                if (Course.Progress == value) return;
-                Course.Progress = value;
-                OnPropertyChanged(nameof(Progress));
-                OnPropertyChanged(nameof(ProgressText));
-            }
-        }
-        public string ProgressText => $"{Course.Progress}%";
-        public int TaskCount => Course.Tasks.Count;
-        public int Difficulty => Course.Difficulty;
-        public int Credits => Course.Credits;
-        public string Status => Course.Status.ToString();
-        public double Workload => Course.ComputeWorkload();
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        MessageBox.Show($"\t\tComing soon\nCurrent JSON file:\n{_viewModel.JsonFilePath}", "Settings", MessageBoxButton.OK, MessageBoxImage.Information);
     }
 
-    private sealed class TaskCardViewModel
+    private void AddObject()
     {
-        public TaskCardViewModel(ParacTask task)
+        if (TasksView.Visibility == Visibility.Visible && _viewModel.SelectedCourse != null)
         {
-            Task = task;
+            AddTaskToSelectedCourse();
+            return;
         }
 
-        public ParacTask Task { get; }
-        public string Title => Task.TaskName;
-        public string Description => Task.TaskDescription ?? "";
-        public int Difficulty => Task.Difficulty;
-        public int Credits => Task.Credits;
-        public string DeadlineText => Task.Deadline.ToString("dd.MM.yyyy");
+        AddCourse();
+    }
+
+    private void AddCourse()
+    {
+        CourseDialog dialog = new CourseDialog
+        {
+            Owner = this
+        };
+
+        if (dialog.ShowDialog() != true)
+            return;
+
+        _viewModel.CreateCourse(
+            dialog.CourseTitle,
+            dialog.CourseDescription,
+            dialog.Credits,
+            dialog.Difficulty,
+            dialog.Deadline,
+            dialog.Progress,
+            dialog.Tags);
+
+        ShowCourses();
+    }
+
+    private void AddTaskToSelectedCourse()
+    {
+        if (_viewModel.SelectedCourse == null)
+            return;
+
+        TaskDialog dialog = new TaskDialog
+        {
+            Owner = this
+        };
+
+        if (dialog.ShowDialog() != true)
+            return;
+
+        _viewModel.CreateTaskForSelectedCourse(
+            dialog.TaskTitle,
+            dialog.Deadline,
+            dialog.Difficulty,
+            dialog.Credits,
+            dialog.TaskDescription,
+            dialog.Progress,
+            dialog.Tags);
+
+        ShowCourseViewIfSelected();
+        CheckDeadlineReminders();
+    }
+
+    private void CourseCardSettings_Click(object sender, RoutedEventArgs e)
+    {
+        e.Handled = true;
+
+        if (sender is Button button && button.ContextMenu != null)
+        {
+            button.ContextMenu.PlacementTarget = button;
+            button.ContextMenu.IsOpen = true;
+        }
+    }
+
+    private void TaskCardSettings_Click(object sender, RoutedEventArgs e)
+    {
+        e.Handled = true;
+
+        if (sender is Button button && button.ContextMenu != null)
+        {
+            button.ContextMenu.PlacementTarget = button;
+            button.ContextMenu.IsOpen = true;
+        }
+    }
+
+    private void EditCourseMenuItem_Click(object sender, RoutedEventArgs e)
+    {
+        if (sender is not MenuItem { Parent: ContextMenu { PlacementTarget: Button { Tag: WpfApp.CourseCardViewModel viewModel } } })
+            return;
+
+        CourseDialog dialog = new CourseDialog(viewModel.Course)
+        {
+            Owner = this
+        };
+
+        if (dialog.ShowDialog() != true)
+            return;
+
+        _viewModel.UpdateCourse(
+            viewModel.Course,
+            dialog.CourseTitle,
+            dialog.CourseDescription,
+            dialog.Credits,
+            dialog.Difficulty,
+            dialog.Progress,
+            dialog.Deadline,
+            dialog.Tags);
+
+        ShowCourses();
+        CheckDeadlineReminders();
+    }
+
+    private void EditTaskMenuItem_Click(object sender, RoutedEventArgs e)
+    {
+        if (sender is not MenuItem { Parent: ContextMenu { PlacementTarget: Button { Tag: WpfApp.TaskCardViewModel viewModel } } })
+            return;
+
+        TaskDialog dialog = new TaskDialog(viewModel.Task)
+        {
+            Owner = this
+        };
+
+        if (dialog.ShowDialog() != true)
+            return;
+
+        Course? course = _viewModel.UpdateTask(
+            viewModel.Task,
+            dialog.TaskTitle,
+            dialog.TaskDescription,
+            dialog.Credits,
+            dialog.Difficulty,
+            dialog.Progress,
+            dialog.Deadline,
+            dialog.Tags);
+
+        ShowCurrentView(course);
+
+        CheckDeadlineReminders();
+    }
+
+    private bool ConfirmDeleteCourse(CourseCardViewModel viewModel)
+    {
+        MessageBoxResult result = MessageBox.Show(
+            $"Delete course \"{viewModel.Title}\"?",
+            "Delete",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Question);
+
+        return result == MessageBoxResult.Yes;
+    }
+
+    private bool ConfirmDeleteTask(TaskCardViewModel viewModel)
+    {
+        MessageBoxResult result = MessageBox.Show(
+            $"Delete task \"{viewModel.Title}\"?",
+            "Delete",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Question);
+
+        return result == MessageBoxResult.Yes;
+    }
+
+    private void CheckDeadlineReminders()
+    {
+        _reminder.CheckDeadlines(_viewModel.CourseManager.GetCourses());
+    }
+
+    private void SortButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (sender is Button button && button.ContextMenu != null)
+        {
+            button.ContextMenu.PlacementTarget = button;
+            button.ContextMenu.IsOpen = true;
+        }
+    }
+
+    private void Status_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        e.Handled = true;
+
+        if (e.ClickCount != 2)
+            return;
+
+        if (sender is TextBlock { ContextMenu: not null } statusText)
+        {
+            statusText.ContextMenu.PlacementTarget = statusText;
+            statusText.ContextMenu.IsOpen = true;
+        }
+    }
+
+    private void ShowCurrentView(Course? course)
+    {
+        if (course != null)
+            ShowTasks(course);
+        else
+            ShowCourses();
+    }
+
+    private void ShowCurrentPanel()
+    {
+        if (_viewModel.SelectedCourse != null)
+            ShowTasksPanel(_viewModel.SelectedCourse);
+        else
+            ShowCoursesPanel();
+
+        CheckDeadlineReminders();
+    }
+
+    private void ShowCoursesPanel()
+    {
+        CoursesView.Visibility = Visibility.Visible;
+        TasksView.Visibility = Visibility.Collapsed;
+        ShowSummarySidebar();
+        CheckDeadlineReminders();
+    }
+
+    private void ShowTasksPanel(Course course)
+    {
+        CoursesView.Visibility = Visibility.Collapsed;
+        TasksView.Visibility = Visibility.Visible;
+        ShowCourseSidebar(course);
+    }
+
+    private void ShowSaveMessage()
+    {
+        MessageBox.Show($"\t\tCourses saved.\nCurrent JSON file:\n{_viewModel.JsonFilePath}", "Save", MessageBoxButton.OK, MessageBoxImage.Information);
+    }
+
+    private void ShowCourseViewIfSelected()
+    {
+        if (_viewModel.SelectedCourse != null)
+            ShowTasks(_viewModel.SelectedCourse);
+        else
+            ShowCourses();
     }
 }

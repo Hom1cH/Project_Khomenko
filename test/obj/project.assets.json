@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\test\\test.csproj",
+      "projectUniqueName": "D:\\education\\.NET\\Project_Khomenko\\test\\test.csproj",
       "projectName": "test",
-      "projectPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\test\\test.csproj",
+      "projectPath": "D:\\education\\.NET\\Project_Khomenko\\test\\test.csproj",
       "packagesPath": "C:\\Users\\bogda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\test\\obj\\",
+      "outputPath": "D:\\education\\.NET\\Project_Khomenko\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bogda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,8 +54,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\bogda\\.codex\\worktrees\\50cb\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj"
+            "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj": {
+              "projectPath": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Core.csproj"
             }
           }
         }
