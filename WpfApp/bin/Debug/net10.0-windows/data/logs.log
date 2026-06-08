@@ -1,0 +1,954 @@
+[2026-06-08 05:23:12] Logger started.
+[2026-06-08 05:23:12] CourseManager: CourseManager initialized.
+[2026-06-08 05:23:12] TaskManager: TaskManager initialized.
+[2026-06-08 05:23:12] CourseController: CourseController initialized.
+[2026-06-08 05:23:13] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:23:13] CourseJsonStorage: LoadCourses file not found filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:23:13] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 05:23:13] CourseManager: LoadCoursesFromStorage completed count=0
+[2026-06-08 05:23:13] TaskManager: LoadTasksFromStorage start count=0
+[2026-06-08 05:23:13] TaskManager: LoadTasksFromStorage completed count=0
+[2026-06-08 05:23:13] CourseJsonStorage: LoadCourses load completed with 0 tasks from json.
+[2026-06-08 05:23:13] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:23:22] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:23:22] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 05:23:22] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 05:23:22] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 05:23:22] TaskManager: LoadTasksFromStorage start count=2
+[2026-06-08 05:23:22] TaskManager: LoadTasksFromStorage completed count=2
+[2026-06-08 05:23:22] CourseJsonStorage: LoadCourses load completed with 2 tasks from json.
+[2026-06-08 05:23:22] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:23:31] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:23:33] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:23:35] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:23:37] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:23:39] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:28:49] Logger started.
+[2026-06-08 05:28:49] CourseManager: CourseManager initialized.
+[2026-06-08 05:28:49] TaskManager: TaskManager initialized.
+[2026-06-08 05:28:49] CourseController: CourseController initialized.
+[2026-06-08 05:28:49] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:28:49] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 05:28:49] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 05:28:49] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 05:28:49] TaskManager: LoadTasksFromStorage start count=2
+[2026-06-08 05:28:49] TaskManager: LoadTasksFromStorage completed count=2
+[2026-06-08 05:28:49] CourseJsonStorage: LoadCourses load completed with 2 tasks from json.
+[2026-06-08 05:28:49] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:29:05] Logger stopped.
+[2026-06-08 05:30:53] Logger started.
+[2026-06-08 05:30:53] CourseManager: CourseManager initialized.
+[2026-06-08 05:30:53] TaskManager: TaskManager initialized.
+[2026-06-08 05:30:53] CourseController: CourseController initialized.
+[2026-06-08 05:30:53] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:30:53] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 05:30:53] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 05:30:53] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 05:30:53] TaskManager: LoadTasksFromStorage start count=2
+[2026-06-08 05:30:53] TaskManager: LoadTasksFromStorage completed count=2
+[2026-06-08 05:30:53] CourseJsonStorage: LoadCourses load completed with 2 tasks from json.
+[2026-06-08 05:30:53] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 05:33:39] CourseManager: UpdateCourseStatus start courseId=7 status=Paused
+[2026-06-08 05:33:39] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:33:39] CourseManager: UpdateCourseStatus completed courseId=7 status=Paused
+[2026-06-08 05:33:41] CourseManager: UpdateCourseStatus start courseId=7 status=NotStarted
+[2026-06-08 05:33:41] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:33:41] CourseManager: UpdateCourseStatus completed courseId=7 status=NotStarted
+[2026-06-08 05:33:51] CourseManager: UpdateCourseStatus start courseId=7 status=Paused
+[2026-06-08 05:33:51] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:33:51] CourseManager: UpdateCourseStatus completed courseId=7 status=Paused
+[2026-06-08 05:33:53] CourseManager: UpdateCourseStatus start courseId=7 status=NotStarted
+[2026-06-08 05:33:53] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:33:53] CourseManager: UpdateCourseStatus completed courseId=7 status=NotStarted
+[2026-06-08 05:33:54] CourseManager: UpdateCourseStatus start courseId=7 status=Paused
+[2026-06-08 05:33:54] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:33:54] CourseManager: UpdateCourseStatus completed courseId=7 status=Paused
+[2026-06-08 05:33:55] CourseManager: UpdateCourseStatus start courseId=7 status=NotStarted
+[2026-06-08 05:33:55] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 05:33:55] CourseManager: UpdateCourseStatus completed courseId=7 status=NotStarted
+[2026-06-08 06:37:41] Logger started.
+[2026-06-08 06:37:41] CourseManager: CourseManager initialized.
+[2026-06-08 06:37:41] TaskManager: TaskManager initialized.
+[2026-06-08 06:37:41] CourseController: CourseController initialized.
+[2026-06-08 06:37:41] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 06:37:42] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 06:37:42] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 06:37:42] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 06:37:42] TaskManager: LoadTasksFromStorage start count=2
+[2026-06-08 06:37:42] TaskManager: LoadTasksFromStorage completed count=2
+[2026-06-08 06:37:42] CourseJsonStorage: LoadCourses load completed with 2 tasks from json.
+[2026-06-08 06:37:42] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 06:42:28] CourseController: CreateTaskForCourse start courseId=3 taskName=Лабы
+[2026-06-08 06:42:28] TaskManager: CreateTaskForCourse start courseId=3 taskName=Лабы
+[2026-06-08 06:42:28] TaskManager: CreateTask start name=Лабы deadline=2026-06-15T00:00:00.0000000 difficulty=70 credits=10
+[2026-06-08 06:42:28] TaskManager: AddTask start taskId=8 taskName=Лабы
+[2026-06-08 06:42:28] TaskManager: SaveChanges called.
+[2026-06-08 06:42:28] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:42:28] TaskManager: AddTask completed taskId=8
+[2026-06-08 06:42:28] TaskManager: CreateTask completed id=8 name=Лабы
+[2026-06-08 06:42:28] CourseManager: AddTaskToCourseById start courseId=3 taskId=8
+[2026-06-08 06:42:28] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:42:28] CourseManager: AddTaskToCourseById completed courseId=3 taskId=8
+[2026-06-08 06:42:28] TaskManager: CreateTaskForCourse completed courseId=3 taskId=8
+[2026-06-08 06:42:28] CourseController: CreateTaskForCourse completed taskId=8 courseId=3
+[2026-06-08 06:42:28] TaskManager: UpdateTaskProgress start taskId=8 progress=95
+[2026-06-08 06:42:28] TaskManager: FindById found taskId=8
+[2026-06-08 06:42:28] TaskManager: SaveChanges called.
+[2026-06-08 06:42:28] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:42:28] TaskManager: UpdateTaskProgress completed taskId=8 progress=95
+[2026-06-08 06:42:28] TaskManager: FindById found taskId=8
+[2026-06-08 06:42:28] TaskManager: SaveChanges called.
+[2026-06-08 06:42:28] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:43:49] CourseController: CreateTaskForCourse start courseId=3 taskName=Звіти
+[2026-06-08 06:43:49] TaskManager: CreateTaskForCourse start courseId=3 taskName=Звіти
+[2026-06-08 06:43:49] TaskManager: CreateTask start name=Звіти deadline=2026-06-15T00:00:00.0000000 difficulty=30 credits=10
+[2026-06-08 06:43:49] TaskManager: AddTask start taskId=9 taskName=Звіти
+[2026-06-08 06:43:49] TaskManager: SaveChanges called.
+[2026-06-08 06:43:49] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:43:49] TaskManager: AddTask completed taskId=9
+[2026-06-08 06:43:49] TaskManager: CreateTask completed id=9 name=Звіти
+[2026-06-08 06:43:49] CourseManager: AddTaskToCourseById start courseId=3 taskId=9
+[2026-06-08 06:43:49] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:43:49] CourseManager: AddTaskToCourseById completed courseId=3 taskId=9
+[2026-06-08 06:43:49] TaskManager: CreateTaskForCourse completed courseId=3 taskId=9
+[2026-06-08 06:43:49] CourseController: CreateTaskForCourse completed taskId=9 courseId=3
+[2026-06-08 06:43:49] TaskManager: UpdateTaskProgress start taskId=9 progress=10
+[2026-06-08 06:43:49] TaskManager: FindById found taskId=9
+[2026-06-08 06:43:49] TaskManager: SaveChanges called.
+[2026-06-08 06:43:49] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:43:49] TaskManager: UpdateTaskProgress completed taskId=9 progress=10
+[2026-06-08 06:43:49] TaskManager: FindById found taskId=9
+[2026-06-08 06:43:49] TaskManager: SaveChanges called.
+[2026-06-08 06:43:49] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:44:12] CourseController: CreateTaskForCourse start courseId=6 taskName=лаб 1
+[2026-06-08 06:44:12] TaskManager: CreateTaskForCourse start courseId=6 taskName=лаб 1
+[2026-06-08 06:44:12] TaskManager: CreateTask start name=лаб 1 deadline=2026-06-15T00:00:00.0000000 difficulty=50 credits=10
+[2026-06-08 06:44:12] TaskManager: AddTask start taskId=10 taskName=лаб 1
+[2026-06-08 06:44:12] TaskManager: SaveChanges called.
+[2026-06-08 06:44:12] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:44:12] TaskManager: AddTask completed taskId=10
+[2026-06-08 06:44:12] TaskManager: CreateTask completed id=10 name=лаб 1
+[2026-06-08 06:44:12] CourseManager: AddTaskToCourseById start courseId=6 taskId=10
+[2026-06-08 06:44:12] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:44:12] CourseManager: AddTaskToCourseById completed courseId=6 taskId=10
+[2026-06-08 06:44:12] TaskManager: CreateTaskForCourse completed courseId=6 taskId=10
+[2026-06-08 06:44:12] CourseController: CreateTaskForCourse completed taskId=10 courseId=6
+[2026-06-08 06:44:12] TaskManager: UpdateTaskProgress start taskId=10 progress=100
+[2026-06-08 06:44:12] TaskManager: FindById found taskId=10
+[2026-06-08 06:44:12] TaskManager: SaveChanges called.
+[2026-06-08 06:44:12] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:44:12] TaskManager: UpdateTaskProgress completed taskId=10 progress=100
+[2026-06-08 06:44:12] TaskManager: FindById found taskId=10
+[2026-06-08 06:44:12] TaskManager: SaveChanges called.
+[2026-06-08 06:44:12] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:45:41] CourseController: CreateTaskForCourse start courseId=6 taskName=лаб 2
+[2026-06-08 06:45:41] TaskManager: CreateTaskForCourse start courseId=6 taskName=лаб 2
+[2026-06-08 06:45:41] TaskManager: CreateTask start name=лаб 2 deadline=2026-06-15T00:00:00.0000000 difficulty=50 credits=1
+[2026-06-08 06:45:41] TaskManager: AddTask start taskId=11 taskName=лаб 2
+[2026-06-08 06:45:41] TaskManager: SaveChanges called.
+[2026-06-08 06:45:41] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:45:41] TaskManager: AddTask completed taskId=11
+[2026-06-08 06:45:41] TaskManager: CreateTask completed id=11 name=лаб 2
+[2026-06-08 06:45:41] CourseManager: AddTaskToCourseById start courseId=6 taskId=11
+[2026-06-08 06:45:41] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:45:41] CourseManager: AddTaskToCourseById completed courseId=6 taskId=11
+[2026-06-08 06:45:41] TaskManager: CreateTaskForCourse completed courseId=6 taskId=11
+[2026-06-08 06:45:41] CourseController: CreateTaskForCourse completed taskId=11 courseId=6
+[2026-06-08 06:45:41] TaskManager: UpdateTaskProgress start taskId=11 progress=80
+[2026-06-08 06:45:41] TaskManager: FindById found taskId=11
+[2026-06-08 06:45:41] TaskManager: SaveChanges called.
+[2026-06-08 06:45:41] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:45:41] TaskManager: UpdateTaskProgress completed taskId=11 progress=80
+[2026-06-08 06:45:41] TaskManager: FindById found taskId=11
+[2026-06-08 06:45:41] TaskManager: SaveChanges called.
+[2026-06-08 06:45:41] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:45:57] CourseController: CreateTaskForCourse start courseId=6 taskName=лаб 3
+[2026-06-08 06:45:57] TaskManager: CreateTaskForCourse start courseId=6 taskName=лаб 3
+[2026-06-08 06:45:57] TaskManager: CreateTask start name=лаб 3 deadline=2026-06-15T00:00:00.0000000 difficulty=50 credits=10
+[2026-06-08 06:45:57] TaskManager: AddTask start taskId=12 taskName=лаб 3
+[2026-06-08 06:45:57] TaskManager: SaveChanges called.
+[2026-06-08 06:45:57] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:45:57] TaskManager: AddTask completed taskId=12
+[2026-06-08 06:45:57] TaskManager: CreateTask completed id=12 name=лаб 3
+[2026-06-08 06:45:57] CourseManager: AddTaskToCourseById start courseId=6 taskId=12
+[2026-06-08 06:45:57] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:45:57] CourseManager: AddTaskToCourseById completed courseId=6 taskId=12
+[2026-06-08 06:45:57] TaskManager: CreateTaskForCourse completed courseId=6 taskId=12
+[2026-06-08 06:45:57] CourseController: CreateTaskForCourse completed taskId=12 courseId=6
+[2026-06-08 06:45:57] TaskManager: UpdateTaskProgress start taskId=12 progress=0
+[2026-06-08 06:45:57] TaskManager: FindById found taskId=12
+[2026-06-08 06:45:57] TaskManager: SaveChanges called.
+[2026-06-08 06:45:57] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:45:57] TaskManager: UpdateTaskProgress completed taskId=12 progress=0
+[2026-06-08 06:45:57] TaskManager: FindById found taskId=12
+[2026-06-08 06:45:57] TaskManager: SaveChanges called.
+[2026-06-08 06:45:57] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:02] TaskManager: RenameTask start taskId=11 name=лаб 2
+[2026-06-08 06:46:02] TaskManager: FindById found taskId=11
+[2026-06-08 06:46:02] TaskManager: SaveChanges called.
+[2026-06-08 06:46:02] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:02] TaskManager: RenameTask completed taskId=11 name=лаб 2
+[2026-06-08 06:46:02] TaskManager: ChangeTaskDescription start taskId=11 description=перепроверить и сделать звіт(если нет)
+[2026-06-08 06:46:02] TaskManager: FindById found taskId=11
+[2026-06-08 06:46:02] TaskManager: SaveChanges called.
+[2026-06-08 06:46:02] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:02] TaskManager: ChangeTaskDescription completed taskId=11
+[2026-06-08 06:46:02] TaskManager: UpdateTaskCredits start taskId=11 credits=10
+[2026-06-08 06:46:02] TaskManager: FindById found taskId=11
+[2026-06-08 06:46:02] TaskManager: SaveChanges called.
+[2026-06-08 06:46:02] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:02] TaskManager: UpdateTaskCredits completed taskId=11 credits=10
+[2026-06-08 06:46:02] TaskManager: UpdateTaskDifficulty start taskId=11 difficulty=50
+[2026-06-08 06:46:02] TaskManager: FindById found taskId=11
+[2026-06-08 06:46:02] TaskManager: SaveChanges called.
+[2026-06-08 06:46:02] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:02] TaskManager: UpdateTaskDifficulty completed taskId=11 difficulty=50
+[2026-06-08 06:46:02] TaskManager: UpdateTaskProgress start taskId=11 progress=80
+[2026-06-08 06:46:02] TaskManager: FindById found taskId=11
+[2026-06-08 06:46:02] TaskManager: SaveChanges called.
+[2026-06-08 06:46:02] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:02] TaskManager: UpdateTaskProgress completed taskId=11 progress=80
+[2026-06-08 06:46:02] TaskManager: ChangeTaskDeadline start taskId=11 deadline=2026-06-15T00:00:00.0000000
+[2026-06-08 06:46:02] TaskManager: FindById found taskId=11
+[2026-06-08 06:46:02] TaskManager: SaveChanges called.
+[2026-06-08 06:46:02] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:02] TaskManager: ChangeTaskDeadline completed taskId=11 deadline=2026-06-15T00:00:00.0000000
+[2026-06-08 06:46:02] TaskManager: FindById found taskId=11
+[2026-06-08 06:46:02] TaskManager: SaveChanges called.
+[2026-06-08 06:46:02] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:12] CourseController: CreateTaskForCourse start courseId=6 taskName=лаб 4
+[2026-06-08 06:46:12] TaskManager: CreateTaskForCourse start courseId=6 taskName=лаб 4
+[2026-06-08 06:46:12] TaskManager: CreateTask start name=лаб 4 deadline=2026-06-15T00:00:00.0000000 difficulty=50 credits=10
+[2026-06-08 06:46:12] TaskManager: AddTask start taskId=13 taskName=лаб 4
+[2026-06-08 06:46:12] TaskManager: SaveChanges called.
+[2026-06-08 06:46:12] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:12] TaskManager: AddTask completed taskId=13
+[2026-06-08 06:46:12] TaskManager: CreateTask completed id=13 name=лаб 4
+[2026-06-08 06:46:12] CourseManager: AddTaskToCourseById start courseId=6 taskId=13
+[2026-06-08 06:46:12] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:12] CourseManager: AddTaskToCourseById completed courseId=6 taskId=13
+[2026-06-08 06:46:12] TaskManager: CreateTaskForCourse completed courseId=6 taskId=13
+[2026-06-08 06:46:12] CourseController: CreateTaskForCourse completed taskId=13 courseId=6
+[2026-06-08 06:46:12] TaskManager: UpdateTaskProgress start taskId=13 progress=0
+[2026-06-08 06:46:12] TaskManager: FindById found taskId=13
+[2026-06-08 06:46:12] TaskManager: SaveChanges called.
+[2026-06-08 06:46:12] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:12] TaskManager: UpdateTaskProgress completed taskId=13 progress=0
+[2026-06-08 06:46:12] TaskManager: FindById found taskId=13
+[2026-06-08 06:46:12] TaskManager: SaveChanges called.
+[2026-06-08 06:46:12] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:17] CourseController: CreateTaskForCourse start courseId=6 taskName=лаб 5
+[2026-06-08 06:46:17] TaskManager: CreateTaskForCourse start courseId=6 taskName=лаб 5
+[2026-06-08 06:46:17] TaskManager: CreateTask start name=лаб 5 deadline=2026-06-15T00:00:00.0000000 difficulty=50 credits=1
+[2026-06-08 06:46:17] TaskManager: AddTask start taskId=14 taskName=лаб 5
+[2026-06-08 06:46:17] TaskManager: SaveChanges called.
+[2026-06-08 06:46:17] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:17] TaskManager: AddTask completed taskId=14
+[2026-06-08 06:46:17] TaskManager: CreateTask completed id=14 name=лаб 5
+[2026-06-08 06:46:17] CourseManager: AddTaskToCourseById start courseId=6 taskId=14
+[2026-06-08 06:46:17] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:17] CourseManager: AddTaskToCourseById completed courseId=6 taskId=14
+[2026-06-08 06:46:17] TaskManager: CreateTaskForCourse completed courseId=6 taskId=14
+[2026-06-08 06:46:17] CourseController: CreateTaskForCourse completed taskId=14 courseId=6
+[2026-06-08 06:46:17] TaskManager: UpdateTaskProgress start taskId=14 progress=0
+[2026-06-08 06:46:17] TaskManager: FindById found taskId=14
+[2026-06-08 06:46:17] TaskManager: SaveChanges called.
+[2026-06-08 06:46:17] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 06:46:17] TaskManager: UpdateTaskProgress completed taskId=14 progress=0
+[2026-06-08 06:46:17] TaskManager: FindById found taskId=14
+[2026-06-08 06:46:17] TaskManager: SaveChanges called.
+[2026-06-08 06:46:17] CourseManager: SaveChanges writing 5 courses to D:\education\Новая папка\courses.json
+[2026-06-08 07:32:07] Logger started.
+[2026-06-08 07:32:07] CourseManager: CourseManager initialized.
+[2026-06-08 07:32:07] TaskManager: TaskManager initialized.
+[2026-06-08 07:32:07] CourseController: CourseController initialized.
+[2026-06-08 07:32:08] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:32:08] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 07:32:08] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 07:32:08] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 07:32:08] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 07:32:08] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 07:32:08] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 07:32:08] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:34:49] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:41:15] Logger started.
+[2026-06-08 07:41:15] CourseManager: CourseManager initialized.
+[2026-06-08 07:41:15] TaskManager: TaskManager initialized.
+[2026-06-08 07:41:15] CourseController: CourseController initialized.
+[2026-06-08 07:41:15] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:41:15] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 07:41:15] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 07:41:15] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 07:41:15] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 07:41:15] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 07:41:15] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 07:41:15] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:42:10] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:42:11] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:42:11] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:42:11] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:50:30] Logger stopped.
+[2026-06-08 07:52:24] Logger started.
+[2026-06-08 07:52:24] CourseManager: CourseManager initialized.
+[2026-06-08 07:52:24] TaskManager: TaskManager initialized.
+[2026-06-08 07:52:24] CourseController: CourseController initialized.
+[2026-06-08 07:52:25] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:52:25] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 07:52:25] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 07:52:25] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 07:52:25] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 07:52:25] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 07:52:25] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 07:52:25] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:56:12] Logger started.
+[2026-06-08 07:56:12] CourseManager: CourseManager initialized.
+[2026-06-08 07:56:12] TaskManager: TaskManager initialized.
+[2026-06-08 07:56:12] CourseController: CourseController initialized.
+[2026-06-08 07:56:13] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:56:13] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 07:56:13] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 07:56:13] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 07:56:13] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 07:56:13] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 07:56:13] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 07:56:13] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:57:02] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:57:03] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 07:58:52] Logger stopped.
+[2026-06-08 08:04:01] Logger started.
+[2026-06-08 08:04:01] CourseManager: CourseManager initialized.
+[2026-06-08 08:04:01] TaskManager: TaskManager initialized.
+[2026-06-08 08:04:01] CourseController: CourseController initialized.
+[2026-06-08 08:04:01] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:04:01] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:04:01] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:04:01] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:04:01] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:04:01] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:04:01] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:04:01] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:06:04] Logger started.
+[2026-06-08 08:06:04] CourseManager: CourseManager initialized.
+[2026-06-08 08:06:04] TaskManager: TaskManager initialized.
+[2026-06-08 08:06:04] CourseController: CourseController initialized.
+[2026-06-08 08:06:05] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:06:05] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:06:05] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:06:05] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:06:05] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:06:05] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:06:05] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:06:05] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:06:18] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:06:25] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:09:32] Logger started.
+[2026-06-08 08:09:32] CourseManager: CourseManager initialized.
+[2026-06-08 08:09:32] TaskManager: TaskManager initialized.
+[2026-06-08 08:09:32] CourseController: CourseController initialized.
+[2026-06-08 08:09:33] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:09:33] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:09:33] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:09:33] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:09:33] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:09:33] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:09:33] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:09:33] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:24:00] Logger started.
+[2026-06-08 08:24:00] CourseManager: CourseManager initialized.
+[2026-06-08 08:24:00] TaskManager: TaskManager initialized.
+[2026-06-08 08:24:00] CourseController: CourseController initialized.
+[2026-06-08 08:24:00] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:24:00] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:24:00] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:24:00] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:24:00] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:24:00] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:24:00] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:24:00] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:27:00] Logger started.
+[2026-06-08 08:27:00] CourseManager: CourseManager initialized.
+[2026-06-08 08:27:00] TaskManager: TaskManager initialized.
+[2026-06-08 08:27:00] CourseController: CourseController initialized.
+[2026-06-08 08:27:01] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:27:01] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:27:01] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:27:01] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:27:01] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:27:01] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:27:01] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:27:01] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:27:47] Logger started.
+[2026-06-08 08:27:47] CourseManager: CourseManager initialized.
+[2026-06-08 08:27:47] TaskManager: TaskManager initialized.
+[2026-06-08 08:27:47] CourseController: CourseController initialized.
+[2026-06-08 08:27:47] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:27:47] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:27:47] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:27:47] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:27:47] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:27:47] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:27:47] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:27:47] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:28:14] Logger started.
+[2026-06-08 08:28:14] CourseManager: CourseManager initialized.
+[2026-06-08 08:28:14] TaskManager: TaskManager initialized.
+[2026-06-08 08:28:14] CourseController: CourseController initialized.
+[2026-06-08 08:28:14] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:28:14] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:28:14] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:28:14] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:28:14] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:28:14] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:28:14] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:28:14] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:28:50] Logger started.
+[2026-06-08 08:28:50] CourseManager: CourseManager initialized.
+[2026-06-08 08:28:50] TaskManager: TaskManager initialized.
+[2026-06-08 08:28:50] CourseController: CourseController initialized.
+[2026-06-08 08:28:50] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:28:50] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:28:50] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:28:50] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:28:50] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:28:50] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:28:50] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:28:50] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:29:20] Logger started.
+[2026-06-08 08:29:20] CourseManager: CourseManager initialized.
+[2026-06-08 08:29:20] TaskManager: TaskManager initialized.
+[2026-06-08 08:29:20] CourseController: CourseController initialized.
+[2026-06-08 08:29:20] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:29:20] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:29:20] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:29:20] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:29:20] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:29:20] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:29:20] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:29:20] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:29:50] Logger started.
+[2026-06-08 08:29:50] CourseManager: CourseManager initialized.
+[2026-06-08 08:29:50] TaskManager: TaskManager initialized.
+[2026-06-08 08:29:50] CourseController: CourseController initialized.
+[2026-06-08 08:29:50] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:29:50] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:29:50] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:29:50] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:29:50] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:29:50] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:29:50] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:29:50] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:30:33] Logger started.
+[2026-06-08 08:30:33] CourseManager: CourseManager initialized.
+[2026-06-08 08:30:33] TaskManager: TaskManager initialized.
+[2026-06-08 08:30:33] CourseController: CourseController initialized.
+[2026-06-08 08:30:33] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:30:33] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:30:33] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:30:33] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:30:33] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:30:33] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:30:33] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:30:33] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:30:55] Logger started.
+[2026-06-08 08:30:55] CourseManager: CourseManager initialized.
+[2026-06-08 08:30:55] TaskManager: TaskManager initialized.
+[2026-06-08 08:30:55] CourseController: CourseController initialized.
+[2026-06-08 08:30:55] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:30:55] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:30:55] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:30:55] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:30:55] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:30:55] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:30:55] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:30:55] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:31:18] Logger started.
+[2026-06-08 08:31:18] CourseManager: CourseManager initialized.
+[2026-06-08 08:31:18] TaskManager: TaskManager initialized.
+[2026-06-08 08:31:18] CourseController: CourseController initialized.
+[2026-06-08 08:31:19] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:31:19] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:31:19] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:31:19] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:31:19] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:31:19] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:31:19] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:31:19] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:31:40] Logger started.
+[2026-06-08 08:31:40] CourseManager: CourseManager initialized.
+[2026-06-08 08:31:40] TaskManager: TaskManager initialized.
+[2026-06-08 08:31:40] CourseController: CourseController initialized.
+[2026-06-08 08:31:41] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:31:41] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:31:41] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:31:41] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:31:41] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:31:41] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:31:41] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:31:41] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:32:02] Logger started.
+[2026-06-08 08:32:02] CourseManager: CourseManager initialized.
+[2026-06-08 08:32:02] TaskManager: TaskManager initialized.
+[2026-06-08 08:32:02] CourseController: CourseController initialized.
+[2026-06-08 08:32:02] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:32:02] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:32:02] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:32:02] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:32:02] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:32:02] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:32:02] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:32:02] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:32:32] Logger started.
+[2026-06-08 08:32:32] CourseManager: CourseManager initialized.
+[2026-06-08 08:32:32] TaskManager: TaskManager initialized.
+[2026-06-08 08:32:32] CourseController: CourseController initialized.
+[2026-06-08 08:32:32] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:32:32] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:32:32] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:32:32] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:32:32] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:32:32] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:32:32] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:32:32] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:32:55] Logger started.
+[2026-06-08 08:32:55] CourseManager: CourseManager initialized.
+[2026-06-08 08:32:55] TaskManager: TaskManager initialized.
+[2026-06-08 08:32:55] CourseController: CourseController initialized.
+[2026-06-08 08:32:55] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:32:55] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:32:55] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:32:55] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:32:55] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:32:55] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:32:55] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:32:55] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:33:19] Logger started.
+[2026-06-08 08:33:19] CourseManager: CourseManager initialized.
+[2026-06-08 08:33:19] TaskManager: TaskManager initialized.
+[2026-06-08 08:33:19] CourseController: CourseController initialized.
+[2026-06-08 08:33:19] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:33:19] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:33:19] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:33:19] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:33:19] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:33:19] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:33:19] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:33:19] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:33:43] Logger started.
+[2026-06-08 08:33:43] CourseManager: CourseManager initialized.
+[2026-06-08 08:33:43] TaskManager: TaskManager initialized.
+[2026-06-08 08:33:43] CourseController: CourseController initialized.
+[2026-06-08 08:33:43] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:33:43] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:33:43] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:33:43] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:33:43] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:33:43] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:33:43] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:33:43] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:34:11] Logger started.
+[2026-06-08 08:34:11] CourseManager: CourseManager initialized.
+[2026-06-08 08:34:11] TaskManager: TaskManager initialized.
+[2026-06-08 08:34:11] CourseController: CourseController initialized.
+[2026-06-08 08:34:12] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:34:12] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:34:12] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:34:12] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:34:12] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:34:12] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:34:12] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:34:12] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:34:44] Logger started.
+[2026-06-08 08:34:44] CourseManager: CourseManager initialized.
+[2026-06-08 08:34:44] TaskManager: TaskManager initialized.
+[2026-06-08 08:34:44] CourseController: CourseController initialized.
+[2026-06-08 08:34:44] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:34:44] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:34:44] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:34:44] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:34:44] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:34:44] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:34:44] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:34:44] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:36:35] Logger stopped.
+[2026-06-08 08:36:43] Logger started.
+[2026-06-08 08:36:43] CourseManager: CourseManager initialized.
+[2026-06-08 08:36:43] TaskManager: TaskManager initialized.
+[2026-06-08 08:36:43] CourseController: CourseController initialized.
+[2026-06-08 08:36:43] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:36:43] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:36:43] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:36:43] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:36:43] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:36:43] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:36:43] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:36:43] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:37:03] Logger started.
+[2026-06-08 08:37:03] CourseManager: CourseManager initialized.
+[2026-06-08 08:37:03] TaskManager: TaskManager initialized.
+[2026-06-08 08:37:03] CourseController: CourseController initialized.
+[2026-06-08 08:37:04] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:37:04] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:37:04] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:37:04] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:37:04] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:37:04] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:37:04] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:37:04] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:37:41] Logger started.
+[2026-06-08 08:37:41] CourseManager: CourseManager initialized.
+[2026-06-08 08:37:41] TaskManager: TaskManager initialized.
+[2026-06-08 08:37:41] CourseController: CourseController initialized.
+[2026-06-08 08:37:41] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:37:41] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:37:41] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:37:41] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:37:41] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:37:41] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:37:41] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:37:41] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:38:02] Logger started.
+[2026-06-08 08:38:02] CourseManager: CourseManager initialized.
+[2026-06-08 08:38:02] TaskManager: TaskManager initialized.
+[2026-06-08 08:38:02] CourseController: CourseController initialized.
+[2026-06-08 08:38:02] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:38:02] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:38:02] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:38:02] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:38:02] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:38:02] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:38:02] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:38:02] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:38:07] Logger stopped.
+[2026-06-08 08:38:19] Logger started.
+[2026-06-08 08:38:19] CourseManager: CourseManager initialized.
+[2026-06-08 08:38:19] TaskManager: TaskManager initialized.
+[2026-06-08 08:38:19] CourseController: CourseController initialized.
+[2026-06-08 08:38:20] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:38:20] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:38:20] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:38:20] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:38:20] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:38:20] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:38:20] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:38:20] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:38:39] Logger started.
+[2026-06-08 08:38:39] CourseManager: CourseManager initialized.
+[2026-06-08 08:38:39] TaskManager: TaskManager initialized.
+[2026-06-08 08:38:39] CourseController: CourseController initialized.
+[2026-06-08 08:38:39] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:38:40] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:38:40] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:38:40] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:38:40] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:38:40] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:38:40] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:38:40] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:38:52] Logger started.
+[2026-06-08 08:38:52] CourseManager: CourseManager initialized.
+[2026-06-08 08:38:52] TaskManager: TaskManager initialized.
+[2026-06-08 08:38:52] CourseController: CourseController initialized.
+[2026-06-08 08:38:53] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:38:53] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:38:53] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:38:53] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:38:53] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:38:53] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:38:53] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:38:53] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:39:17] Logger started.
+[2026-06-08 08:39:17] CourseManager: CourseManager initialized.
+[2026-06-08 08:39:17] TaskManager: TaskManager initialized.
+[2026-06-08 08:39:17] CourseController: CourseController initialized.
+[2026-06-08 08:39:18] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:39:18] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:39:18] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:39:18] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:39:18] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:39:18] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:39:18] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:39:18] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:39:38] Logger started.
+[2026-06-08 08:39:38] CourseManager: CourseManager initialized.
+[2026-06-08 08:39:38] TaskManager: TaskManager initialized.
+[2026-06-08 08:39:38] CourseController: CourseController initialized.
+[2026-06-08 08:39:39] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:39:39] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:39:39] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:39:39] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:39:39] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:39:39] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:39:39] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:39:39] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:39:59] Logger started.
+[2026-06-08 08:39:59] CourseManager: CourseManager initialized.
+[2026-06-08 08:39:59] TaskManager: TaskManager initialized.
+[2026-06-08 08:39:59] CourseController: CourseController initialized.
+[2026-06-08 08:39:59] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:39:59] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:39:59] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:39:59] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:39:59] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:39:59] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:39:59] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:39:59] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:40:23] Logger started.
+[2026-06-08 08:40:23] CourseManager: CourseManager initialized.
+[2026-06-08 08:40:23] TaskManager: TaskManager initialized.
+[2026-06-08 08:40:23] CourseController: CourseController initialized.
+[2026-06-08 08:40:23] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:40:23] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:40:23] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:40:23] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:40:23] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:40:23] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:40:23] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:40:23] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:40:42] Logger started.
+[2026-06-08 08:40:42] CourseManager: CourseManager initialized.
+[2026-06-08 08:40:42] TaskManager: TaskManager initialized.
+[2026-06-08 08:40:42] CourseController: CourseController initialized.
+[2026-06-08 08:40:42] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:40:42] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:40:42] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:40:42] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:40:42] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:40:42] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:40:42] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:40:42] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:41:11] Logger started.
+[2026-06-08 08:41:11] CourseManager: CourseManager initialized.
+[2026-06-08 08:41:11] TaskManager: TaskManager initialized.
+[2026-06-08 08:41:11] CourseController: CourseController initialized.
+[2026-06-08 08:41:12] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:41:12] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:41:12] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:41:12] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:41:12] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:41:12] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:41:12] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:41:12] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:42:59] Logger stopped.
+[2026-06-08 08:44:31] Logger started.
+[2026-06-08 08:44:31] CourseManager: CourseManager initialized.
+[2026-06-08 08:44:31] TaskManager: TaskManager initialized.
+[2026-06-08 08:44:31] CourseController: CourseController initialized.
+[2026-06-08 08:44:32] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:44:32] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:44:32] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:44:32] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:44:32] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:44:32] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:44:32] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:44:32] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:45:39] Logger started.
+[2026-06-08 08:45:39] CourseManager: CourseManager initialized.
+[2026-06-08 08:45:39] TaskManager: TaskManager initialized.
+[2026-06-08 08:45:39] CourseController: CourseController initialized.
+[2026-06-08 08:45:39] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:45:39] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:45:39] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:45:39] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:45:39] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:45:39] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:45:39] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:45:39] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:46:13] Logger started.
+[2026-06-08 08:46:13] CourseManager: CourseManager initialized.
+[2026-06-08 08:46:13] TaskManager: TaskManager initialized.
+[2026-06-08 08:46:13] CourseController: CourseController initialized.
+[2026-06-08 08:46:14] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:46:14] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:46:14] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:46:14] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:46:14] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:46:14] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:46:14] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:46:14] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:47:38] Logger started.
+[2026-06-08 08:47:38] CourseManager: CourseManager initialized.
+[2026-06-08 08:47:38] TaskManager: TaskManager initialized.
+[2026-06-08 08:47:38] CourseController: CourseController initialized.
+[2026-06-08 08:47:38] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:47:38] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:47:38] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:47:38] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:47:38] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:47:38] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:47:38] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:47:38] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:51:39] Logger started.
+[2026-06-08 08:51:39] CourseManager: CourseManager initialized.
+[2026-06-08 08:51:39] TaskManager: TaskManager initialized.
+[2026-06-08 08:51:39] CourseController: CourseController initialized.
+[2026-06-08 08:51:39] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:51:39] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:51:39] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:51:39] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:51:39] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:51:39] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:51:39] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:51:39] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:52:46] Logger started.
+[2026-06-08 08:52:46] CourseManager: CourseManager initialized.
+[2026-06-08 08:52:46] TaskManager: TaskManager initialized.
+[2026-06-08 08:52:46] CourseController: CourseController initialized.
+[2026-06-08 08:52:47] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:52:47] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:52:47] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:52:47] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:52:47] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:52:47] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:52:47] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:52:47] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:57:03] Logger started.
+[2026-06-08 08:57:03] CourseManager: CourseManager initialized.
+[2026-06-08 08:57:03] TaskManager: TaskManager initialized.
+[2026-06-08 08:57:03] CourseController: CourseController initialized.
+[2026-06-08 08:57:03] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:57:04] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:57:04] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:57:04] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:57:04] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:57:04] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:57:04] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:57:04] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:59:02] Logger started.
+[2026-06-08 08:59:02] CourseManager: CourseManager initialized.
+[2026-06-08 08:59:02] TaskManager: TaskManager initialized.
+[2026-06-08 08:59:02] CourseController: CourseController initialized.
+[2026-06-08 08:59:02] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 08:59:02] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 08:59:02] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 08:59:02] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 08:59:02] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 08:59:02] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 08:59:02] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 08:59:02] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:00:03] Logger started.
+[2026-06-08 09:00:03] CourseManager: CourseManager initialized.
+[2026-06-08 09:00:03] TaskManager: TaskManager initialized.
+[2026-06-08 09:00:03] CourseController: CourseController initialized.
+[2026-06-08 09:00:03] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:00:03] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:00:03] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:00:03] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:00:03] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:00:03] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:00:03] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:00:03] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:00:29] Logger started.
+[2026-06-08 09:00:29] CourseManager: CourseManager initialized.
+[2026-06-08 09:00:29] TaskManager: TaskManager initialized.
+[2026-06-08 09:00:29] CourseController: CourseController initialized.
+[2026-06-08 09:00:30] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:00:30] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:00:30] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:00:30] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:00:30] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:00:30] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:00:30] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:00:30] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:03:05] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:04:28] CourseJsonStorage: SaveCourses start filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:04:28] CourseJsonStorage: SaveCourses completed filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:04:28] CourseXmlExporter: ExportCurrentCourses start filePath=D:\education\Новая папка\courses.xml
+[2026-06-08 09:04:28] CourseXmlExporter: ExportCurrentCourses completed filePath=D:\education\Новая папка\courses.xml
+[2026-06-08 09:13:25] Logger started.
+[2026-06-08 09:13:25] CourseManager: CourseManager initialized.
+[2026-06-08 09:13:25] TaskManager: TaskManager initialized.
+[2026-06-08 09:13:25] CourseController: CourseController initialized.
+[2026-06-08 09:13:25] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:13:25] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:13:25] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:13:25] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:13:25] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:13:25] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:13:25] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:13:25] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:16:51] Logger started.
+[2026-06-08 09:16:51] CourseManager: CourseManager initialized.
+[2026-06-08 09:16:51] TaskManager: TaskManager initialized.
+[2026-06-08 09:16:51] CourseController: CourseController initialized.
+[2026-06-08 09:16:51] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:16:51] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:16:51] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:16:51] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:16:51] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:16:51] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:16:51] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:16:51] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:19:34] Logger started.
+[2026-06-08 09:19:34] CourseManager: CourseManager initialized.
+[2026-06-08 09:19:34] TaskManager: TaskManager initialized.
+[2026-06-08 09:19:34] CourseController: CourseController initialized.
+[2026-06-08 09:19:34] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:19:34] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:19:34] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:19:34] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:19:34] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:19:34] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:19:34] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:19:34] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:20:48] Logger started.
+[2026-06-08 09:20:48] CourseManager: CourseManager initialized.
+[2026-06-08 09:20:48] TaskManager: TaskManager initialized.
+[2026-06-08 09:20:48] CourseController: CourseController initialized.
+[2026-06-08 09:20:49] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:20:49] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:20:49] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:20:49] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:20:49] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:20:49] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:20:49] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:20:49] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:21:39] Logger started.
+[2026-06-08 09:21:39] CourseManager: CourseManager initialized.
+[2026-06-08 09:21:39] TaskManager: TaskManager initialized.
+[2026-06-08 09:21:39] CourseController: CourseController initialized.
+[2026-06-08 09:21:39] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:21:39] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:21:39] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:21:39] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:21:39] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:21:39] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:21:39] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:21:39] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:23:26] Logger started.
+[2026-06-08 09:23:26] CourseManager: CourseManager initialized.
+[2026-06-08 09:23:26] TaskManager: TaskManager initialized.
+[2026-06-08 09:23:26] CourseController: CourseController initialized.
+[2026-06-08 09:23:27] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:23:27] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:23:27] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:23:27] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:23:27] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:23:27] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:23:27] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:23:27] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:25:02] Logger stopped.
+[2026-06-08 09:27:04] Logger started.
+[2026-06-08 09:27:04] CourseManager: CourseManager initialized.
+[2026-06-08 09:27:04] TaskManager: TaskManager initialized.
+[2026-06-08 09:27:04] CourseController: CourseController initialized.
+[2026-06-08 09:27:05] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:27:05] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:27:05] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:27:05] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:27:05] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:27:05] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:27:05] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:27:05] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:28:25] Logger stopped.
+[2026-06-08 09:30:38] Logger started.
+[2026-06-08 09:30:38] CourseManager: CourseManager initialized.
+[2026-06-08 09:30:38] TaskManager: TaskManager initialized.
+[2026-06-08 09:30:38] CourseController: CourseController initialized.
+[2026-06-08 09:30:39] CourseJsonStorage: LoadCourses start filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:30:39] CourseJsonStorage: LoadCourses completed filePath=D:\education\Новая папка\courses.json count=5
+[2026-06-08 09:30:39] CourseManager: LoadCoursesFromStorage start.
+[2026-06-08 09:30:39] CourseManager: LoadCoursesFromStorage completed count=5
+[2026-06-08 09:30:39] TaskManager: LoadTasksFromStorage start count=9
+[2026-06-08 09:30:39] TaskManager: LoadTasksFromStorage completed count=9
+[2026-06-08 09:30:39] CourseJsonStorage: LoadCourses load completed with 9 tasks from json.
+[2026-06-08 09:30:39] CourseManager: EnableJsonAutoSave filePath=D:\education\Новая папка\courses.json
+[2026-06-08 09:31:46] Logger stopped.

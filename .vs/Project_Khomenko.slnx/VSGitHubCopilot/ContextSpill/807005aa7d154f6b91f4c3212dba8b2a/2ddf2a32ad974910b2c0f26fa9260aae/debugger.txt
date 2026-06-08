@@ -1,0 +1,1204 @@
+﻿## EXCEPTION
+Exception Type: System.Windows.Markup.XamlParseException
+Exception Message: Привязка типа TwoWay или OneWayToSource не может работать с доступным только для чтения свойством "Progress" типа "WpfApp.MainWindow+CourseCardViewModel".
+Inner Exceptions:
+1- System.InvalidOperationException:Привязка типа TwoWay или OneWayToSource не может работать с доступным только для чтения свойством "Progress" типа "WpfApp.MainWindow+CourseCardViewModel".
+Piece of code that has the exception:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\ba71154a7b44d057354e94bf9136ff00912660e0c8e1435d76b141387af3b90b\XamlReader.cs
+423: 	internal static void RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)
+424: 	{
+425: 		throw WrapException(e, lineInfo, baseUri);
+426: 	}
+```
+Exception is on line 425
+This exception was originally thrown at this call stack:
+[1] MS.Internal.Data.PropertyPathWorker.CheckReadOnly(object, object) в PropertyPathWorker.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\91b8eab688dba73dc7b179fffb2179670850a52b1cbbd82a2b0536ca94116ea9\PropertyPathWorker.cs
+1176: 	private void CheckReadOnly(object item, object info)
+1177: 	{
+1178: 		SetPropertyInfo(info, out var pi, out var pd, out var dp, out var dpa);
+1179: 		if (pi != null)
+1180: 		{
+1181: 			if (IsPropertyReadOnly(item, pi))
+1182: 			{
+1183: 				throw new InvalidOperationException(SR.Format(SR.CannotWriteToReadOnly, item.GetType(), pi.Name));
+1184: 			}
+1185: 		}
+1186: 		else if (pd != null)
+1187: 		{
+1188: 			if (pd.IsReadOnly)
+1189: 			{
+1190: 				throw new InvalidOperationException(SR.Format(SR.CannotWriteToReadOnly, item.GetType(), pd.Name));
+1191: 			}
+1192: 		}
+1193: 		else if (dp != null)
+1194: 		{
+1195: 			if (dp.ReadOnly)
+1196: 			{
+1197: 				throw new InvalidOperationException(SR.Format(SR.CannotWriteToReadOnly, item.GetType(), dp.Name));
+1198: 			}
+1199: 		}
+1200: 		else if (dpa != null && dpa.IsReadOnly)
+1201: 		{
+1202: 			throw new InvalidOperationException(SR.Format(SR.CannotWriteToReadOnly, item.GetType(), dpa.PropertyName));
+1203: 		}
+1204: 	}
+```
+Current statement: line 1190
+[2] MS.Internal.Data.PropertyPathWorker.ReplaceItem(int, object, object) в PropertyPathWorker.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\91b8eab688dba73dc7b179fffb2179670850a52b1cbbd82a2b0536ca94116ea9\PropertyPathWorker.cs
+588: 	private void ReplaceItem(int k, object newO, object parent)
+589: 	{
+590: 		bool flag = IsExtendedTraceEnabled(TraceDataLevel.Transfer);
+591: 		SourceValueState svs = default(SourceValueState);
+592: 		object reference = BindingExpressionBase.GetReference(_arySVS[k].item);
+593: 		if (IsDynamic && SVI[k].type != SourceValueType.Direct)
+594: 		{
+595: 			PropertyPath.DowncastAccessor(_arySVS[k].info, out var dp, out var pi, out var pd, out var _);
+596: 			if (reference == BindingExpression.StaticSource)
+597: 			{
+598: 				Type type = ((pi != null) ? pi.DeclaringType : pd?.ComponentType);
+599: 				if (type != null)
+600: 				{
+601: 					StaticPropertyChangedEventManager.RemoveHandler(type, OnStaticPropertyChanged, SVI[k].propertyName);
+602: 				}
+603: 			}
+604: 			else if (dp != null)
+605: 			{
+606: 				_dependencySourcesChanged = true;
+607: 			}
+608: 			else if (reference is INotifyPropertyChanged source)
+609: 			{
+610: 				PropertyChangedEventManager.RemoveHandler(source, OnPropertyChanged, SVI[k].propertyName);
+611: 			}
+612: 			else if (pd != null && reference != null)
+613: 			{
+614: 				ValueChangedEventManager.RemoveHandler(reference, OnValueChanged, pd);
+615: 			}
+616: 		}
+617: 		if (_host != null && k == Length - 1 && IsDynamic && _host.ValidatesOnNotifyDataErrors && reference is INotifyDataErrorInfo source2)
+618: 		{
+619: 			ErrorsChangedEventManager.RemoveHandler(source2, OnErrorsChanged);
+620: 		}
+621: 		_isDBNullValidForUpdate = null;
+622: 		if (newO == null || parent == DependencyProperty.UnsetValue || parent == BindingExpression.NullDataItem || parent == BindingExpressionBase.DisconnectedItem)
+623: 		{
+624: 			_arySVS[k].item = BindingExpressionBase.ReplaceReference(_arySVS[k].item, newO);
+625: 			if (parent == DependencyProperty.UnsetValue || parent == BindingExpression.NullDataItem || parent == BindingExpressionBase.DisconnectedItem)
+626: 			{
+627: 				_arySVS[k].collectionView = null;
+628: 			}
+629: 			if (flag)
+630: 			{
+631: 				TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.ReplaceItemShort(TraceData.Identify(_host.ParentBindingExpression), k, TraceData.Identify(newO)), _host.ParentBindingExpression);
+632: 			}
+633: 			return;
+634: 		}
+635: 		if (newO != BindingExpression.NullDataItem)
+636: 		{
+637: 			parent = newO;
+638: 			GetInfo(k, newO, ref svs);
+639: 			svs.collectionView = _arySVS[k].collectionView;
+640: 		}
+641: 		else
+642: 		{
+643: 			DrillIn drillIn = SVI[k].drillIn;
+644: 			ICollectionView collectionView = null;
+645: 			if (drillIn != DrillIn.Always)
+646: 			{
+647: 				GetInfo(k, parent, ref svs);
+648: 			}
+649: 			if (svs.info == null)
+650: 			{
+651: 				collectionView = CollectionViewSource.GetDefaultCollectionView(parent, TreeContext, (object x) => BindingExpressionBase.GetReference((k == 0) ? _rootItem : _arySVS[k - 1].item));
+652: 				if (collectionView != null && drillIn != DrillIn.Always && collectionView != parent)
+653: 				{
+654: 					GetInfo(k, collectionView, ref svs);
+655: 				}
+656: 			}
+657: 			if (svs.info == null && drillIn != DrillIn.Never && collectionView != null)
+658: 			{
+659: 				newO = collectionView.CurrentItem;
+660: 				if (newO != null)
+661: 				{
+662: 					GetInfo(k, newO, ref svs);
+663: 					svs.collectionView = collectionView;
+664: 				}
+665: 				else
+666: 				{
+667: 					svs = _arySVS[k];
+668: 					svs.collectionView = collectionView;
+669: 					if (!SystemXmlHelper.IsEmptyXmlDataCollection(parent))
+670: 					{
+671: 						svs.item = BindingExpressionBase.ReplaceReference(svs.item, BindingExpression.NullDataItem);
+672: 						if (svs.info == null)
+673: 						{
+674: 							svs.info = DependencyProperty.UnsetValue;
+675: 						}
+676: 					}
+677: 				}
+678: 			}
+679: 		}
+680: 		if (svs.info == null)
+681: 		{
+682: 			svs.item = BindingExpressionBase.ReplaceReference(svs.item, BindingExpression.NullDataItem);
+683: 			_arySVS[k] = svs;
+684: 			_status = PropertyPathStatus.PathError;
+685: 			ReportNoInfoError(k, parent);
+686: 			return;
+687: 		}
+688: 		_arySVS[k] = svs;
+689: 		newO = BindingExpressionBase.GetReference(svs.item);
+690: 		if (flag)
+691: 		{
+692: 			TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.ReplaceItemLong(TraceData.Identify(_host.ParentBindingExpression), k, TraceData.Identify(newO), TraceData.IdentifyAccessor(svs.info)), _host.ParentBindingExpression);
+693: 		}
+694: 		if (IsDynamic && SVI[k].type != SourceValueType.Direct)
+695: 		{
+696: 			Engine.RegisterForCacheChanges(newO, svs.info);
+697: 			PropertyPath.DowncastAccessor(svs.info, out var dp2, out var pi2, out var pd2, out var _);
+698: 			if (newO == BindingExpression.StaticSource)
+699: 			{
+700: 				Type type2 = ((pi2 != null) ? pi2.DeclaringType : pd2?.ComponentType);
+701: 				if (type2 != null)
+702: 				{
+703: 					StaticPropertyChangedEventManager.AddHandler(type2, OnStaticPropertyChanged, SVI[k].propertyName);
+704: 				}
+705: 			}
+706: 			else if (dp2 != null)
+707: 			{
+708: 				_dependencySourcesChanged = true;
+709: 			}
+710: 			else if (newO is INotifyPropertyChanged source3)
+711: 			{
+712: 				PropertyChangedEventManager.AddHandler(source3, OnPropertyChanged, SVI[k].propertyName);
+713: 			}
+714: 			else if (pd2 != null && newO != null)
+715: 			{
+716: 				ValueChangedEventManager.AddHandler(newO, OnValueChanged, pd2);
+717: 			}
+718: 		}
+719: 		if (_host == null || k != Length - 1)
+720: 		{
+721: 			return;
+722: 		}
+723: 		_host.SetupDefaultValueConverter(svs.type);
+724: 		if (_host.IsReflective)
+725: 		{
+726: 			CheckReadOnly(newO, svs.info);
+727: 		}
+728: 		if (_host.ValidatesOnNotifyDataErrors && newO is INotifyDataErrorInfo notifyDataErrorInfo)
+729: 		{
+730: 			if (IsDynamic)
+731: 			{
+732: 				ErrorsChangedEventManager.AddHandler(notifyDataErrorInfo, OnErrorsChanged);
+733: 			}
+734: 			_host.OnDataErrorsChanged(notifyDataErrorInfo, SourcePropertyName);
+735: 		}
+736: 	}
+```
+Current statement: line 726
+[3] MS.Internal.Data.PropertyPathWorker.UpdateSourceValueState(int, System.ComponentModel.ICollectionView, object, bool) в PropertyPathWorker.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\91b8eab688dba73dc7b179fffb2179670850a52b1cbbd82a2b0536ca94116ea9\PropertyPathWorker.cs
+531: 	private void UpdateSourceValueState(int k, ICollectionView collectionView, object newValue, bool isASubPropertyChange)
+532: 	{
+533: 		DependencyObject dependencyObject = null;
+534: 		if (_host != null)
+535: 		{
+536: 			dependencyObject = _host.CheckTarget();
+537: 			if (_rootItem != BindingExpression.NullDataItem && dependencyObject == null)
+538: 			{
+539: 				return;
+540: 			}
+541: 		}
+542: 		int num = k;
+543: 		object obj = null;
+544: 		bool flag = _host == null || k < 0;
+545: 		_status = PropertyPathStatus.Active;
+546: 		_dependencySourcesChanged = false;
+547: 		if (collectionView != null)
+548: 		{
+549: 			ReplaceItem(k, collectionView.CurrentItem, NoParent);
+550: 		}
+551: 		for (k++; k < _arySVS.Length; k++)
+552: 		{
+553: 			isASubPropertyChange = false;
+554: 			ICollectionView collectionView2 = _arySVS[k].collectionView;
+555: 			obj = ((newValue == BindingExpression.NullDataItem) ? RawValue(k - 1) : newValue);
+556: 			newValue = BindingExpression.NullDataItem;
+557: 			if (obj == AsyncRequestPending)
+558: 			{
+559: 				_status = PropertyPathStatus.AsyncRequestPending;
+560: 				break;
+561: 			}
+562: 			if (!flag && obj == BindingExpressionBase.DisconnectedItem && _arySVS[k - 1].info == FrameworkElement.DataContextProperty)
+563: 			{
+564: 				flag = true;
+565: 			}
+566: 			ReplaceItem(k, BindingExpression.NullDataItem, obj);
+567: 			ICollectionView collectionView3 = _arySVS[k].collectionView;
+568: 			if (collectionView2 != collectionView3 && _host != null)
+569: 			{
+570: 				_host.ReplaceCurrentItem(collectionView2, collectionView3);
+571: 			}
+572: 		}
+573: 		if (_host != null)
+574: 		{
+575: 			if (num < _arySVS.Length)
+576: 			{
+577: 				NeedsDirectNotification = _status == PropertyPathStatus.Active && _arySVS.Length != 0 && SVI[_arySVS.Length - 1].type != SourceValueType.Direct && !(_arySVS[_arySVS.Length - 1].info is DependencyProperty) && typeof(DependencyObject).IsAssignableFrom(_arySVS[_arySVS.Length - 1].type);
+578: 			}
+579: 			if (!flag && _arySVS.Length != 0 && _arySVS[_arySVS.Length - 1].info == FrameworkElement.DataContextProperty && RawValue() == BindingExpressionBase.DisconnectedItem)
+580: 			{
+581: 				flag = true;
+582: 			}
+583: 			_host.NewValueAvailable(_dependencySourcesChanged, flag, isASubPropertyChange);
+584: 		}
+585: 		GC.KeepAlive(dependencyObject);
+586: 	}
+```
+Current statement: line 566
+[4] MS.Internal.Data.ClrBindingWorker.AttachDataItem() в ClrBindingWorker.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\17ec58bd025c825b2d0935666e9aff8a0e1ce35908b6d45b85e666185bee50dd\ClrBindingWorker.cs
+108: 	internal override void AttachDataItem()
+109: 	{
+110: 		object obj;
+111: 		if (XmlWorker == null)
+112: 		{
+113: 			obj = base.DataItem;
+114: 		}
+115: 		else
+116: 		{
+117: 			XmlWorker.AttachDataItem();
+118: 			obj = XmlWorker.RawValue();
+119: 		}
+120: 		PW.AttachToRootItem(obj);
+121: 		if (PW.Length == 0)
+122: 		{
+123: 			base.ParentBindingExpression.SetupDefaultValueConverter(obj.GetType());
+124: 		}
+125: 	}
+```
+Current statement: line 120
+[5] System.Windows.Data.BindingExpression.Activate(object) в BindingExpression.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\5b2908da04e3f4a19e2691ecd2973772a8a8fdbb42ece9dbe853a17df55a14c5\BindingExpression.cs
+701: 	internal void Activate(object item)
+702: 	{
+703: 		DependencyObject targetElement = base.TargetElement;
+704: 		if (targetElement == null)
+705: 		{
+706: 			return;
+707: 		}
+708: 		if (item == BindingExpressionBase.DisconnectedItem)
+709: 		{
+710: 			Disconnect();
+711: 			return;
+712: 		}
+713: 		bool flag = TraceData.IsExtendedTraceEnabled(this, TraceDataLevel.Attach);
+714: 		Deactivate();
+715: 		if (!ParentBinding.BindsDirectlyToSource)
+716: 		{
+717: 			CollectionViewSource collectionViewSource = (CollectionViewSource = item as CollectionViewSource);
+718: 			if (collectionViewSource != null)
+719: 			{
+720: 				item = collectionViewSource.CollectionView;
+721: 				ChangeWorkerSources(null, 0);
+722: 				if (flag)
+723: 				{
+724: 					TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.UseCVS(TraceData.Identify(this), TraceData.Identify(collectionViewSource)), this);
+725: 				}
+726: 			}
+727: 			else
+728: 			{
+729: 				item = DereferenceDataProvider(item);
+730: 			}
+731: 		}
+732: 		_dataItem = BindingExpressionBase.CreateReference(item);
+733: 		if (flag)
+734: 		{
+735: 			TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.ActivateItem(TraceData.Identify(this), TraceData.Identify(item)), this);
+736: 		}
+737: 		if (Worker == null)
+738: 		{
+739: 			CreateWorker();
+740: 		}
+741: 		SetStatus(BindingStatusInternal.Active);
+742: 		Worker.AttachDataItem();
+743: 		bool flag2 = base.IsOneWayToSource;
+744: 		if (ShouldUpdateWithCurrentValue(targetElement, out var currentValue))
+745: 		{
+746: 			flag2 = true;
+747: 			ChangeValue(currentValue, notify: false);
+748: 			base.NeedsUpdate = true;
+749: 		}
+750: 		if (!flag2)
+751: 		{
+752: 			ValidationError error;
+753: 			object initialValue = GetInitialValue(targetElement, out error);
+754: 			bool flag3 = initialValue == NullDataItem;
+755: 			if (!flag3)
+756: 			{
+757: 				TransferValue(initialValue, isASubPropertyChange: false);
+758: 			}
+759: 			if (error != null)
+760: 			{
+761: 				UpdateValidationError(error, flag3);
+762: 			}
+763: 		}
+764: 		else if (!base.IsInMultiBindingExpression)
+765: 		{
+766: 			UpdateValue();
+767: 		}
+768: 		GC.KeepAlive(targetElement);
+769: 	}
+```
+Current statement: line 742
+[6] System.Windows.Data.BindingExpression.AttachToContext(System.Windows.Data.BindingExpression.AttachAttempt) в BindingExpression.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\5b2908da04e3f4a19e2691ecd2973772a8a8fdbb42ece9dbe853a17df55a14c5\BindingExpression.cs
+465: 	private void AttachToContext(AttachAttempt attempt)
+466: 	{
+467: 		DependencyObject targetElement = base.TargetElement;
+468: 		if (targetElement == null)
+469: 		{
+470: 			return;
+471: 		}
+472: 		bool flag = TraceData.IsExtendedTraceEnabled(this, TraceDataLevel.Attach);
+473: 		bool isTracing = TraceData.IsExtendedTraceEnabled(this, TraceDataLevel.Attach);
+474: 		if (attempt == AttachAttempt.First)
+475: 		{
+476: 			ObjectRef sourceReference = ParentBinding.SourceReference;
+477: 			if (sourceReference != null && sourceReference.TreeContextIsRequired(targetElement))
+478: 			{
+479: 				if (flag)
+480: 				{
+481: 					TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.SourceRequiresTreeContext(TraceData.Identify(this), sourceReference.Identify()), this);
+482: 				}
+483: 				return;
+484: 			}
+485: 		}
+486: 		bool flag2 = attempt == AttachAttempt.Last;
+487: 		if (flag)
+488: 		{
+489: 			TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.AttachToContext(TraceData.Identify(this), flag2 ? " (last chance)" : string.Empty), this);
+490: 		}
+491: 		if (!flag2 && ParentBinding.TreeContextIsRequired && (targetElement.GetValue(XmlAttributeProperties.XmlnsDictionaryProperty) == null || targetElement.GetValue(XmlAttributeProperties.XmlNamespaceMapsProperty) == null))
+492: 		{
+493: 			if (flag)
+494: 			{
+495: 				TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.PathRequiresTreeContext(TraceData.Identify(this), ParentBinding.Path.Path), this);
+496: 			}
+497: 			return;
+498: 		}
+499: 		DependencyObject dependencyObject = ((!base.UsingMentor) ? targetElement : Helper.FindMentor(targetElement));
+500: 		if (dependencyObject == null)
+501: 		{
+502: 			if (flag)
+503: 			{
+504: 				TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.NoMentorExtended(TraceData.Identify(this)), this);
+505: 			}
+506: 			if (flag2)
+507: 			{
+508: 				SetStatus(BindingStatusInternal.PathError);
+509: 				if (TraceData.IsEnabled)
+510: 				{
+511: 					TraceData.TraceAndNotify(TraceEventType.Error, TraceData.NoMentor, this);
+512: 				}
+513: 			}
+514: 			return;
+515: 		}
+516: 		DependencyObject dependencyObject2 = null;
+517: 		bool flag3 = true;
+518: 		if (ParentBinding.SourceReference == null)
+519: 		{
+520: 			dependencyObject2 = dependencyObject;
+521: 			if (base.TargetProperty == FrameworkElement.DataContextProperty || (base.TargetProperty == ContentPresenter.ContentProperty && targetElement is ContentPresenter) || (base.UsingMentor && targetElement is CollectionViewSource collectionViewSource && collectionViewSource.PropertyForInheritanceContext == FrameworkElement.DataContextProperty))
+522: 			{
+523: 				dependencyObject2 = FrameworkElement.GetFrameworkParent(dependencyObject2);
+524: 				flag3 = dependencyObject2 != null;
+525: 			}
+526: 		}
+527: 		else if (ParentBinding.SourceReference is RelativeObjectRef { ReturnsDataContext: not false } relativeObjectRef)
+528: 		{
+529: 			object obj = relativeObjectRef.GetObject(dependencyObject, new ObjectRefArgs
+530: 			{
+531: 				IsTracing = isTracing
+532: 			});
+533: 			dependencyObject2 = obj as DependencyObject;
+534: 			flag3 = obj != DependencyProperty.UnsetValue;
+535: 		}
+536: 		if (flag)
+537: 		{
+538: 			TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.ContextElement(TraceData.Identify(this), TraceData.Identify(dependencyObject2), flag3 ? "OK" : "error"), this);
+539: 		}
+540: 		if (!flag3)
+541: 		{
+542: 			if (flag2)
+543: 			{
+544: 				SetStatus(BindingStatusInternal.PathError);
+545: 				if (TraceData.IsEnabled)
+546: 				{
+547: 					TraceData.TraceAndNotify(TraceEventType.Error, TraceData.NoDataContext, this);
+548: 				}
+549: 			}
+550: 			return;
+551: 		}
+552: 		object obj2;
+553: 		ObjectRef sourceReference2;
+554: 		if (dependencyObject2 != null)
+555: 		{
+556: 			obj2 = dependencyObject2.GetValue(FrameworkElement.DataContextProperty);
+557: 			if (obj2 == null && !flag2 && !HasLocalDataContext(dependencyObject2))
+558: 			{
+559: 				if (flag)
+560: 				{
+561: 					TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.NullDataContext(TraceData.Identify(this)), this);
+562: 				}
+563: 				return;
+564: 			}
+565: 		}
+566: 		else if ((sourceReference2 = ParentBinding.SourceReference) != null)
+567: 		{
+568: 			ObjectRefArgs objectRefArgs = new ObjectRefArgs
+569: 			{
+570: 				IsTracing = isTracing,
+571: 				ResolveNamesInTemplate = base.ResolveNamesInTemplate
+572: 			};
+573: 			obj2 = sourceReference2.GetDataObject(dependencyObject, objectRefArgs);
+574: 			if (obj2 == DependencyProperty.UnsetValue)
+575: 			{
+576: 				if (flag2)
+577: 				{
+578: 					SetStatus(BindingStatusInternal.PathError);
+579: 					if (TraceData.IsEnabled)
+580: 					{
+581: 						TraceData.TraceAndNotify(base.TraceLevel, TraceData.NoSource(sourceReference2), this);
+582: 					}
+583: 				}
+584: 				return;
+585: 			}
+586: 			if (!flag2 && objectRefArgs.NameResolvedInOuterScope)
+587: 			{
+588: 				base.Engine.AddTask(this, TaskOps.VerifySourceReference);
+589: 			}
+590: 		}
+591: 		else
+592: 		{
+593: 			obj2 = null;
+594: 		}
+595: 		if (dependencyObject2 != null)
+596: 		{
+597: 			_ctxElement = new WeakReference(dependencyObject2);
+598: 		}
+599: 		ChangeWorkerSources(null, 0);
+600: 		if (!base.UseDefaultValueConverter)
+601: 		{
+602: 			Converter = ParentBinding.Converter;
+603: 			if (Converter == null)
+604: 			{
+605: 				throw new InvalidOperationException(SR.MissingValueConverter);
+606: 			}
+607: 		}
+608: 		JoinBindingGroup(base.IsReflective, dependencyObject2);
+609: 		SetStatus(BindingStatusInternal.Inactive);
+610: 		if (base.IsInPriorityBindingExpression)
+611: 		{
+612: 			base.ParentPriorityBindingExpression.InvalidateChild(this);
+613: 		}
+614: 		else
+615: 		{
+616: 			Activate(obj2);
+617: 		}
+618: 		GC.KeepAlive(targetElement);
+619: 	}
+```
+Current statement: line 616
+[7] System.Windows.Data.BindingExpression.AttachOverride(System.Windows.DependencyObject, System.Windows.DependencyProperty) в BindingExpression.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\5b2908da04e3f4a19e2691ecd2973772a8a8fdbb42ece9dbe853a17df55a14c5\BindingExpression.cs
+405: 	internal override bool AttachOverride(DependencyObject target, DependencyProperty dp)
+406: 	{
+407: 		if (!base.AttachOverride(target, dp))
+408: 		{
+409: 			return false;
+410: 		}
+411: 		if (ParentBinding.SourceReference == null || ParentBinding.SourceReference.UsesMentor)
+412: 		{
+413: 			DependencyObject dependencyObject = Helper.FindMentor(target);
+414: 			if (dependencyObject != target)
+415: 			{
+416: 				InheritanceContextChangedEventManager.AddHandler(target, OnInheritanceContextChanged);
+417: 				base.UsingMentor = true;
+418: 				if (TraceData.IsExtendedTraceEnabled(this, TraceDataLevel.Attach))
+419: 				{
+420: 					TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.UseMentor(TraceData.Identify(this), TraceData.Identify(dependencyObject)), this);
+421: 				}
+422: 			}
+423: 		}
+424: 		if (base.IsUpdateOnLostFocus)
+425: 		{
+426: 			Invariant.Assert(!base.IsInMultiBindingExpression, "Source BindingExpressions of a MultiBindingExpression should never be UpdateOnLostFocus.");
+427: 			LostFocusEventManager.AddHandler(target, OnLostFocus);
+428: 		}
+429: 		AttachToContext(AttachAttempt.First);
+430: 		if (base.StatusInternal == BindingStatusInternal.Unattached)
+431: 		{
+432: 			base.Engine.AddTask(this, TaskOps.AttachToContext);
+433: 			if (TraceData.IsExtendedTraceEnabled(this, TraceDataLevel.Attach))
+434: 			{
+435: 				TraceData.TraceAndNotifyWithNoParameters(TraceEventType.Warning, TraceData.DeferAttachToContext(TraceData.Identify(this)), this);
+436: 			}
+437: 		}
+438: 		GC.KeepAlive(target);
+439: 		return true;
+440: 	}
+```
+Current statement: line 429
+[8] System.Windows.Data.BindingExpressionBase.Attach(System.Windows.DependencyObject, System.Windows.DependencyProperty) в BindingExpressionBase.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\566994928137cc44b6a6fa6fefb48d4a7421cafe54da651ca73c338fb90b61cf\BindingExpressionBase.cs
+1571: 	internal void Attach(DependencyObject target, DependencyProperty dp)
+1572: 	{
+1573: 		target?.VerifyAccess();
+1574: 		IsAttaching = true;
+1575: 		AttachOverride(target, dp);
+1576: 		IsAttaching = false;
+1577: 	}
+```
+Current statement: line 1575
+[9] System.Windows.StyleHelper.GetInstanceValue(System.Windows.UncommonField<System.Collections.Specialized.HybridDictionary[]>, System.Windows.DependencyObject, System.Windows.FrameworkElement, System.Windows.FrameworkContentElement, int, System.Windows.DependencyProperty, int, ref System.Windows.EffectiveValueEntry) в StyleHelper.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\95611b95599d7bfe9662fed9a99874e514433c8dc51f8fb6b00461831a725efe\StyleHelper.cs
+1341: 	internal static object GetInstanceValue(UncommonField<HybridDictionary[]> dataField, DependencyObject container, FrameworkElement feChild, FrameworkContentElement fceChild, int childIndex, DependencyProperty dp, int i, ref EffectiveValueEntry entry)
+1342: 	{
+1343: 		object value = entry.Value;
+1344: 		DependencyObject dependencyObject = null;
+1345: 		Helper.DowncastToFEorFCE(container, out var _, out var _, throwIfNeither: true);
+1346: 		HybridDictionary[] obj = dataField?.GetValue(container);
+1347: 		HybridDictionary hybridDictionary = ((obj != null) ? obj[0] : null);
+1348: 		InstanceValueKey key = new InstanceValueKey(childIndex, dp.GlobalIndex, i);
+1349: 		object obj2 = hybridDictionary?[key];
+1350: 		bool flag = feChild?.IsRequestingExpression ?? fceChild.IsRequestingExpression;
+1351: 		if (obj2 == null)
+1352: 		{
+1353: 			obj2 = NotYetApplied;
+1354: 		}
+1355: 		Expression expression = obj2 as Expression;
+1356: 		if (expression != null && expression.HasBeenDetached)
+1357: 		{
+1358: 			obj2 = NotYetApplied;
+1359: 		}
+1360: 		if (obj2 == NotYetApplied)
+1361: 		{
+1362: 			dependencyObject = feChild;
+1363: 			if (dependencyObject == null)
+1364: 			{
+1365: 				dependencyObject = fceChild;
+1366: 			}
+1367: 			if (value is MarkupExtension markupExtension)
+1368: 			{
+1369: 				if (flag && !(feChild?.IsInitialized ?? fceChild.IsInitialized))
+1370: 				{
+1371: 					return DependencyProperty.UnsetValue;
+1372: 				}
+1373: 				ProvideValueServiceProvider provideValueServiceProvider = new ProvideValueServiceProvider();
+1374: 				provideValueServiceProvider.SetData(dependencyObject, dp);
+1375: 				obj2 = markupExtension.ProvideValue(provideValueServiceProvider);
+1376: 			}
+1377: 			else if (value is Freezable freezable)
+1378: 			{
+1379: 				obj2 = freezable.Clone();
+1380: 				dependencyObject.ProvideSelfAsInheritanceContext(obj2, dp);
+1381: 			}
+1382: 			hybridDictionary[key] = obj2;
+1383: 			if (obj2 != DependencyProperty.UnsetValue)
+1384: 			{
+1385: 				expression = obj2 as Expression;
+1386: 				expression?.OnAttach(dependencyObject, dp);
+1387: 			}
+1388: 		}
+1389: 		if (expression != null)
+1390: 		{
+1391: 			if (!flag)
+1392: 			{
+1393: 				if (dependencyObject == null)
+1394: 				{
+1395: 					dependencyObject = feChild;
+1396: 					if (dependencyObject == null)
+1397: 					{
+1398: 						dependencyObject = fceChild;
+1399: 					}
+1400: 				}
+1401: 				entry.ResetValue(DependencyObject.ExpressionInAlternativeStore, hasExpressionMarker: true);
+1402: 				entry.SetExpressionValue(expression.GetValue(dependencyObject, dp), DependencyObject.ExpressionInAlternativeStore);
+1403: 			}
+1404: 			else
+1405: 			{
+1406: 				entry.Value = obj2;
+1407: 			}
+1408: 		}
+1409: 		else
+1410: 		{
+1411: 			entry.Value = obj2;
+1412: 		}
+1413: 		return obj2;
+1414: 	}
+```
+Current statement: line 1386
+[10] System.Windows.StyleHelper.GetChildValueHelper(System.Windows.UncommonField<System.Collections.Specialized.HybridDictionary[]>, ref MS.Utility.ItemStructList<System.Windows.ChildValueLookup>, System.Windows.DependencyProperty, System.Windows.DependencyObject, MS.Internal.FrameworkObject, int, bool, ref System.Windows.EffectiveValueEntry, out System.Windows.ValueLookupType, System.Windows.FrameworkElementFactory) в StyleHelper.cs
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\95611b95599d7bfe9662fed9a99874e514433c8dc51f8fb6b00461831a725efe\StyleHelper.cs
+1199: 	private static object GetChildValueHelper(UncommonField<HybridDictionary[]> dataField, ref ItemStructList<ChildValueLookup> valueLookupList, DependencyProperty dp, DependencyObject container, FrameworkObject child, int childIndex, bool styleLookup, ref EffectiveValueEntry entry, out ValueLookupType sourceType, FrameworkElementFactory templateRoot)
+1200: 	{
+1201: 		object obj = DependencyProperty.UnsetValue;
+1202: 		sourceType = ValueLookupType.Simple;
+1203: 		for (int num = valueLookupList.Count - 1; num >= 0; num--)
+1204: 		{
+1205: 			sourceType = valueLookupList.List[num].LookupType;
+1206: 			switch (valueLookupList.List[num].LookupType)
+1207: 			{
+1208: 			case ValueLookupType.Simple:
+1209: 				obj = valueLookupList.List[num].Value;
+1210: 				break;
+1211: 			case ValueLookupType.Trigger:
+1212: 			case ValueLookupType.PropertyTriggerResource:
+1213: 			case ValueLookupType.DataTrigger:
+1214: 			case ValueLookupType.DataTriggerResource:
+1215: 			{
+1216: 				bool flag = true;
+1217: 				if (valueLookupList.List[num].Conditions != null)
+1218: 				{
+1219: 					int num2 = 0;
+1220: 					while (flag && num2 < valueLookupList.List[num].Conditions.Length)
+1221: 					{
+1222: 						switch (valueLookupList.List[num].LookupType)
+1223: 						{
+1224: 						case ValueLookupType.Trigger:
+1225: 						case ValueLookupType.PropertyTriggerResource:
+1226: 						{
+1227: 							int sourceChildIndex = valueLookupList.List[num].Conditions[num2].SourceChildIndex;
+1228: 							DependencyObject dependencyObject = ((sourceChildIndex != 0) ? GetChild(container, sourceChildIndex) : container);
+1229: 							DependencyProperty property3 = valueLookupList.List[num].Conditions[num2].Property;
+1230: 							object dataTriggerValue;
+1231: 							if (dependencyObject != null)
+1232: 							{
+1233: 								dataTriggerValue = dependencyObject.GetValue(property3);
+1234: 							}
+1235: 							else
+1236: 							{
+1237: 								Type forType = ((templateRoot == null) ? (container as FrameworkElement).TemplateInternal.ChildTypeFromChildIndex[sourceChildIndex] : FindFEF(templateRoot, sourceChildIndex).Type);
+1238: 								dataTriggerValue = property3.GetDefaultValue(forType);
+1239: 							}
+1240: 							flag = valueLookupList.List[num].Conditions[num2].Match(dataTriggerValue);
+1241: 							break;
+1242: 						}
+1243: 						default:
+1244: 						{
+1245: 							object dataTriggerValue = GetDataTriggerValue(dataField, container, valueLookupList.List[num].Conditions[num2].Binding);
+1246: 							flag = valueLookupList.List[num].Conditions[num2].ConvertAndMatch(dataTriggerValue);
+1247: 							break;
+1248: 						}
+1249: 						}
+1250: 						num2++;
+1251: 					}
+1252: 				}
+1253: 				if (flag)
+1254: 				{
+1255: 					if (valueLookupList.List[num].LookupType == ValueLookupType.PropertyTriggerResource || valueLookupList.List[num].LookupType == ValueLookupType.DataTriggerResource)
+1256: 					{
+1257: 						obj = FrameworkElement.FindResourceInternal(child.FE, child.FCE, dp, valueLookupList.List[num].Value, null, allowDeferredResourceReference: true, mustReturnDeferredResourceReference: false, null, isImplicitStyleLookup: false, out var _);
+1258: 						SealIfSealable(obj);
+1259: 					}
+1260: 					else
+1261: 					{
+1262: 						obj = valueLookupList.List[num].Value;
+1263: 					}
+1264: 				}
+1265: 				break;
+1266: 			}
+1267: 			case ValueLookupType.TemplateBinding:
+1268: 			{
+1269: 				TemplateBindingExtension templateBindingExtension = (TemplateBindingExtension)valueLookupList.List[num].Value;
+1270: 				DependencyProperty property = templateBindingExtension.Property;
+1271: 				obj = container.GetValue(property);
+1272: 				if (templateBindingExtension.Converter != null)
+1273: 				{
+1274: 					DependencyProperty property2 = valueLookupList.List[num].Property;
+1275: 					CultureInfo compatibleCulture = child.Language.GetCompatibleCulture();
+1276: 					obj = templateBindingExtension.Converter.Convert(obj, property2.PropertyType, templateBindingExtension.ConverterParameter, compatibleCulture);
+1277: 				}
+1278: 				if (obj != DependencyProperty.UnsetValue && !dp.IsValidValue(obj))
+1279: 				{
+1280: 					obj = DependencyProperty.UnsetValue;
+1281: 				}
+1282: 				break;
+1283: 			}
+1284: 			case ValueLookupType.Resource:
+1285: 			{
+1286: 				obj = FrameworkElement.FindResourceInternal(child.FE, child.FCE, dp, valueLookupList.List[num].Value, null, allowDeferredResourceReference: true, mustReturnDeferredResourceReference: false, null, isImplicitStyleLookup: false, out var _);
+1287: 				SealIfSealable(obj);
+1288: 				break;
+1289: 			}
+1290: 			}
+1291: 			if (obj != DependencyProperty.UnsetValue)
+1292: 			{
+1293: 				entry.Value = obj;
+1294: 				ValueLookupType lookupType = valueLookupList.List[num].LookupType;
+1295: 				if ((uint)lookupType <= 1u || lookupType == ValueLookupType.DataTrigger)
+1296: 				{
+1297: 					if (obj is MarkupExtension)
+1298: 					{
+1299: 						obj = GetInstanceValue(dataField, container, child.FE, child.FCE, childIndex, valueLookupList.List[num].Property, num, ref entry);
+1300: 					}
+1301: 					else if (obj is Freezable { IsFrozen: false })
+1302: 					{
+1303: 						obj = GetInstanceValue(dataField, container, child.FE, child.FCE, childIndex, valueLookupList.List[num].Property, num, ref entry);
+1304: 					}
+1305: 				}
+1306: 			}
+1307: 			if (obj != DependencyProperty.UnsetValue)
+1308: 			{
+1309: 				break;
+1310: 			}
+1311: 		}
+1312: 		return obj;
+1313: 	}
+```
+Current statement: line 1297
+........1 more stack frames omitted.
+The callstack context, if included, corresponds to the thread where this exception occurred. There is no need to identify this thread by other means.
+
+## CALLSTACK
+Thread ID: 9140
+[1] [Исключение] PresentationFramework.dll!System.Windows.Markup.XamlReader.RewrapException
+This is the current stack frame. The provided locals context corresponds to this stack frame.
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\ba71154a7b44d057354e94bf9136ff00912660e0c8e1435d76b141387af3b90b\XamlReader.cs
+423: 	internal static void RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)
+424: 	{
+425: 		throw WrapException(e, lineInfo, baseUri);
+426: 	}
+```
+Current statement: line 425
+[2] [Исключение] PresentationFramework.dll!System.Windows.Markup.XamlReader.RewrapException
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\ba71154a7b44d057354e94bf9136ff00912660e0c8e1435d76b141387af3b90b\XamlReader.cs
+418: 	internal static void RewrapException(Exception e, Uri baseUri)
+419: 	{
+420: 		RewrapException(e, null, baseUri);
+421: 	}
+```
+Current statement: line 420
+[3] [Исключение] PresentationFramework.dll!System.Windows.FrameworkTemplate.LoadTemplateXaml
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\7b8c5f2fbdb2db3e681241a3e974b6f3759a7611fe582e4a56dccfec02127b9b\FrameworkTemplate.cs
+712: 	private void LoadTemplateXaml(System.Xaml.XamlReader templateReader, XamlObjectWriter currentWriter)
+713: 	{
+714: 		try
+715: 		{
+716: 			int num = 0;
+717: 			IXamlLineInfoConsumer xamlLineInfoConsumer = null;
+718: 			IXamlLineInfo xamlLineInfo = null;
+719: 			if (XamlSourceInfoHelper.IsXamlSourceInfoEnabled)
+720: 			{
+721: 				xamlLineInfo = templateReader as IXamlLineInfo;
+722: 				if (xamlLineInfo != null)
+723: 				{
+724: 					xamlLineInfoConsumer = currentWriter;
+725: 				}
+726: 			}
+727: 			while (templateReader.Read())
+728: 			{
+729: 				xamlLineInfoConsumer?.SetLineInfo(xamlLineInfo.LineNumber, xamlLineInfo.LinePosition);
+730: 				currentWriter.WriteNode(templateReader);
+731: 				switch (templateReader.NodeType)
+732: 				{
+733: 				case System.Xaml.XamlNodeType.StartObject:
+734: 				{
+735: 					bool num3 = Names.Depth > 0 && (IsNameScope(Names.CurrentFrame.Type) || Names.CurrentFrame.InsideNameScope);
+736: 					Names.PushScope();
+737: 					Names.CurrentFrame.Type = templateReader.Type;
+738: 					if (num3)
+739: 					{
+740: 						Names.CurrentFrame.InsideNameScope = true;
+741: 					}
+742: 					break;
+743: 				}
+744: 				case System.Xaml.XamlNodeType.GetObject:
+745: 				{
+746: 					bool num2 = IsNameScope(Names.CurrentFrame.Type) || Names.CurrentFrame.InsideNameScope;
+747: 					Names.PushScope();
+748: 					Names.CurrentFrame.Type = Names.PreviousFrame.Property.Type;
+749: 					if (num2)
+750: 					{
+751: 						Names.CurrentFrame.InsideNameScope = true;
+752: 					}
+753: 					break;
+754: 				}
+755: 				case System.Xaml.XamlNodeType.StartMember:
+756: 					Names.CurrentFrame.Property = templateReader.Member;
+757: 					if (templateReader.Member.DeferringLoader != null)
+758: 					{
+759: 						num++;
+760: 					}
+761: 					break;
+762: 				case System.Xaml.XamlNodeType.EndMember:
+763: 					if (Names.CurrentFrame.Property.DeferringLoader != null)
+764: 					{
+765: 						num--;
+766: 					}
+767: 					Names.CurrentFrame.Property = null;
+768: 					break;
+769: 				case System.Xaml.XamlNodeType.EndObject:
+770: 					Names.PopScope();
+771: 					break;
+772: 				case System.Xaml.XamlNodeType.Value:
+773: 					if (num == 0 && Names.CurrentFrame.Property == XamlLanguage.ConnectionId)
+774: 					{
+775: 						_styleConnector?.Connect((int)templateReader.Value, Names.CurrentFrame.Instance);
+776: 					}
+777: 					break;
+778: 				}
+779: 			}
+780: 		}
+781: 		catch (Exception ex)
+782: 		{
+783: 			if (CriticalExceptions.IsCriticalException(ex) || ex is System.Windows.Markup.XamlParseException)
+784: 			{
+785: 				throw;
+786: 			}
+787: 			System.Windows.Markup.XamlReader.RewrapException(ex, null);
+788: 		}
+789: 	}
+```
+Current statement: line 787
+[4] [Исключение] PresentationFramework.dll!System.Windows.FrameworkTemplate.LoadOptimizedTemplateContent
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\7b8c5f2fbdb2db3e681241a3e974b6f3759a7611fe582e4a56dccfec02127b9b\FrameworkTemplate.cs
+655: 	private DependencyObject LoadOptimizedTemplateContent(DependencyObject container, IComponentConnector componentConnector, IStyleConnector styleConnector, List<DependencyObject> affectedChildren, UncommonField<Hashtable> templatedNonFeChildrenField)
+656: 	{
+657: 		if (Names == null)
+658: 		{
+659: 			Names = new MS.Internal.Xaml.Context.XamlContextStack<Frame>(() => new Frame());
+660: 		}
+661: 		DependencyObject rootObject = null;
+662: 		if (TraceMarkup.IsEnabled)
+663: 		{
+664: 			TraceMarkup.Trace(TraceEventType.Start, TraceMarkup.Load, default(ReadOnlySpan<object>));
+665: 		}
+666: 		FrameworkElement feContainer = container as FrameworkElement;
+667: 		_ = feContainer;
+668: 		TemplateNameScope nameScope = new TemplateNameScope(container, affectedChildren, this);
+669: 		XamlObjectWriterSettings xamlObjectWriterSettings = System.Windows.Markup.XamlReader.CreateObjectWriterSettings(_templateHolder.ObjectWriterParentSettings);
+670: 		xamlObjectWriterSettings.ExternalNameScope = nameScope;
+671: 		xamlObjectWriterSettings.RegisterNamesOnExternalNamescope = true;
+672: 		IEnumerator<string> nameEnumerator = ChildNames.GetEnumerator();
+673: 		xamlObjectWriterSettings.AfterBeginInitHandler = delegate(object sender, XamlObjectEventArgs args)
+674: 		{
+675: 			HandleAfterBeginInit(args.Instance, ref rootObject, container, feContainer, nameScope, nameEnumerator);
+676: 			if (XamlSourceInfoHelper.IsXamlSourceInfoEnabled)
+677: 			{
+678: 				XamlSourceInfoHelper.SetXamlSourceInfo(args.Instance, args, null);
+679: 			}
+680: 		};
+681: 		xamlObjectWriterSettings.BeforePropertiesHandler = delegate(object sender, XamlObjectEventArgs args)
+682: 		{
+683: 			HandleBeforeProperties(args.Instance, ref rootObject, container, feContainer, nameScope);
+684: 		};
+685: 		xamlObjectWriterSettings.XamlSetValueHandler = delegate(object sender, XamlSetValueEventArgs setArgs)
+686: 		{
+687: 			setArgs.Handled = ReceivePropertySet(sender, setArgs.Member, setArgs.Value, container);
+688: 		};
+689: 		XamlObjectWriter xamlObjectWriter = _templateHolder.ObjectWriterFactory.GetXamlObjectWriter(xamlObjectWriterSettings);
+690: 		try
+691: 		{
+692: 			LoadTemplateXaml(xamlObjectWriter);
+693: 		}
+694: 		finally
+695: 		{
+696: 			if (TraceMarkup.IsEnabled)
+697: 			{
+698: 				AvTraceDetails load = TraceMarkup.Load;
+699: 				object reference = rootObject;
+700: 				TraceMarkup.Trace(TraceEventType.Stop, load, new ReadOnlySpan<object>(in reference));
+701: 			}
+702: 		}
+703: 		return rootObject;
+704: 	}
+```
+Current statement: line 692
+[5] [Исключение] PresentationFramework.dll!System.Windows.FrameworkTemplate.LoadContent
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\7b8c5f2fbdb2db3e681241a3e974b6f3759a7611fe582e4a56dccfec02127b9b\FrameworkTemplate.cs
+514: 	internal DependencyObject LoadContent(DependencyObject container, List<DependencyObject> affectedChildren)
+515: 	{
+516: 		if (!HasContent)
+517: 		{
+518: 			return null;
+519: 		}
+520: 		lock (SystemResources.ThemeDictionaryLock)
+521: 		{
+522: 			return LoadOptimizedTemplateContent(container, null, _styleConnector, affectedChildren, null);
+523: 		}
+524: 	}
+```
+Current statement: line 522
+[6] [Исключение] PresentationFramework.dll!System.Windows.StyleHelper.ApplyTemplateContent
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\95611b95599d7bfe9662fed9a99874e514433c8dc51f8fb6b00461831a725efe\StyleHelper.cs
+897: 	internal static bool ApplyTemplateContent(UncommonField<HybridDictionary[]> dataField, DependencyObject container, FrameworkElementFactory templateRoot, int lastChildIndex, HybridDictionary childIndexFromChildID, FrameworkTemplate frameworkTemplate)
+898: 	{
+899: 		bool result = false;
+900: 		FrameworkElement frameworkElement = container as FrameworkElement;
+901: 		if (templateRoot != null)
+902: 		{
+903: 			EventTrace.EasyTraceEvent(EventTrace.Keyword.KeywordXamlBaml, EventTrace.Level.Verbose, EventTrace.Event.WClientParseInstVisTreeBegin);
+904: 			CheckForCircularReferencesInTemplateTree(container, frameworkTemplate);
+905: 			List<DependencyObject> list = new List<DependencyObject>(lastChildIndex);
+906: 			TemplatedFeChildrenField.SetValue(container, list);
+907: 			List<DependencyObject> noChildIndexChildren = null;
+908: 			templateRoot.InstantiateTree(dataField, container, container, list, ref noChildIndexChildren, ref frameworkTemplate.ResourceDependents);
+909: 			if (noChildIndexChildren != null)
+910: 			{
+911: 				list.AddRange(noChildIndexChildren);
+912: 			}
+913: 			result = true;
+914: 			if (frameworkElement != null && EventTrace.IsEnabled(EventTrace.Keyword.KeywordXamlBaml, EventTrace.Level.Verbose))
+915: 			{
+916: 				string text = frameworkElement.Name;
+917: 				if (text == null || text.Length == 0)
+918: 				{
+919: 					text = container.GetHashCode().ToString(CultureInfo.InvariantCulture);
+920: 				}
+921: 				EventTrace.EventProvider.TraceEvent(EventTrace.Event.WClientParseInstVisTreeEnd, EventTrace.Keyword.KeywordXamlBaml, EventTrace.Level.Verbose, "Style.InstantiateSubTree for " + container.GetType().Name + " " + text);
+922: 			}
+923: 		}
+924: 		else if (frameworkTemplate != null && frameworkTemplate.HasXamlNodeContent)
+925: 		{
+926: 			EventTrace.EasyTraceEvent(EventTrace.Keyword.KeywordXamlBaml, EventTrace.Level.Verbose, EventTrace.Event.WClientParseInstVisTreeBegin);
+927: 			CheckForCircularReferencesInTemplateTree(container, frameworkTemplate);
+928: 			List<DependencyObject> list2 = new List<DependencyObject>(lastChildIndex);
+929: 			TemplatedFeChildrenField.SetValue(container, list2);
+930: 			frameworkTemplate.LoadContent(container, list2);
+931: 			result = true;
+932: 			if (frameworkElement != null && EventTrace.IsEnabled(EventTrace.Keyword.KeywordXamlBaml, EventTrace.Level.Verbose))
+933: 			{
+934: 				string text2 = frameworkElement.Name;
+935: 				if (text2 == null || text2.Length == 0)
+936: 				{
+937: 					text2 = container.GetHashCode().ToString(CultureInfo.InvariantCulture);
+938: 				}
+939: 				EventTrace.EventProvider.TraceEvent(EventTrace.Event.WClientParseInstVisTreeEnd, EventTrace.Keyword.KeywordXamlBaml, EventTrace.Level.Verbose, "Style.InstantiateSubTree for " + container.GetType().Name + " " + text2);
+940: 			}
+941: 		}
+942: 		else if (frameworkElement != null)
+943: 		{
+944: 			result = frameworkTemplate.BuildVisualTree(frameworkElement);
+945: 		}
+946: 		return result;
+947: 	}
+```
+Current statement: line 930
+[7] [Исключение] PresentationFramework.dll!System.Windows.FrameworkTemplate.ApplyTemplateContent
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\7b8c5f2fbdb2db3e681241a3e974b6f3759a7611fe582e4a56dccfec02127b9b\FrameworkTemplate.cs
+479: 	internal bool ApplyTemplateContent(UncommonField<HybridDictionary[]> templateDataField, FrameworkElement container)
+480: 	{
+481: 		if (TraceDependencyProperty.IsEnabled)
+482: 		{
+483: 			AvTraceDetails applyTemplateContent = TraceDependencyProperty.ApplyTemplateContent;
+484: 			global::_003C_003Ey__InlineArray2<object> buffer = default(global::_003C_003Ey__InlineArray2<object>);
+485: 			global::_003CPrivateImplementationDetails_003E.InlineArrayElementRef<global::_003C_003Ey__InlineArray2<object>, object>(ref buffer, 0) = container;
+486: 			global::_003CPrivateImplementationDetails_003E.InlineArrayElementRef<global::_003C_003Ey__InlineArray2<object>, object>(ref buffer, 1) = this;
+487: 			TraceDependencyProperty.Trace(TraceEventType.Start, applyTemplateContent, global::_003CPrivateImplementationDetails_003E.InlineArrayAsReadOnlySpan<global::_003C_003Ey__InlineArray2<object>, object>(in buffer, 2));
+488: 		}
+489: 		ValidateTemplatedParent(container);
+490: 		bool result = StyleHelper.ApplyTemplateContent(templateDataField, container, _templateRoot, _lastChildIndex, ChildIndexFromChildName, this);
+491: 		if (TraceDependencyProperty.IsEnabled)
+492: 		{
+493: 			AvTraceDetails applyTemplateContent2 = TraceDependencyProperty.ApplyTemplateContent;
+494: 			global::_003C_003Ey__InlineArray2<object> buffer2 = default(global::_003C_003Ey__InlineArray2<object>);
+495: 			global::_003CPrivateImplementationDetails_003E.InlineArrayElementRef<global::_003C_003Ey__InlineArray2<object>, object>(ref buffer2, 0) = container;
+496: 			global::_003CPrivateImplementationDetails_003E.InlineArrayElementRef<global::_003C_003Ey__InlineArray2<object>, object>(ref buffer2, 1) = this;
+497: 			TraceDependencyProperty.Trace(TraceEventType.Stop, applyTemplateContent2, global::_003CPrivateImplementationDetails_003E.InlineArrayAsReadOnlySpan<global::_003C_003Ey__InlineArray2<object>, object>(in buffer2, 2));
+498: 		}
+499: 		return result;
+500: 	}
+```
+Current statement: line 489
+[8] [Исключение] PresentationFramework.dll!System.Windows.FrameworkElement.ApplyTemplate
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\7e794aeee257f72b356f5594f27c0605de6342012d58a8a4e8832b21d3818fd0\FrameworkElement.cs
+1717: 	public bool ApplyTemplate()
+1718: 	{
+1719: 		OnPreApplyTemplate();
+1720: 		bool flag = false;
+1721: 		UncommonField<HybridDictionary[]> templateDataField = StyleHelper.TemplateDataField;
+1722: 		FrameworkTemplate templateInternal = TemplateInternal;
+1723: 		int num = 2;
+1724: 		int num2 = 0;
+1725: 		while (templateInternal != null && num2 < num && !HasTemplateGeneratedSubTree)
+1726: 		{
+1727: 			flag = templateInternal.ApplyTemplateContent(templateDataField, this);
+1728: 			if (flag)
+1729: 			{
+1730: 				HasTemplateGeneratedSubTree = true;
+1731: 				StyleHelper.InvokeDeferredActions(this, templateInternal);
+1732: 				OnApplyTemplate();
+1733: 			}
+1734: 			if (templateInternal == TemplateInternal)
+1735: 			{
+1736: 				break;
+1737: 			}
+1738: 			templateInternal = TemplateInternal;
+1739: 			num2++;
+1740: 		}
+1741: 		OnPostApplyTemplate();
+1742: 		return flag;
+1743: 	}
+```
+Current statement: line 1727
+[9] [Исключение] PresentationFramework.dll!System.Windows.FrameworkElement.MeasureCore
+Code for the stack frame:
+```csharp C:\Users\bogda\AppData\Local\Temp\.vsdbgsrc\7e794aeee257f72b356f5594f27c0605de6342012d58a8a4e8832b21d3818fd0\FrameworkElement.cs
+3543: 	protected sealed override Size MeasureCore(Size availableSize)
+3544: 	{
+3545: 		bool useLayoutRounding = UseLayoutRounding;
+3546: 		DpiScale dpi = GetDpi();
+3547: 		if (useLayoutRounding && !CheckFlagsAnd(VisualFlags.UseLayoutRounding))
+3548: 		{
+3549: 			SetFlags(value: true, VisualFlags.UseLayoutRounding);
+3550: 		}
+3551: 		ApplyTemplate();
+3552: 		if (BypassLayoutPolicies)
+3553: 		{
+3554: 			return MeasureOverride(availableSize);
+3555: 		}
+3556: 		Thickness margin = Margin;
+3557: 		double num = margin.Left + margin.Right;
+3558: 		double num2 = margin.Top + margin.Bottom;
+3559: 		if (useLayoutRounding && (this is ScrollContentPresenter || !FrameworkAppContextSwitches.DoNotApplyLayoutRoundingToMarginsAndBorderThickness))
+3560: 		{
+3561: 			num = UIElement.RoundLayoutValue(num, dpi.DpiScaleX);
+3562: 			num2 = UIElement.RoundLayoutValue(num2, dpi.DpiScaleY);
+3563: 		}
+3564: 		Size size = new Size(Math.Max(availableSize.Width - num, 0.0), Math.Max(availableSize.Height - num2, 0.0));
+3565: 		MinMax minMax = new MinMax(this);
+3566: 		if (useLayoutRounding && !FrameworkAppContextSwitches.DoNotApplyLayoutRoundingToMarginsAndBorderThickness)
+3567: 		{
+3568: 			minMax.maxHeight = UIElement.RoundLayoutValue(minMax.maxHeight, dpi.DpiScaleY);
+3569: 			minMax.maxWidth = UIElement.RoundLayoutValue(minMax.maxWidth, dpi.DpiScaleX);
+3570: 			minMax.minHeight = UIElement.RoundLayoutValue(minMax.minHeight, dpi.DpiScaleY);
+3571: 			minMax.minWidth = UIElement.RoundLayoutValue(minMax.minWidth, dpi.DpiScaleX);
+3572: 		}
+3573: 		LayoutTransformData layoutTransformData = LayoutTransformDataField.GetValue(this);
+3574: 		Transform layoutTransform = LayoutTransform;
+3575: 		if (layoutTransform != null && !layoutTransform.IsIdentity)
+3576: 		{
+3577: 			if (layoutTransformData == null)
+3578: 			{
+3579: 				layoutTransformData = new LayoutTransformData();
+3580: 				LayoutTransformDataField.SetValue(this, layoutTransformData);
+3581: 			}
+3582: 			layoutTransformData.CreateTransformSnapshot(layoutTransform);
+3583: 			layoutTransformData.UntransformedDS = default(Size);
+3584: 			if (useLayoutRounding)
+3585: 			{
+3586: 				layoutTransformData.TransformedUnroundedDS = default(Size);
+3587: 			}
+3588: 		}
+3589: 		else if (layoutTransformData != null)
+3590: 		{
+3591: 			layoutTransformData = null;
+3592: 			LayoutTransformDataField.ClearValue(this);
+3593: 		}
+3594: 		if (layoutTransformData != null)
+3595: 		{
+3596: 			size = FindMaximalAreaLocalSpaceRect(layoutTransformData.Transform, size);
+3597: 		}
+3598: 		size.Width = Math.Max(minMax.minWidth, Math.Min(size.Width, minMax.maxWidth));
+3599: 		size.Height = Math.Max(minMax.minHeight, Math.Min(size.Height, minMax.maxHeight));
+3600: 		if (useLayoutRounding)
+3601: 		{
+3602: 			size = UIElement.RoundLayoutSize(size, dpi.DpiScaleX, dpi.DpiScaleY);
+3603: 		}
+3604: 		Size size2 = MeasureOverride(size);
+3605: 		size2 = new Size(Math.Max(size2.Width, minMax.minWidth), Math.Max(size2.Height, minMax.minHeight));
+3606: 		Size size3 = size2;
+3607: 		if (layoutTransformData != null)
+3608: 		{
+3609: 			layoutTransformData.UntransformedDS = size3;
+3610: 			Rect rect = Rect.Transform(new Rect(0.0, 0.0, size3.Width, size3.Height), layoutTransformData.Transform.Value);
+3611: 			size3.Width = rect.Width;
+3612: 			size3.Height = rect.Height;
+3613: 		}
+3614: 		bool flag = false;
+3615: 		if (size2.Width > minMax.maxWidth)
+3616: 		{
+3617: 			size2.Width = minMax.maxWidth;
+3618: 			flag = true;
+3619: 		}
+3620: 		if (size2.Height > minMax.maxHeight)
+3621: 		{
+3622: 			size2.Height = minMax.maxHeight;
+3623: 			flag = true;
+3624: 		}
+3625: 		if (layoutTransformData != null)
+3626: 		{
+3627: 			Rect rect2 = Rect.Transform(new Rect(0.0, 0.0, size2.Width, size2.Height), layoutTransformData.Transform.Value);
+3628: 			size2.Width = rect2.Width;
+3629: 			size2.Height = rect2.Height;
+3630: 		}
+3631: 		double num3 = size2.Width + num;
+3632: 		double num4 = size2.Height + num2;
+3633: 		if (num3 > availableSize.Width)
+3634: 		{
+3635: 			num3 = availableSize.Width;
+3636: 			flag = true;
+3637: 		}
+3638: 		if (num4 > availableSize.Height)
+3639: 		{
+3640: 			num4 = availableSize.Height;
+3641: 			flag = true;
+3642: 		}
+3643: 		if (layoutTransformData != null)
+3644: 		{
+3645: 			layoutTransformData.TransformedUnroundedDS = new Size(Math.Max(0.0, num3), Math.Max(0.0, num4));
+3646: 		}
+3647: 		if (useLayoutRounding)
+3648: 		{
+3649: 			num3 = UIElement.RoundLayoutValue(num3, dpi.DpiScaleX);
+3650: 			num4 = UIElement.RoundLayoutValue(num4, dpi.DpiScaleY);
+3651: 		}
+3652: 		SizeBox value = UnclippedDesiredSizeField.GetValue(this);
+3653: 		if (flag || num3 < 0.0 || num4 < 0.0)
+3654: 		{
+3655: 			if (value == null)
+3656: 			{
+3657: 				value = new SizeBox(size3);
+3658: 				UnclippedDesiredSizeField.SetValue(this, value);
+3659: 			}
+3660: 			else
+3661: 			{
+3662: 				value.Width = size3.Width;
+3663: 				value.Height = size3.Height;
+3664: 			}
+3665: 		}
+3666: 		else if (value != null)
+3667: 		{
+3668: 			UnclippedDesiredSizeField.ClearValue(this);
+3669: 		}
+3670: 		return new Size(Math.Max(0.0, num3), Math.Max(0.0, num4));
+3671: 	}
+```
+Current statement: line 3551
+[10] [Исключение] PresentationCore.dll!System.Windows.UIElement.Measure
+........79 more stack frames omitted.
+
+## LOCALS
+

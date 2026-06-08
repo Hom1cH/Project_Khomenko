@@ -1,0 +1,23 @@
+{
+  "ExportDirectory": "D:\\education\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430",
+  "Theme": 0,
+  "ReminderEnabled": false,
+  "GamblingApps": [
+    {
+      "Name": "krita",
+      "ExePath": "E:\\Krita (x64)\\bin\\krita.exe"
+    },
+    {
+      "Name": "Code",
+      "ExePath": "E:\\Microsoft VS Code\\Code.exe"
+    },
+    {
+      "Name": "Sequator",
+      "ExePath": "E:\\Sequator162r2\\Sequator.exe"
+    },
+    {
+      "Name": "blender",
+      "ExePath": "G:\\SteamLibrary\\steamapps\\common\\Blender\\blender.exe"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "resADvs+t5k=",
+  "success": true,
+  "projectFilePath": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\WpfApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bogda\\.nuget\\packages\\materialdesigncolors\\5.3.2\\materialdesigncolors.5.3.2.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\materialdesignthemes\\5.3.2\\materialdesignthemes.5.3.2.nupkg.sha512",
+    "C:\\Users\\bogda\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.77\\microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512"
+  ],
+  "logs": []
+}

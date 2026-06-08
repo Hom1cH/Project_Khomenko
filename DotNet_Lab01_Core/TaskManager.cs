@@ -39,7 +39,12 @@ public class TaskManager : IEnumerable<ParacTask>
         _suspendAutoSave = false;
         Log($"LoadTasksFromStorage completed count={_tasks.Count}");
     }
-
+    private void RecalculateCourse(int? courseId)
+    {
+        if (courseId == null) return;
+        Course? course = _courseManager.FindById(courseId.Value);
+        course?.RecalculateFromTasks();
+    }
     private void SaveChanges()
     {
         Log("SaveChanges called.");
@@ -251,6 +256,7 @@ public class TaskManager : IEnumerable<ParacTask>
         }
 
         task.Credits = credits;
+        RecalculateCourse(task.CourseId);
         SaveChanges();
         Log($"UpdateTaskCredits completed taskId={taskId} credits={credits}");
         return true;
@@ -268,6 +274,7 @@ public class TaskManager : IEnumerable<ParacTask>
         }
 
         task.UpdateProgress(progress);
+        RecalculateCourse(task.CourseId);
         SaveChanges();
         Log($"UpdateTaskProgress completed taskId={taskId} progress={progress}");
         return true;
@@ -302,6 +309,7 @@ public class TaskManager : IEnumerable<ParacTask>
         }
 
         task.Complete();
+        RecalculateCourse(task.CourseId);
         SaveChanges();
         Log($"CompleteTask completed taskId={taskId}");
         return true;
@@ -390,6 +398,7 @@ public class TaskManager : IEnumerable<ParacTask>
         }
 
         SaveChanges();
+        RecalculateCourse(task.CourseId);
         Log($"UpdateTaskStatus completed taskId={taskId} status={status}");
         return true;
     }

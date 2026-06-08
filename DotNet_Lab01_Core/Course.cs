@@ -144,5 +144,47 @@ namespace DotNet_Lab01_Core
                 .OrderByDescending(task => task.Difficulty)
                 .ToList();
         }
+        public void RecalculateFromTasks()
+        {
+            if (Tasks.Count == 0)
+            {
+                Progress = 0;
+                ReceivedCredits = 0;
+                return;
+            }
+
+            // Прогрес = середнє по всіх тасках
+            Progress = (int)Math.Round(Tasks.Average(t => t.Progress));
+
+            // Кредити завершених тасків
+            int completedCredits = Tasks
+                .Where(t => t.Status == UnitStatus.Completed)
+                .Sum(t => t.Credits);
+
+            int totalTaskCredits = Tasks.Sum(t => t.Credits);
+
+            if (totalTaskCredits <= Credits)
+            {
+                // Пряма сума — таски не перевищують максимум курсу
+                ReceivedCredits = completedCredits;
+            }
+            else
+            {
+                // Пропорційний розрахунок:
+                // totalTaskCredits = 100%
+                // completedCredits = x%
+                // ReceivedCredits = Credits курсу * x%
+                double ratio = (double)completedCredits / totalTaskCredits;
+                ReceivedCredits = (int)Math.Round(Credits * ratio);
+            }
+
+            // Оновити статус курсу
+            if (Progress == 0)
+                Status = UnitStatus.NotStarted;
+            else if (Progress == 100)
+                Status = UnitStatus.Completed;
+            else if (Status != UnitStatus.Paused && Status != UnitStatus.Archived)
+                Status = UnitStatus.InProgress;
+        }
     }
 }

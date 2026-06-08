@@ -17,6 +17,8 @@ namespace DotNet_Lab01_Core
 
         
         public int? CourseId { get; set; }
+        public List<string> ImagePaths { get; set; } = new();
+        public List<string> AttachmentPaths { get; set; } = new();
 
         public int Credits
         {
@@ -65,6 +67,18 @@ namespace DotNet_Lab01_Core
         public override string ToString()
         {
             return $"Task name: {TaskName}\nCourse ID: {CourseId?.ToString() ?? "None"}\nDeadline: {Deadline}\nDifficulty: {Difficulty}\nCredits: {Credits}\nWorkload: {ComputeWorkload()}\nDescription: {TaskDescription}\n";
+        }
+
+        public void AddImage(string path)
+        {
+            if (!string.IsNullOrWhiteSpace(path) && !ImagePaths.Contains(path))
+                ImagePaths.Add(path);
+        }
+
+        public void AddAttachment(string path)
+        {
+            if (!string.IsNullOrWhiteSpace(path) && !AttachmentPaths.Contains(path))
+                AttachmentPaths.Add(path);
         }
 
     }

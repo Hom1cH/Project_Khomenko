@@ -30,5 +30,9 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("robotocondensed-light.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("robotocondensed-lightitalic.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("robotocondensed-regular.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/appicon.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/appicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/csgo%20case%20opening%20sound%20effect.mp3")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/readme.md")]
 
 

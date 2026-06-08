@@ -17,4 +17,8 @@
     <ProjectReference Include="..\DotNet_Lab01_Core\Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Assets\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

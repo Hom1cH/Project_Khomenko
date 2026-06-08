@@ -10,7 +10,7 @@
         Width="1600"
         MinHeight="680"
         MinWidth="980"
-        Background="#F4F7FB"
+        Background="{DynamicResource AppBackgroundBrush}"
         >
     <Window.DataContext>
         <local:MainViewModel />
@@ -18,14 +18,15 @@
 
     <Window.Resources>
         <local:BindingProxy x:Key="ViewModelProxy" Data="{Binding}" />
+        <local:FreedImageConverter x:Key="FreedImageConverter" />
 
         <Style x:Key="MetricLabel" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="#667085" />
+            <Setter Property="Foreground" Value="{DynamicResource SecondaryTextBrush}" />
             <Setter Property="FontSize" Value="12" />
         </Style>
 
         <Style x:Key="MetricValue" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="#111827" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextBrush}" />
             <Setter Property="FontWeight" Value="SemiBold" />
             <Setter Property="FontSize" Value="18" />
         </Style>
@@ -59,9 +60,9 @@
                     <TextBlock Text="All courses"
                        FontSize="28"
                        FontWeight="SemiBold"
-                       Foreground="#101828" />
+                       Foreground="{DynamicResource PrimaryTextBrush}" />
                     <TextBlock Text="Click a course card to inspect its tasks."
-                       Foreground="#667085"
+                       Foreground="{DynamicResource SecondaryTextBrush}"
                        Margin="0,4,0,0" />
                 </StackPanel>
 
@@ -85,13 +86,13 @@
                                     Margin="0"
                                     Padding="0"
                                     BorderThickness="0"
-                                    Background="Transparent"
+                                    Background="{DynamicResource TransparentBrush}"
                                     Cursor="Hand">
-                                        <Border Background="White"
+                                        <Border Background="{DynamicResource SurfaceBrush}"
                                         CornerRadius="8"
                                         Width="345"
                                         MinHeight="400"
-                                        BorderBrush="#E5E7EB"
+                                        BorderBrush="{DynamicResource BorderBrush}"
                                         BorderThickness="1"
                                         Padding="0">
                                             <StackPanel>
@@ -100,17 +101,19 @@
                                                         Padding="18">
                                                     <StackPanel>
                                                 <DockPanel>
-                                                    <TextBlock Text="{Binding Title}"      
-                                                               Width="280"
-                                                               HorizontalAlignment="Left"
-                                                        FontSize="24"
-                                                        FontWeight="SemiBold"
-                                                        Foreground="#111827"
-                                                        TextTrimming="CharacterEllipsis" 
+                                                    <TextBlock  Text="{Binding Title}"      
+                                                                Width="280"
+                                                                HorizontalAlignment="Left"
+                                                                FontSize="24"
+                                                                FontWeight="SemiBold"
+                                                                Foreground="{DynamicResource 000000000}"
+                                                                TextTrimming="CharacterEllipsis" 
                                                            />
                                                 </DockPanel>
                                                 <Border DockPanel.Dock="Right"
-                                                    Background="#ECFDF3"
+                                                    Background="{Binding StatusBadgeBackground}"
+                                                    BorderBrush="{Binding StatusBadgeBorderBrush}"
+                                                    BorderThickness="1"
                                                     CornerRadius="5"
                                                     Padding="8,3"
                                                     HorizontalAlignment="Left"
@@ -118,27 +121,27 @@
 
                                                     <TextBlock Text="{Binding Status}"
                                                         FontSize="11"
-                                                        Foreground="#027A48"
+                                                        Foreground="{Binding StatusBadgeForeground}"
                                                         FontWeight="SemiBold"
                                                         PreviewMouseLeftButtonDown="Status_PreviewMouseLeftButtonDown"
                                                         Tag="{Binding}">
                                                         <TextBlock.ContextMenu>
-                                                            <ContextMenu>
+                                                            <ContextMenu Background="{DynamicResource PanelBrush}">
                                                                 <MenuItem Header="NotStarted"
                                                                           Command="{Binding Data.SetCourseNotStartedCommand, Source={StaticResource ViewModelProxy}}"
-                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                                 <MenuItem Header="InProgress"
                                                                           Command="{Binding Data.SetCourseInProgressCommand, Source={StaticResource ViewModelProxy}}"
-                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                                 <MenuItem Header="Completed"
                                                                           Command="{Binding Data.SetCourseCompletedCommand, Source={StaticResource ViewModelProxy}}"
-                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                                 <MenuItem Header="Paused"
                                                                           Command="{Binding Data.SetCoursePausedCommand, Source={StaticResource ViewModelProxy}}"
-                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                                 <MenuItem Header="Archived"
                                                                           Command="{Binding Data.SetCourseArchivedCommand, Source={StaticResource ViewModelProxy}}"
-                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                                                                          CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                             </ContextMenu>
                                                         </TextBlock.ContextMenu>
                                                     </TextBlock>
@@ -169,50 +172,53 @@
                                                 </Border>
                                                 <StackPanel Margin="18">
                                                 <TextBlock Text="{Binding Description}"
-                                                    Foreground="#667085"
-                                                    TextWrapping="Wrap"
-                                                    MaxHeight="40"
-                                                    TextTrimming="CharacterEllipsis"
-                                                    Margin="0,8,0,14" />
+                                                            Foreground="{DynamicResource SecondaryTextBrush}"
+                                                            TextWrapping="Wrap"
+                                                            MaxHeight="40"
+                                                            TextTrimming="CharacterEllipsis"
+                                                            Margin="0,8,0,14" />
                                                 <ProgressBar Value="{Binding Progress, Mode=OneWay}"
-                                                    Height="10"
-                                                    Maximum="100"
-                                                    Margin="0,0,0,12" />
+                                                             Height="10"
+                                                             Maximum="100"
+                                                             Margin="0,0,0,12" 
+                                                             BorderBrush="{DynamicResource TransparentBrush}"
+                                                             Background="{DynamicResource ProgresBackgroundBrush}"
+                                                             Foreground="{DynamicResource ProgresForegroundBrush}"/>
                                                 <UniformGrid Columns="3"
                                                              Margin="0,0,0,12">
                                                     <StackPanel>
                                                         <TextBlock Text="Progress" Style="{StaticResource MetricLabel}" />
-                                                        <TextBlock Text="{Binding ProgressText}" Style="{StaticResource MetricValue}" />
+                                                            <TextBlock Text="{Binding ProgressText}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <TextBlock Text="Tasks" Style="{StaticResource MetricLabel}" />
-                                                        <TextBlock Text="{Binding TaskCount}" Style="{StaticResource MetricValue}" />
+                                                            <TextBlock Text="{Binding TaskCount}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                     </StackPanel>
                                                     <StackPanel>
                                                         <TextBlock Text="Difficulty" Style="{StaticResource MetricLabel}" />
-                                                        <TextBlock Text="{Binding Difficulty}" Style="{StaticResource MetricValue}" />
+                                                            <TextBlock Text="{Binding Difficulty}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                     </StackPanel>
                                                 </UniformGrid>
                                                 <UniformGrid Columns="2">
                                                     <StackPanel Margin="0,0,0,8">
                                                         <TextBlock Text="Credits" Style="{StaticResource MetricLabel}" />
-                                                        <TextBlock Text="{Binding ReceivedCreditsText}" FontWeight="SemiBold" Foreground="#111827" />
+                                                        <TextBlock Text="{Binding ReceivedCreditsText}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                     </StackPanel>
                                                     <StackPanel Margin="0,0,10,8">
                                                         <TextBlock Text="Workload" Style="{StaticResource MetricLabel}" />
-                                                        <TextBlock Text="{Binding Workload}" FontWeight="SemiBold" Foreground="#111827" />
+                                                        <TextBlock Text="{Binding Workload}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                     </StackPanel>
                                                     <StackPanel Margin="0,0,10,8">
                                                         <TextBlock Text="Created" Style="{StaticResource MetricLabel}" />
-                                                        <TextBlock Text="{Binding CreatedAtText}" FontWeight="SemiBold" Foreground="#111827" />
+                                                        <TextBlock Text="{Binding CreatedAtText}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                     </StackPanel>
                                                     <StackPanel Margin="0,0,0,8">
                                                         <TextBlock Text="Deadline" Style="{StaticResource MetricLabel}" />
-                                                        <TextBlock Text="{Binding DeadlineText}" FontWeight="SemiBold" Foreground="#111827" />
+                                                        <TextBlock Text="{Binding DeadlineText}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                     </StackPanel>
                                                         <StackPanel Margin="0,0,10,0">
                                                             <TextBlock Text="Ended" Style="{StaticResource MetricLabel}" />
-                                                            <TextBlock Text="{Binding EndedAtText}" FontWeight="SemiBold" Foreground="#111827" />
+                                                            <TextBlock Text="{Binding EndedAtText}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                         </StackPanel>
                                                     </UniformGrid>
                                                 </StackPanel>
@@ -220,19 +226,23 @@
                                         </Border>
                                     </Button>
                                     <Button Width="28"
-                                        Height="28"
-                                        HorizontalAlignment="Right"
-                                        VerticalAlignment="Top"
-                                        Margin="0,10,10,0"
-                                        Content="..."
-                                        FontWeight="Bold"
-                                        Padding="0"
-                                        Click="CourseCardSettings_Click"
-                                        Tag="{Binding}">
+                                            Height="28"
+                                            Panel.ZIndex="2"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Top"
+                                            Margin="0,10,10,0"
+                                            Content="..."
+                                            FontWeight="Bold"
+                                            Padding="0"
+                                            Click="CourseCardSettings_Click"
+                                            Background="{DynamicResource ButtonBackground}"
+                                            BorderBrush="{DynamicResource ButtonBackground}"
+                                            Tag="{Binding}">
                                         <Button.ContextMenu>
-                                            <ContextMenu>
-                                                <MenuItem Header="Изменить" Click="EditCourseMenuItem_Click" />
-                                                <MenuItem Header="Удалить"
+                                            <ContextMenu Background="{DynamicResource PanelBrush}">
+                                                <MenuItem Header="Изменить" Click="EditCourseMenuItem_Click" Foreground="{DynamicResource PrimaryTextBrush}"/>
+                                                <MenuItem Header="Удалить" 
+                                                          Foreground="{DynamicResource PrimaryTextBrush}"
                                                           Command="{Binding Data.DeleteCourseCommand, Source={StaticResource ViewModelProxy}}"
                                                           CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
                                             </ContextMenu>
@@ -257,16 +267,18 @@
                             Width="86"
                             Height="34"
                             DockPanel.Dock="Left"
-                            Command="{Binding BackCommand}" />
+                            Command="{Binding BackCommand}" 
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}"/>
                     <StackPanel Margin="16,0,0,0">
                         <TextBlock x:Name="SelectedCourseTitle"
                                    Text="{Binding SelectedCourseTitle}"
                                    FontSize="28"
                                    FontWeight="SemiBold"
-                                   Foreground="#101828" />
+                                   Foreground="{DynamicResource PrimaryTextBrush}" />
                         <TextBlock x:Name="SelectedCourseSubtitle"
                                    Text="{Binding SelectedCourseSubtitle}"
-                                   Foreground="#667085"
+                                   Foreground="{DynamicResource SecondaryTextBrush}"
                                    Margin="0,4,0,0" />
                     </StackPanel>
                 </DockPanel>
@@ -287,11 +299,14 @@
                                     <Border Width="345"
                                         MinHeight="320"
                                         Margin="0"
-                                        Background="White"
+                                        Background="{DynamicResource SurfaceBrush}"
                                         CornerRadius="8"
-                                        BorderBrush="#E5E7EB"
+                                        BorderBrush="{DynamicResource BorderBrush}"
                                         BorderThickness="1"
-                                        Padding="0">
+                                        Padding="0"
+                                        MouseLeftButtonDown="TaskCard_MouseDown"
+                                        Tag="{Binding}"
+                                        Cursor="Hand">
                                         <StackPanel>
                                             <Border Background="{Binding HeaderBackground}"
                                                     CornerRadius="8,8,0,0"
@@ -300,34 +315,37 @@
                                             <TextBlock Text="{Binding Title}"
                                                    FontSize="18"
                                                    FontWeight="SemiBold"
-                                                   Foreground="#111827"
+                                                   Foreground="{DynamicResource PrimaryTextBrush}"
                                                    TextWrapping="Wrap" />
                                             <Border DockPanel.Dock="Right"
-                                                    Background="#ECFDF3"
+                                                    Background="{Binding StatusBadgeBackground}"
+                                                    BorderBrush="{Binding StatusBadgeBorderBrush}"
+                                                    BorderThickness="1"
                                                     CornerRadius="5"
                                                     Padding="8,3"
                                                     HorizontalAlignment="Left">
                                                 <TextBlock Text="{Binding Status}"
                                                         FontSize="11"
-                                                        Foreground="#027A48"
+                                                        Foreground="{Binding StatusBadgeForeground}"
                                                         FontWeight="SemiBold"
                                                         PreviewMouseLeftButtonDown="Status_PreviewMouseLeftButtonDown"
-                                                        Tag="{Binding}">
+                                                        Tag="{Binding}"
+                                                        Cursor="Hand">
                                                     <TextBlock.ContextMenu>
-                                                        <ContextMenu>
-                                                            <MenuItem Header="NotStarted"
+                                                        <ContextMenu Background="{DynamicResource PanelBrush}">
+                                                            <MenuItem Header="NotStarted" Foreground="{DynamicResource PrimaryTextBrush}"
                                                                       Command="{Binding Data.SetTaskNotStartedCommand, Source={StaticResource ViewModelProxy}}"
                                                                       CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
-                                                            <MenuItem Header="InProgress"
+                                                            <MenuItem Header="InProgress" Foreground="{DynamicResource PrimaryTextBrush}"
                                                                       Command="{Binding Data.SetTaskInProgressCommand, Source={StaticResource ViewModelProxy}}"
                                                                       CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
-                                                            <MenuItem Header="Completed"
+                                                            <MenuItem Header="Completed" Foreground="{DynamicResource PrimaryTextBrush}"
                                                                       Command="{Binding Data.SetTaskCompletedCommand, Source={StaticResource ViewModelProxy}}"
                                                                       CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
-                                                            <MenuItem Header="Paused"
+                                                            <MenuItem Header="Paused" Foreground="{DynamicResource PrimaryTextBrush}"
                                                                       Command="{Binding Data.SetTaskPausedCommand, Source={StaticResource ViewModelProxy}}"
                                                                       CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
-                                                            <MenuItem Header="Archived"
+                                                            <MenuItem Header="Archived" Foreground="{DynamicResource PrimaryTextBrush}"
                                                                       Command="{Binding Data.SetTaskArchivedCommand, Source={StaticResource ViewModelProxy}}"
                                                                       CommandParameter="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
                                                         </ContextMenu>
@@ -360,50 +378,53 @@
                                             </Border>
                                             <StackPanel Margin="18">
                                             <TextBlock Text="{Binding Description}"
-                                                   Foreground="#667085"
+                                                   Foreground="{DynamicResource SecondaryTextBrush}"
                                                    TextWrapping="Wrap"
                                                    MaxHeight="40"
                                                    TextTrimming="CharacterEllipsis"
                                                    Margin="0,8,0,8" />
-                                            <ProgressBar Value="{Binding Progress, Mode=OneWay}"
-                                                Height="10"
-                                                Maximum="100"
-                                                Margin="0,0,0,12" />
+                                            <ProgressBar Value="{Binding Progress, Mode=OneTime}"
+                                                        Height="10"
+                                                        Maximum="100"
+                                                        Margin="0,0,0,12" 
+                                                        Background="{DynamicResource TransparentBrush}"
+                                                        BorderBrush="{DynamicResource ProgresBackgroundBrush}"
+                                                        Foreground="{DynamicResource ProgresForegroundBrush}"/>
                                             <UniformGrid Columns="3"
                                                          Margin="0,0,0,12">
                                                 <StackPanel>
                                                     <TextBlock Text="Progress" Style="{StaticResource MetricLabel}" />
-                                                    <TextBlock Text="{Binding ProgressText}" Style="{StaticResource MetricValue}" />
+                                                        <TextBlock Text="{Binding ProgressText}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                 </StackPanel>
                                                 <StackPanel>
                                                     <TextBlock Text="Credits" Style="{StaticResource MetricLabel}" />
-                                                    <TextBlock Text="{Binding Credits}" Style="{StaticResource MetricValue}" />
+                                                        <TextBlock Text="{Binding Credits}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                 </StackPanel>
                                                 <StackPanel>
                                                     <TextBlock Text="Difficulty" Style="{StaticResource MetricLabel}" />
-                                                    <TextBlock Text="{Binding Difficulty}" Style="{StaticResource MetricValue}" />
+                                                        <TextBlock Text="{Binding Difficulty}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                                                 </StackPanel>
                                             </UniformGrid>
                                             <UniformGrid Columns="2">
                                                 <StackPanel Margin="0,0,10,8">
                                                     <TextBlock Text="Workload" Style="{StaticResource MetricLabel}" />
-                                                    <TextBlock Text="{Binding Workload}" FontWeight="SemiBold" Foreground="#111827" />
+                                                    <TextBlock Text="{Binding Workload}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                 </StackPanel>
                                                 <StackPanel Margin="0,0,0,8">
                                                     <TextBlock Text="Status" Style="{StaticResource MetricLabel}" />
-                                                    <TextBlock Text="{Binding StatusText}" FontWeight="SemiBold" Foreground="#111827" />
+                                                    <TextBlock Text="{Binding StatusText}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                 </StackPanel>
                                                 <StackPanel Margin="0,0,10,8">
                                                     <TextBlock Text="Created" Style="{StaticResource MetricLabel}" />
-                                                    <TextBlock Text="{Binding CreatedAtText}" FontWeight="SemiBold" Foreground="#111827" />
+                                                    <TextBlock Text="{Binding CreatedAtText}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                 </StackPanel>
                                                 <StackPanel Margin="0,0,0,8">
                                                     <TextBlock Text="Deadline" Style="{StaticResource MetricLabel}" />
-                                                    <TextBlock Text="{Binding DeadlineText}" FontWeight="SemiBold" Foreground="#111827" />
+                                                    <TextBlock Text="{Binding DeadlineText}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                 </StackPanel>
                                                 <StackPanel Margin="0,0,10,0">
                                                     <TextBlock Text="Ended" Style="{StaticResource MetricLabel}" />
-                                                    <TextBlock Text="{Binding EndedAtText}" FontWeight="SemiBold" Foreground="#111827" />
+                                                    <TextBlock Text="{Binding EndedAtText}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                                                 </StackPanel>
                                             </UniformGrid>
                                             </StackPanel>
@@ -411,6 +432,7 @@
                                     </Border>
                                     <Button Width="28"
                                             Height="28"
+                                            Panel.ZIndex="2"
                                             HorizontalAlignment="Right"
                                             VerticalAlignment="Top"
                                             Margin="0,10,10,0"
@@ -418,9 +440,11 @@
                                             FontWeight="Bold"
                                             Padding="0"
                                             Click="TaskCardSettings_Click"
+                                            Background="{DynamicResource ButtonBackground}"
+                                            BorderBrush="{DynamicResource ButtonBackground}"
                                             Tag="{Binding}">
                                         <Button.ContextMenu>
-                                            <ContextMenu>
+                                            <ContextMenu Background="{DynamicResource PanelBrush}">
                                                 <MenuItem Header="Изменить" Click="EditTaskMenuItem_Click" />
                                                 <MenuItem Header="Удалить"
                                                           Command="{Binding Data.DeleteTaskCommand, Source={StaticResource ViewModelProxy}}"
@@ -434,28 +458,242 @@
                     </ItemsControl>
                 </ScrollViewer>
             </Grid>
+            <!-- ========================== Task Detail =======================================-->
+            <Grid x:Name="TaskDetailView"
+                  Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <DockPanel Margin="0,0,0,18">
+                    <Button Content="Back"
+                            Width="86"
+                            Height="34"
+                            DockPanel.Dock="Left"
+                            Click="BackToTasks_Click" />
+                    <StackPanel Margin="16,0,0,0">
+                        <TextBlock Text="{Binding SelectedTaskTitle}"
+                                   FontSize="28"
+                                   FontWeight="SemiBold"
+                                   Foreground="{DynamicResource PrimaryTextBrush}" />
+                        <TextBlock Text="Task workspace"
+                                   Foreground="{DynamicResource SecondaryTextBrush}"
+                                   Margin="0,4,0,0" />
+                    </StackPanel>
+                </DockPanel>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="280" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Main Content -->
+                    <ScrollViewer Grid.Column="0"
+                                  VerticalScrollBarVisibility="Auto"
+                                  Margin="0,0,20,0">
+                        <StackPanel>
+                            <TextBlock Text="Description"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"
+                                       Foreground="{DynamicResource PrimaryTextBrush}"
+                                       Margin="0,0,0,8" />
+
+                            <!-- View Mode -->
+                            <Border x:Name="DescriptionViewBorder"
+                                    Background="{DynamicResource SurfaceBrush}"
+                                    BorderBrush="{DynamicResource BorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="18"
+                                    Margin="0,0,0,22"
+                                    MouseLeftButtonDown="DescriptionViewBorder_MouseDown">
+                                <TextBlock x:Name="DescriptionViewText"
+                                           Text="{Binding SelectedTaskDescription}"
+                                           Foreground="{DynamicResource PrimaryTextBrush}"
+                                           TextWrapping="Wrap"
+                                           FontSize="14"
+                                           Cursor="Hand" />
+                            </Border>
+
+                            <!-- Edit Mode -->
+                            <StackPanel x:Name="DescriptionEditPanel"
+                                        Visibility="Collapsed"
+                                        Margin="0,0,0,22">
+                                <Border Background="{DynamicResource SurfaceBrush}"
+                                        BorderBrush="{DynamicResource BorderBrush}"
+                                        BorderThickness="1"
+                                        CornerRadius="8">
+                                    <TextBox x:Name="DescriptionEditBox"
+                                             Padding="18"
+                                             Text="{Binding SelectedTaskDescription, Mode=TwoWay}"
+                                             Foreground="{DynamicResource PrimaryTextBrush}"
+                                             TextWrapping="Wrap"
+                                             FontSize="14"
+                                             MinHeight="120"
+                                             AcceptsReturn="True"
+                                             VerticalScrollBarVisibility="Auto"
+                                             Background="Transparent"
+                                             BorderThickness="0" />
+                                </Border>
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0,8,0,0"
+                                            HorizontalAlignment="Right">
+                                    <Button Content="Save"
+                                            Width="70"
+                                            Height="32"
+                                            Margin="0,0,8,0"
+                                            Click="SaveDescription_Click"
+                                            Background="{DynamicResource ButtonBackground}" />
+                                    <Button Content="Cancel"
+                                            Width="70"
+                                            Height="32"
+                                            Click="CancelDescription_Click"
+                                            Background="{DynamicResource ButtonBackground}" />
+                                </StackPanel>
+                            </StackPanel>
+
+                            <TextBlock Text="Images"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"
+                                       Foreground="{DynamicResource PrimaryTextBrush}"
+                                       Margin="0,0,0,10" />
+                            <ItemsControl ItemsSource="{Binding TaskImages}"
+                                          Margin="0,0,0,22">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Button Width="180"
+                                                Height="auto"
+                                                Background="{DynamicResource TransparentBrush}"
+                                                BorderThickness="0"
+                                                Padding="0"
+                                                Cursor="Hand"
+                                                Click="OpenTaskImage_Click"
+                                                MouseRightButtonUp="TaskDetailIMGSettings_Click"
+                                                Tag="{Binding Path}"
+                                                Margin="0,0,12,12">
+                                            <!-- ЗАМІНИТИ старий ContextMenu зображення на: -->
+                                            <Button.ContextMenu>
+                                                <ContextMenu Background="{DynamicResource PanelBrush}">
+                                                    <MenuItem Header="Открыть расположение"
+                                                              Tag="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                              Click="OpenImageLocation_Click"
+                                                              Foreground="{DynamicResource PrimaryTextBrush}" />
+                                                    <MenuItem Header="Открыть с помощью..."
+                                                              Tag="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                              Click="OpenImageWith_Click"
+                                                              Foreground="{DynamicResource PrimaryTextBrush}" />
+                                                    <Separator />
+                                                    <MenuItem Header="Удалить с устройства"
+                                                              Tag="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                              Click="DeleteImageFromDevice_Click"
+                                                              Foreground="OrangeRed" />
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                            <Border Width="180"
+                                                    Height="auto"
+                                                    Background="{DynamicResource SurfaceBrush}"
+                                                    BorderBrush="{DynamicResource BorderBrush}"
+                                                    BorderThickness="1"
+                                                    CornerRadius="8"
+                                                    Padding="8">
+                                                <StackPanel>
+                                                    <Image Source="{Binding Path, Converter={StaticResource FreedImageConverter}}"
+                                                           Height="auto"
+                                                           Stretch="UniformToFill" />
+                                                    <TextBlock Text="{Binding FileName}"
+                                                               Foreground="{DynamicResource SecondaryTextBrush}"
+                                                               TextTrimming="CharacterEllipsis"
+                                                               Margin="0,8,0,0" />
+                                                </StackPanel>
+                                            </Border>
+                                        </Button>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                            <TextBlock Text="Files"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"
+                                       Foreground="{DynamicResource PrimaryTextBrush}"
+                                       Margin="0,0,0,10" />
+                            <ItemsControl ItemsSource="{Binding TaskAttachments}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Button Background="{DynamicResource TransparentBrush}"
+                                                BorderThickness="0"
+                                                Padding="0"
+                                                Cursor="Hand"
+                                                Click="OpenTaskFile_Click"
+                                                MouseRightButtonUp="TaskDetailFileSettings_Click"
+                                                Tag="{Binding Path}"
+                                                HorizontalAlignment="Left"
+                                                Width="auto"
+                                                Height="auto"
+                                                Margin="0,0,0,8">
+                                            <Button.ContextMenu>
+                                                <ContextMenu Background="{DynamicResource PanelBrush}">
+                                                    <MenuItem Header="Открыть расположение"
+                                                              Tag="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                              Click="OpenFileLocation_Click"
+                                                              Foreground="{DynamicResource PrimaryTextBrush}" />
+                                                    <MenuItem Header="Открыть с помощью..."
+                                                              Tag="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                              Click="OpenFileWith_Click"
+                                                              Foreground="{DynamicResource PrimaryTextBrush}" />
+                                                    <Separator />
+                                                    <MenuItem Header="Удалить с устройства"
+                                                              Tag="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                              Click="DeleteFileFromDevice_Click"
+                                                              Foreground="OrangeRed" />
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                            <Border Background="{DynamicResource SurfaceBrush}"
+                                                    BorderBrush="{DynamicResource BorderBrush}"
+                                                    BorderThickness="1"
+                                                    CornerRadius="6"
+                                                    Padding="10">
+                                                <TextBlock Text="{Binding FileName}"
+                                                           Foreground="{DynamicResource PrimaryTextBrush}" />
+                                            </Border>
+                                        </Button>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
         </Grid>
         <!-- ============================== Side Bar ============================== -->
         <Border
         Grid.Column="0"
-        Background="#FFFFFF"
-        BorderBrush="#E5E7EB"
+        Background="{DynamicResource PanelBrush}"
+        BorderBrush="{DynamicResource BorderBrush}"
         BorderThickness="0,0,1,0"
         Padding="20" Grid.RowSpan="2">
             <Border.Effect>
-                <DropShadowEffect Color="#000000" Opacity="0.5" BlurRadius="10" ShadowDepth="5" />
+                <DropShadowEffect Color="{DynamicResource ShadowColor}" Opacity="0.5" BlurRadius="10" ShadowDepth="5" />
             </Border.Effect>
             <Grid>
                 <StackPanel x:Name="SummaryPanel">
-                     <TextBlock Text="Summary"
-                       Foreground="#667085"
+                    <TextBlock Text="Summary"
+                       Foreground="{DynamicResource SecondaryTextBrush}"
                        FontSize="12"
                        FontWeight="SemiBold"
                        Margin="0,100,0,12" />
                     <Button Content="Sort"
                             Height="34"
                             Margin="0,0,0,12"
-                            Click="SortButton_Click">
+                            Click="SortButton_Click"
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}">
                         <Button.ContextMenu>
                             <ContextMenu>
                                 <MenuItem Header="Status" Command="{Binding Data.SortCommand, Source={StaticResource ViewModelProxy}}" CommandParameter="Status" />
@@ -471,28 +709,28 @@
                         </Button.ContextMenu>
                     </Button>
                     <UniformGrid Columns="1" Rows="4">
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
-                                <TextBlock Text="Courses" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="TotalCoursesText" Text="{Binding TotalCourses}" Style="{StaticResource MetricValue}" />
+                                <TextBlock Text="Courses" Style="{StaticResource MetricLabel}" Foreground="{DynamicResource SecondaryTextBrush}"/>
+                                <TextBlock x:Name="TotalCoursesText" Text="{Binding TotalCourses}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
-                                <TextBlock Text="Tasks" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="TotalTasksText" Text="{Binding TotalTasks}" Style="{StaticResource MetricValue}" />
+                                <TextBlock Text="Tasks" Style="{StaticResource MetricLabel}" Foreground="{DynamicResource SecondaryTextBrush}"/>
+                                <TextBlock x:Name="TotalTasksText" Text="{Binding TotalTasks}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
-                                <TextBlock Text="Avg progress" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="AverageProgressText" Text="{Binding AverageProgressText}" Style="{StaticResource MetricValue}" />
+                                <TextBlock Text="Avg progress" Style="{StaticResource MetricLabel}" Foreground="{DynamicResource SecondaryTextBrush}"/>
+                                <TextBlock x:Name="AverageProgressText" Text="{Binding AverageProgressText}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" CornerRadius="6">
                             <StackPanel>
-                            <TextBlock Text="Current" Style="{StaticResource MetricLabel}" />
-                            <TextBlock x:Name="CurrentCoursesText" Text="{Binding CurrentCourses}" Style="{StaticResource MetricValue}" />
+                                <TextBlock Text="Current" Style="{StaticResource MetricLabel}" Foreground="{DynamicResource SecondaryTextBrush}"/>
+                                <TextBlock x:Name="CurrentCoursesText" Text="{Binding CurrentCourses}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                             </StackPanel>
                         </Border>
                     </UniformGrid>
@@ -507,7 +745,9 @@
                     <Button Content="Sort tasks"
                             Height="34"
                             Margin="0,0,0,12"
-                            Click="SortButton_Click">
+                            Click="SortButton_Click"
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}">
                         <Button.ContextMenu>
                             <ContextMenu>
                                 <MenuItem Header="Status" Command="{Binding Data.SortCommand, Source={StaticResource ViewModelProxy}}" CommandParameter="Status" />
@@ -524,13 +764,13 @@
                     </Button>
                     <TextBlock x:Name="SidebarCourseTitle"
                                Text="{Binding SidebarCourseTitle}"
-                               Foreground="#111827"
+                               Foreground="{DynamicResource PrimaryTextBrush}"
                                FontSize="20"
                                FontWeight="SemiBold"
                                TextWrapping="Wrap"
                                Margin="0,0,0,12" />
-                    <Border Background="#ECFDF3"
-                            BorderBrush="#ABEFC6"
+                    <Border Background="{Binding SidebarCourseStatusBackground}"
+                            BorderBrush="{Binding SidebarCourseStatusBorderBrush}"
                             BorderThickness="1"
                             CornerRadius="6"
                             Padding="8,4"
@@ -538,72 +778,183 @@
                             Margin="0,0,0,8">
                         <TextBlock x:Name="SidebarCourseStatus"
                                    Text="{Binding SidebarCourseStatus}"
-                                   Foreground="#027A48"
+                                   Foreground="{Binding SidebarCourseStatusForeground}"
                                    FontWeight="SemiBold"
                                    FontSize="12" />
                     </Border>
-                    <Border Background="#F9FAFB"
-                            BorderBrush="#D0D5DD"
+                    <ItemsControl ItemsSource="{Binding SidebarCourseTagItems}"
+                                  Margin="0,0,0,18"
+                                  MaxWidth="180">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="{Binding Background}"
+                                        BorderBrush="{Binding BorderBrush}"
+                                        BorderThickness="1"
+                                        CornerRadius="5"
+                                        Padding="8,3"
+                                        Margin="0,0,6,6">
+                                    <TextBlock Text="{Binding Text}"
+                                               FontSize="11"
+                                               Foreground="{Binding Foreground}"
+                                               FontWeight="SemiBold" />
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <UniformGrid Columns="1" Rows="8">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Progress" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarCourseProgress" Text="{Binding SidebarCourseProgress}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Tasks" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarCourseTasks" Text="{Binding SidebarCourseTasks}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Credits" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarCourseCredits" Text="{Binding SidebarCourseCredits}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Difficulty" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarCourseDifficulty" Text="{Binding SidebarCourseDifficulty}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Workload" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarCourseWorkload" Text="{Binding SidebarCourseWorkload}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Created" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarCourseCreated" Text="{Binding SidebarCourseCreated}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Deadline" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarCourseDeadline" Text="{Binding SidebarCourseDeadline}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Description" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarCourseDescription" Text="{Binding SidebarCourseDescription}" TextWrapping="Wrap" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
+                            </StackPanel>
+                        </Border>
+                    </UniformGrid>
+                </StackPanel>
+                <StackPanel x:Name="SelectedTaskPanel"
+                            Visibility="Collapsed">
+                    <TextBlock Text="Task"
+                       Foreground="{DynamicResource SecondaryTextBrush}"
+                       FontSize="12"
+                       FontWeight="SemiBold"
+                       Margin="0,100,0,12" />
+                    <TextBlock x:Name="SidebarTaskTitle"
+                               Text="{Binding SelectedTaskTitle}"
+                               Foreground="{DynamicResource PrimaryTextBrush}"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               TextWrapping="Wrap"
+                               Margin="0,0,0,12" />
+                    <Border Background="{Binding SidebarTaskStatusBackground}"
+                            BorderBrush="{Binding SidebarTaskStatusBorderBrush}"
                             BorderThickness="1"
                             CornerRadius="6"
                             Padding="8,4"
                             HorizontalAlignment="Left"
-                            Margin="0,0,0,18">
-                        <TextBlock x:Name="SidebarCourseTags"
-                                   Text="{Binding SidebarCourseTags}"
-                                   Foreground="#344054"
+                            Margin="0,0,0,8">
+                        <TextBlock x:Name="SidebarTaskStatus"
+                                   Text="{Binding SidebarTaskStatus}"
+                                   Foreground="{Binding SidebarTaskStatusForeground}"
                                    FontWeight="SemiBold"
-                                   FontSize="12"
-                                   TextWrapping="Wrap"
-                                   MaxWidth="170" />
+                                   FontSize="12" />
                     </Border>
+                    <ItemsControl ItemsSource="{Binding SidebarTaskTagItems}"
+                                  Margin="0,0,0,18"
+                                  MaxWidth="180">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="{Binding Background}"
+                                        BorderBrush="{Binding BorderBrush}"
+                                        BorderThickness="1"
+                                        CornerRadius="5"
+                                        Padding="8,3"
+                                        Margin="0,0,6,6">
+                                    <TextBlock Text="{Binding Text}"
+                                               FontSize="11"
+                                               Foreground="{Binding Foreground}"
+                                               FontWeight="SemiBold" />
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                     <UniformGrid Columns="1" Rows="8">
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
                                 <TextBlock Text="Progress" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="SidebarCourseProgress" Text="{Binding SidebarCourseProgress}" Style="{StaticResource MetricValue}" />
+                                <TextBlock x:Name="SidebarTaskProgress" Text="{Binding SidebarTaskProgress}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
-                            <StackPanel>
-                                <TextBlock Text="Tasks" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="SidebarCourseTasks" Text="{Binding SidebarCourseTasks}" Style="{StaticResource MetricValue}" />
-                            </StackPanel>
-                        </Border>
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
                                 <TextBlock Text="Credits" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="SidebarCourseCredits" Text="{Binding SidebarCourseCredits}" Style="{StaticResource MetricValue}" />
+                                <TextBlock x:Name="SidebarTaskCredits" Text="{Binding SidebarTaskCredits}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
                                 <TextBlock Text="Difficulty" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="SidebarCourseDifficulty" Text="{Binding SidebarCourseDifficulty}" Style="{StaticResource MetricValue}" />
+                                <TextBlock x:Name="SidebarTaskDifficulty" Text="{Binding SidebarTaskDifficulty}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
                                 <TextBlock Text="Workload" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="SidebarCourseWorkload" Text="{Binding SidebarCourseWorkload}" Style="{StaticResource MetricValue}" />
+                                <TextBlock x:Name="SidebarTaskWorkload" Text="{Binding SidebarTaskWorkload}" Style="{StaticResource MetricValue}" Foreground="{DynamicResource PrimaryTextBrush}"/>
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
                                 <TextBlock Text="Created" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="SidebarCourseCreated" Text="{Binding SidebarCourseCreated}" FontWeight="SemiBold" Foreground="#111827" />
+                                <TextBlock x:Name="SidebarTaskCreated" Text="{Binding SidebarTaskCreated}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" Margin="0,0,0,8" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
                                 <TextBlock Text="Deadline" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="SidebarCourseDeadline" Text="{Binding SidebarCourseDeadline}" FontWeight="SemiBold" Foreground="#111827" />
+                                <TextBlock x:Name="SidebarTaskDeadline" Text="{Binding SidebarTaskDeadline}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                             </StackPanel>
                         </Border>
-                        <Border Background="#F9FAFB" Padding="12" CornerRadius="6">
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
-                                <TextBlock Text="Description" Style="{StaticResource MetricLabel}" />
-                                <TextBlock x:Name="SidebarCourseDescription" Text="{Binding SidebarCourseDescription}" TextWrapping="Wrap" FontWeight="SemiBold" Foreground="#111827" />
+                                <TextBlock Text="Ended" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarTaskEnded" Text="{Binding SidebarTaskEnded}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
+                            </StackPanel>
+                        </Border>
+                        <Border Background="{DynamicResource SubtleSurfaceBrush}" Padding="12" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="Course" Style="{StaticResource MetricLabel}" />
+                                <TextBlock x:Name="SidebarTaskCourse" Text="{Binding SidebarTaskCourse}" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" />
                             </StackPanel>
                         </Border>
                     </UniformGrid>
@@ -612,42 +963,66 @@
         </Border>
         <!-- ============================== App Bar ============================== -->
         <Border Grid.Row="0"
-        Grid.ColumnSpan="2"
-        Background="#152238"
-        Padding="28,18"
-        CornerRadius="0,0,20,0">
+                Grid.ColumnSpan="2"
+                Background="{DynamicResource AppBarBrush}"
+                Padding="28,18"
+                CornerRadius="0,0,20,0">
             <Border.Effect>
-                <DropShadowEffect Color="#000000" Opacity="0.7" BlurRadius="30" ShadowDepth="10" />
+                <DropShadowEffect Color="{DynamicResource ShadowColor}" Opacity="0.7" BlurRadius="30" ShadowDepth="10" />
             </Border.Effect>
             <DockPanel>
                 <StackPanel DockPanel.Dock="Right"
                             Orientation="Horizontal"
                             VerticalAlignment="Center">
+                    <Button Content="🎰 Gambling"
+                            Width="96"
+                            Height="34"
+                            Margin="0,0,10,0"
+                            Command="{Binding GamblingCommand}"
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}"/>
                     <Button Content="Save"
                             Width="86"
                             Height="34"
                             Margin="0,0,10,0"
-                            Command="{Binding SaveCommand}" />
+                            Command="{Binding SaveCommand}" 
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}"/>
+                    <Button Content="Export"
+                            Width="86"
+                            Height="34"
+                            Margin="0,0,10,0"
+                            Command="{Binding ExportCommand}"
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}"/>
                     <Button Content="Import"
                             Width="86"
                             Height="34"
                             Margin="0,0,10,0"
-                            Command="{Binding ImportCommand}" />
+                            Command="{Binding ImportCommand}" 
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}"/>
                     <Button Content="Settings"
                             Width="96"
                             Height="34"
-                            Click="SettingsButton_Click" />
+                            Click="SettingsButton_Click" 
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}"/>
                 </StackPanel>
                 <StackPanel DockPanel.Dock="Left">
-                    <TextBlock Text="Education Dashboard"
-                       Foreground="White"
-                       FontSize="26"
-                       FontWeight="SemiBold" FontFamily="Constantia" />
-                    <TextBlock x:Name="HeaderSubtitle"
-                       Text="{Binding HeaderSubtitle}"
-                       Foreground="#B8C7DA"
-                       FontSize="13"
-                       />
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+                            <TextBlock Text="Education Dashboard"
+                               Foreground="{DynamicResource AppBarTitleBrush}"
+                               FontSize="26"
+                               FontWeight="SemiBold" FontFamily="Constantia" />
+                            <TextBlock x:Name="HeaderSubtitle"
+                               Text="{Binding HeaderSubtitle}"
+                               Foreground="{DynamicResource AppBarSubtitleBrush}"
+                               FontSize="13"
+                               />
+                        </StackPanel>
+                    </StackPanel>
                 </StackPanel>
             </DockPanel>
         </Border>
@@ -664,12 +1039,14 @@
                 Content="+"
                 FontSize="30"
                 FontWeight="Bold"
-                Foreground="White"
-                Background="#32CD32"
+                Foreground="{DynamicResource AppBarTitleBrush}"
+                Background="{DynamicResource FabBackgroundBrush}"
                 BorderThickness="0"
-                BorderBrush ="#32CD32"
-                Command="{Binding AddObjectCommand}"
+                BorderBrush ="{DynamicResource FabBackgroundBrush}"
+                Click="FloatingAddButton_Click"
                 Style="{StaticResource MaterialDesignFloatingActionButton}">
         </Button>
     </Grid>
 </Window>
+
+

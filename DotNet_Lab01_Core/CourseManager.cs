@@ -28,7 +28,7 @@ public class CourseManager : IEnumerable<Course>
         Log($"EnableJsonAutoSave filePath={filePath}");
     }
 
-    internal void SaveChanges()
+    public void SaveChanges()
     {
         if (_suspendAutoSave || string.IsNullOrWhiteSpace(_jsonFilePath))
         {
@@ -51,6 +51,7 @@ public class CourseManager : IEnumerable<Course>
         {
             _courses.Add(course);
             _courseDictionary[course.Id] = course;
+            course.RecalculateFromTasks();
         }
 
         _suspendAutoSave = false;

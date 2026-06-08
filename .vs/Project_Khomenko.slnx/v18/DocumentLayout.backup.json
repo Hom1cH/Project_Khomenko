@@ -3,20 +3,88 @@
   "WorkspaceRootPath": "D:\\education\\.NET\\Project_Khomenko\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\gamblingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\gamblingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\gamblingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\gamblingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\gamblingiconextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\gamblingiconextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|d:\\education\\.net\\project_khomenko\\dotnet_lab01_core\\educationunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|solutionrelative:dotnet_lab01_core\\educationunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\appsettingsstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\appsettingsstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\settingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\settingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\gamblingapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\gamblingapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|d:\\education\\.net\\project_khomenko\\dotnet_lab01_core\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|solutionrelative:dotnet_lab01_core\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|d:\\education\\.net\\project_khomenko\\dotnet_lab01_core\\coursemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|solutionrelative:dotnet_lab01_core\\coursemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|d:\\education\\.net\\project_khomenko\\dotnet_lab01_core\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|solutionrelative:dotnet_lab01_core\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|d:\\education\\.net\\project_khomenko\\dotnet_lab01_core\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE20C698-DE30-2FF2-FB8F-703016E586AF}|DotNet_Lab01_Core\\Core.csproj|solutionrelative:dotnet_lab01_core\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\zipexportimport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\zipexportimport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\cardviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\cardviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\coursedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\coursedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\tagfilterwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\tagfilterwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|d:\\education\\.net\\project_khomenko\\wpfapp\\taskdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9F9D5F64-00BF-7D07-B9BF-7E6C60996CF1}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\taskdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,8 +93,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 164,
-          "SelectedChildIndex": 7,
+          "DockedWidth": 192,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,51 +118,250 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EducationUnit.cs",
-              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\EducationUnit.cs",
-              "RelativeDocumentMoniker": "DotNet_Lab01_Core\\EducationUnit.cs",
-              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\EducationUnit.cs",
-              "RelativeToolTip": "DotNet_Lab01_Core\\EducationUnit.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAAwKsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "GamblingIconExtractor.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\GamblingIconExtractor.cs",
+              "RelativeDocumentMoniker": "WpfApp\\GamblingIconExtractor.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\GamblingIconExtractor.cs",
+              "RelativeToolTip": "WpfApp\\GamblingIconExtractor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T21:05:14.943Z"
+              "WhenOpened": "2026-06-08T04:59:00.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "WpfApp\\MainViewModel.cs",
-              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainViewModel.cs",
-              "RelativeToolTip": "WpfApp\\MainViewModel.cs",
-              "ViewState": "AgIAAM4BAAAAAAAAAAAmwPMBAAAfAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "AppSettingsStorage.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\AppSettingsStorage.cs",
+              "RelativeDocumentMoniker": "WpfApp\\AppSettingsStorage.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\AppSettingsStorage.cs",
+              "RelativeToolTip": "WpfApp\\AppSettingsStorage.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T22:37:27.259Z"
+              "WhenOpened": "2026-06-08T04:54:15.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GamblingWindow.xaml",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\GamblingWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\GamblingWindow.xaml",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\GamblingWindow.xaml",
+              "RelativeToolTip": "WpfApp\\GamblingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-08T04:50:38.102Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkBAAAIAAAAAAAAAA==",
+              "Title": "GamblingWindow.xaml.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\GamblingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\GamblingWindow.xaml.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\GamblingWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp\\GamblingWindow.xaml.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAuwHIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T22:15:53.766Z",
+              "WhenOpened": "2026-06-08T04:20:26.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
+              "Title": "GamblingApp.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\GamblingApp.cs",
+              "RelativeDocumentMoniker": "WpfApp\\GamblingApp.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\GamblingApp.cs",
+              "RelativeToolTip": "WpfApp\\GamblingApp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T04:13:41.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TaskManager.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\TaskManager.cs",
+              "RelativeDocumentMoniker": "DotNet_Lab01_Core\\TaskManager.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\TaskManager.cs",
+              "RelativeToolTip": "DotNet_Lab01_Core\\TaskManager.cs",
+              "ViewState": "AgIAAF8BAAAAAAAAAAArwJABAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T03:30:47.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Course.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Course.cs",
+              "RelativeDocumentMoniker": "DotNet_Lab01_Core\\Course.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\Course.cs",
+              "RelativeToolTip": "DotNet_Lab01_Core\\Course.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAADwv6EAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T03:30:06.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ResourceManager.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\ResourceManager.cs",
+              "RelativeDocumentMoniker": "DotNet_Lab01_Core\\ResourceManager.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\ResourceManager.cs",
+              "RelativeToolTip": "DotNet_Lab01_Core\\ResourceManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T02:24:37.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ZipExportImport.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\ZipExportImport.cs",
+              "RelativeDocumentMoniker": "WpfApp\\ZipExportImport.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\ZipExportImport.cs",
+              "RelativeToolTip": "WpfApp\\ZipExportImport.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwDEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T02:09:32.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml",
               "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml",
               "RelativeToolTip": "WpfApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-30T20:29:56.631Z"
+              "WhenOpened": "2026-05-31T03:27:50.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAGUDAAAAAAAAAAAcwH0DAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T20:54:17.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\MainViewModel.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\MainViewModel.cs",
+              "RelativeToolTip": "WpfApp\\MainViewModel.cs",
+              "ViewState": "AgIAABYDAAAAAAAAAAAAADQDAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T21:22:12.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CardViewModels.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\CardViewModels.cs",
+              "RelativeDocumentMoniker": "WpfApp\\CardViewModels.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\CardViewModels.cs",
+              "RelativeToolTip": "WpfApp\\CardViewModels.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T18:46:57.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CourseManager.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\CourseManager.cs",
+              "RelativeDocumentMoniker": "DotNet_Lab01_Core\\CourseManager.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\DotNet_Lab01_Core\\CourseManager.cs",
+              "RelativeToolTip": "DotNet_Lab01_Core\\CourseManager.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwDUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T22:26:26.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ThemeManager.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\ThemeManager.cs",
+              "RelativeDocumentMoniker": "WpfApp\\ThemeManager.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\ThemeManager.cs",
+              "RelativeToolTip": "WpfApp\\ThemeManager.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowEIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T18:55:45.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "WpfApp\\RelayCommand.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\RelayCommand.cs",
+              "RelativeToolTip": "WpfApp\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T23:36:39.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SettingsWindow.xaml.cs",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\SettingsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\SettingsWindow.xaml.cs",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\SettingsWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp\\SettingsWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T20:16:42.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SettingsWindow.xaml",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\SettingsWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\SettingsWindow.xaml",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\SettingsWindow.xaml",
+              "RelativeToolTip": "WpfApp\\SettingsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-31T03:47:06.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TaskDialog.xaml",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\TaskDialog.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\TaskDialog.xaml",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\TaskDialog.xaml",
+              "RelativeToolTip": "WpfApp\\TaskDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-31T03:36:19.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CourseDialog.xaml",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\CourseDialog.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\CourseDialog.xaml",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\CourseDialog.xaml",
+              "RelativeToolTip": "WpfApp\\CourseDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-31T03:36:21.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TagFilterWindow.xaml",
+              "DocumentMoniker": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\TagFilterWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\TagFilterWindow.xaml",
+              "ToolTip": "D:\\education\\.NET\\Project_Khomenko\\WpfApp\\TagFilterWindow.xaml",
+              "RelativeToolTip": "WpfApp\\TagFilterWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-07T19:26:23.142Z"
             }
           ]
         }
