@@ -174,18 +174,7 @@ namespace WinFormsApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using SaveFileDialog saveDialog = new SaveFileDialog
-            {
-                Title = "Save courses",
-                Filter = "JSON files (*.json)|*.json|XML files (*.xml)|*.xml",
-                FileName = "courses.json",
-                InitialDirectory = _dataDirectory
-            };
-
-            if (saveDialog.ShowDialog(this) != DialogResult.OK)
-                return;
-
-            SaveBySelectedFileType(saveDialog.FileName, saveDialog.FilterIndex);
+            CourseJsonStorage.SaveCourses(_courseManager.GetCourses(), _jsonFilePath, _logger);
 
             MessageBox.Show(
                 "Courses saved.",
@@ -213,6 +202,33 @@ namespace WinFormsApp
             MessageBox.Show(
                 "Courses exported.",
                 "Exported",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            using OpenFileDialog openDialog = new OpenFileDialog
+            {
+                Title = "Import courses",
+                Filter = "JSON files (*.json)|*.json",
+                InitialDirectory = _dataDirectory,
+                CheckFileExists = true,
+                CheckPathExists = true
+            };
+
+            if (openDialog.ShowDialog(this) != DialogResult.OK)
+                return;
+
+            CourseJsonStorage.LoadCourses(openDialog.FileName, _courseManager, _taskManager, _logger);
+            _courseManager.EnableJsonAutoSave(_jsonFilePath);
+            CourseJsonStorage.SaveCourses(_courseManager.GetCourses(), _jsonFilePath, _logger);
+            LoadCoursesToGrid();
+
+            MessageBox.Show(
+                "Courses imported.",
+                "Imported",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );

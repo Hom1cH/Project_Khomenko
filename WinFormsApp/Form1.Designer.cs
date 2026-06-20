@@ -34,6 +34,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            button5 = new Button();
             panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -102,8 +103,19 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // button5
+            // 
+            button5.Location = new Point(416, 3);
+            button5.Name = "button5";
+            button5.Size = new Size(110, 39);
+            button5.TabIndex = 4;
+            button5.Text = "Імпорт";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // panel1
             // 
+            panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
@@ -138,6 +150,7 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Button button5;
         private Panel panel1;
     }
 }
