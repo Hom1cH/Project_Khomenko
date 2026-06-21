@@ -35,7 +35,6 @@ namespace DotNet_Lab01_Core
             ReceivedCredits = 0;
         }
 
-        // Compatibility constructor: accepts explicit start date and end date (used by older sample projects)
         public Course(string coursename, int credits, DateTime startDate, DateTime endDate)
             : base(coursename, $"Course with {credits} credits", endDate)
         {
@@ -55,7 +54,6 @@ namespace DotNet_Lab01_Core
             ReceivedCredits = 0;
         }
 
-        // Compatibility method for older code samples
         public int GetCourseDuration()
         {
             return (Deadline - CreatedAt).Days;
@@ -182,7 +180,10 @@ namespace DotNet_Lab01_Core
             if (Progress == 0)
                 Status = UnitStatus.NotStarted;
             else if (Progress == 100)
+            {
                 Status = UnitStatus.Completed;
+                EndedAt = DateTime.Now;
+            }
             else if (Status != UnitStatus.Paused && Status != UnitStatus.Archived)
                 Status = UnitStatus.InProgress;
         }

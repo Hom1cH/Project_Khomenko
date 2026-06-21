@@ -23,7 +23,7 @@ public static class GamblingIconExtractor
                 Int32Rect.Empty,
                 BitmapSizeOptions.FromEmptyOptions());
 
-            bitmap.Freeze(); // <- обов'язково для передачі між потоками
+            bitmap.Freeze();
             return bitmap;
         }
         catch

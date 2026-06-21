@@ -12,7 +12,6 @@ public static class ZipExportImport
 
         using var zip = ZipFile.Open(zipPath, ZipArchiveMode.Create);
 
-        // JSON і XML можуть бути в ExportDirectory
         string jsonPath = Path.Combine(exportDirectory, "courses.json");
         if (File.Exists(jsonPath))
             zip.CreateEntryFromFile(jsonPath, "courses.json");
@@ -21,7 +20,6 @@ public static class ZipExportImport
         if (File.Exists(xmlPath))
             zip.CreateEntryFromFile(xmlPath, "courses.xml");
 
-        // Зображення і файли — завжди в DataDirectory
         AddFolder(zip, dataDirectory, "task_images");
         AddFolder(zip, dataDirectory, "task_files");
     }
@@ -34,7 +32,6 @@ public static class ZipExportImport
         {
             if (string.IsNullOrEmpty(entry.Name)) continue;
 
-            // JSON і XML — розпаковуємо в ExportDirectory
             string destDirectory = entry.FullName.StartsWith("task_")
                 ? dataDirectory
                 : exportDirectory;

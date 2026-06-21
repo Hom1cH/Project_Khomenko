@@ -66,8 +66,7 @@
                        Margin="0,4,0,0" />
                 </StackPanel>
 
-                <ScrollViewer
-                              VerticalScrollBarVisibility="Hidden" Margin="0,75,0,0" Grid.RowSpan="2">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="0,75,0,0" Grid.RowSpan="2">
                     <ItemsControl x:Name="CourseCards" ItemsSource="{Binding Courses}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -106,7 +105,7 @@
                                                                 HorizontalAlignment="Left"
                                                                 FontSize="24"
                                                                 FontWeight="SemiBold"
-                                                                Foreground="{DynamicResource 000000000}"
+                                                                Foreground="Black"
                                                                 TextTrimming="CharacterEllipsis" 
                                                            />
                                                 </DockPanel>
@@ -312,11 +311,12 @@
                                                     CornerRadius="8,8,0,0"
                                                     Padding="18">
                                                 <StackPanel>
-                                            <TextBlock Text="{Binding Title}"
-                                                   FontSize="18"
-                                                   FontWeight="SemiBold"
-                                                   Foreground="{DynamicResource PrimaryTextBrush}"
-                                                   TextWrapping="Wrap" />
+                                                <TextBlock  Text="{Binding Title}"
+                                                            FontSize="24"
+                                                            FontWeight="SemiBold"
+                                                            Foreground="Black"
+                                                            TextTrimming="CharacterEllipsis"
+                                                            TextWrapping="Wrap" />
                                             <Border DockPanel.Dock="Right"
                                                     Background="{Binding StatusBadgeBackground}"
                                                     BorderBrush="{Binding StatusBadgeBorderBrush}"
@@ -471,7 +471,9 @@
                             Width="86"
                             Height="34"
                             DockPanel.Dock="Left"
-                            Click="BackToTasks_Click" />
+                            Click="BackToTasks_Click"
+                            Background="{DynamicResource ButtonBackground}"
+                            BorderBrush="{DynamicResource ButtonBackground}"/>
                     <StackPanel Margin="16,0,0,0">
                         <TextBlock Text="{Binding SelectedTaskTitle}"
                                    FontSize="28"

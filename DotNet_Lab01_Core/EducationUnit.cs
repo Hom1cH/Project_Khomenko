@@ -15,7 +15,7 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
     public DateTime? EndedAt { get;  set; }
     public DateTime Deadline { get; set; }
     public UnitStatus Status { get; set; }
-    public int Progress { get; set; } // 0 - 100
+    public int Progress { get; set; }
     public List<string> Tags { get; set; } = new();
     
     public int Difficulty
@@ -132,13 +132,17 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
         else if (Progress < 100)
             Status = UnitStatus.InProgress;
         else
+        {
             Status = UnitStatus.Completed;
+            EndedAt = DateTime.Now;
+        }
     }
 
     public virtual void MarkCompleted()
     {
         Progress = 100;
         Status = UnitStatus.Completed;
+        EndedAt = DateTime.Now;
 
         Console.WriteLine($"{Title} marked as completed.");
     }
