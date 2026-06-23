@@ -83,7 +83,7 @@ public sealed class TaskImageViewModel
     public TaskImageViewModel(string path)
     {
         Path = path;
-        FileName = System.IO.Path.GetFileName(path);
+        FileName = AttachmentNameFormatter.GetDisplayFileName(path);
     }
 
     public string Path { get; }
@@ -95,11 +95,28 @@ public sealed class TaskAttachmentViewModel
     public TaskAttachmentViewModel(string path)
     {
         Path = path;
-        FileName = System.IO.Path.GetFileName(path);
+        FileName = AttachmentNameFormatter.GetDisplayFileName(path);
     }
 
     public string Path { get; }
     public string FileName { get; }
+}
+
+internal static class AttachmentNameFormatter
+{
+    public static string GetDisplayFileName(string path)
+    {
+        string fileName = System.IO.Path.GetFileName(path);
+        int separatorIndex = fileName.IndexOf('_');
+
+        if (separatorIndex <= 0)
+            return fileName;
+
+        string prefix = fileName[..separatorIndex];
+        return prefix.All(char.IsDigit)
+            ? fileName[(separatorIndex + 1)..]
+            : fileName;
+    }
 }
 
 internal static class ViewModelVisuals

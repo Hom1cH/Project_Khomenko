@@ -27,6 +27,7 @@ public static class ThemeManager
             Set(resources, "BorderBrush", "#374151");
             Set(resources, "AppBarBrush", "#263351");
             Set(resources, "AppBarTitleBrush", "#FFFFFF");
+            Set(resources, "ButtonTitle", "#000000");
             Set(resources, "AppBarSubtitleBrush", "#D7E2F1");
             Set(resources, "TransparentBrush", "#00FFFFFF");
             Set(resources, "StatusBadgeBackgroundBrush", "#14532D");
@@ -50,6 +51,7 @@ public static class ThemeManager
         Set(resources, "BorderBrush", "#E5E7EB");
         Set(resources, "AppBarBrush", "#263351");
         Set(resources, "AppBarTitleBrush", "#FFFFFF");
+        Set(resources, "ButtonTitle", "#000000");
         Set(resources, "AppBarSubtitleBrush", "#B8C7DA");
         Set(resources, "TransparentBrush", "#00FFFFFF");
         Set(resources, "StatusBadgeBackgroundBrush", "#ECFDF3");

@@ -128,9 +128,15 @@ public abstract class EducationUnit : IProgressable, IExecutable, IShowable
         Progress = value;
 
         if (Progress == 0)
+        {
             Status = UnitStatus.NotStarted;
+            EndedAt = null;
+        }
         else if (Progress < 100)
+        {
             Status = UnitStatus.InProgress;
+            EndedAt = null;
+        }
         else
         {
             Status = UnitStatus.Completed;

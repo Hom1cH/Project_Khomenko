@@ -349,7 +349,7 @@ public class MainViewModel : INotifyPropertyChanged, IDisposable
         SelectedTask = null;
         ShowSelectedCourse(course);
         SetTasks(tasks);
-        HeaderSubtitle = "Task details";
+        HeaderSubtitle = "Task overview";
     }
 
     public void ShowTaskDetails(ParacTask task)

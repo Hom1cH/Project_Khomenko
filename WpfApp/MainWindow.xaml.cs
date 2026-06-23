@@ -74,6 +74,7 @@ public partial class MainWindow : Window
         _viewModel.ShowCourses();
         CoursesView.Visibility = Visibility.Visible;
         TasksView.Visibility = Visibility.Collapsed;
+        TaskDetailView.Visibility = Visibility.Collapsed;
         ShowSummarySidebar();
     }
 
@@ -82,6 +83,7 @@ public partial class MainWindow : Window
         _viewModel.ShowTasks(course);
         CoursesView.Visibility = Visibility.Collapsed;
         TasksView.Visibility = Visibility.Visible;
+        TaskDetailView.Visibility = Visibility.Collapsed;
         ShowCourseSidebar(course);
     }
 
@@ -89,12 +91,14 @@ public partial class MainWindow : Window
     {
         SummaryPanel.Visibility = Visibility.Visible;
         SelectedCoursePanel.Visibility = Visibility.Collapsed;
+        SelectedTaskPanel.Visibility = Visibility.Collapsed;
     }
 
     private void ShowCourseSidebar(Course course)
     {
         SummaryPanel.Visibility = Visibility.Collapsed;
         SelectedCoursePanel.Visibility = Visibility.Visible;
+        SelectedTaskPanel.Visibility = Visibility.Collapsed;
 
         _viewModel.ShowSelectedCourse(course);
     }
@@ -123,19 +127,12 @@ public partial class MainWindow : Window
     private void BackToTasks_Click(object sender, RoutedEventArgs e)
     {
         if (_viewModel.SelectedCourse != null)
-        {
-            TaskDetailView.Visibility = Visibility.Collapsed;
-            TasksView.Visibility = Visibility.Visible;
-
-            // Show course sidebar
-            SummaryPanel.Visibility = Visibility.Collapsed;
-            SelectedCoursePanel.Visibility = Visibility.Visible;
-            if (FindName("SelectedTaskPanel") is StackPanel taskPanel)
-                taskPanel.Visibility = Visibility.Collapsed;
-        }
+            ShowTasks(_viewModel.SelectedCourse);
+        else
+            ShowCourses();
     }
 
-    private void AddTaskImage_Click(object sender, RoutedEventArgs e)
+    private void AddTaskImage_Click(object? sender, RoutedEventArgs? e)
     {
         if (_viewModel.SelectedTask == null)
             return;
@@ -156,8 +153,8 @@ public partial class MainWindow : Window
             string taskImagesDir = Path.Combine(_viewModel.DataDirectory, "task_images");
             Directory.CreateDirectory(taskImagesDir);
 
-            string destPath = Path.Combine(taskImagesDir, $"{_viewModel.SelectedTask.Id}_{fileName}");
-            File.Copy(dialog.FileName, destPath, overwrite: true);
+            string destPath = GetUniqueDestinationPath(taskImagesDir, fileName);
+            File.Copy(dialog.FileName, destPath);
 
             _viewModel.AddImageToSelectedTask(destPath);
         }
@@ -167,7 +164,7 @@ public partial class MainWindow : Window
         }
     }
 
-    private void AttachTaskFile_Click(object sender, RoutedEventArgs e)
+    private void AttachTaskFile_Click(object? sender, RoutedEventArgs? e)
     {
         if (_viewModel.SelectedTask == null)
             return;
@@ -188,8 +185,8 @@ public partial class MainWindow : Window
             string taskFilesDir = Path.Combine(_viewModel.DataDirectory, "task_files");
             Directory.CreateDirectory(taskFilesDir);
 
-            string destPath = Path.Combine(taskFilesDir, $"{_viewModel.SelectedTask.Id}_{fileName}");
-            File.Copy(dialog.FileName, destPath, overwrite: true);
+            string destPath = GetUniqueDestinationPath(taskFilesDir, fileName);
+            File.Copy(dialog.FileName, destPath);
 
             _viewModel.AddAttachmentToSelectedTask(destPath);
         }
@@ -202,20 +199,19 @@ public partial class MainWindow : Window
     private void ShowTaskDetails(ParacTask task)
     {
         _viewModel.ShowTaskDetails(task);
-        TaskDetailView.Visibility = Visibility.Visible;
+        CoursesView.Visibility = Visibility.Collapsed;
         TasksView.Visibility = Visibility.Collapsed;
+        TaskDetailView.Visibility = Visibility.Visible;
 
-        // Show task sidebar, hide others
         SummaryPanel.Visibility = Visibility.Collapsed;
         SelectedCoursePanel.Visibility = Visibility.Collapsed;
-        if (FindName("SelectedTaskPanel") is StackPanel taskPanel)
-            taskPanel.Visibility = Visibility.Visible;
+        SelectedTaskPanel.Visibility = Visibility.Visible;
     }
     private void OpenGambling()
     {
         if (_viewModel.GamblingApps.Count == 0)
         {
-            MessageBox.Show("Додайте програми в Settings → Gambling Apps.",
+            MessageBox.Show("Якщо ви не заєте з чого почати?  Хай це зробить рандом!\n\nДодайте .exe файли програм в Settings → Gambling Apps,\nі хай вам допоможе Фортуна.",
                 "Gambling", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }
@@ -502,6 +498,32 @@ public partial class MainWindow : Window
             }
 
             // Стандартное диалоговое окно Windows "Открыть с помощью"
+            OpenWithWindowsDialog(path);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+
+    private static void OpenWithWindowsDialog(string path)
+    {
+        try
+        {
+            string openWithPath = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.System),
+                "OpenWith.exe");
+
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = openWithPath,
+                Arguments = $"\"{path}\"",
+                UseShellExecute = false
+            });
+        }
+        catch
+        {
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
             {
                 FileName = "rundll32.exe",
@@ -509,11 +531,23 @@ public partial class MainWindow : Window
                 UseShellExecute = false
             });
         }
-        catch (Exception ex)
+    }
+
+    private static string GetUniqueDestinationPath(string directory, string fileName)
+    {
+        string safeFileName = Path.GetFileName(fileName);
+        string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(safeFileName);
+        string extension = Path.GetExtension(safeFileName);
+        string destinationPath = Path.Combine(directory, safeFileName);
+        int copyIndex = 1;
+
+        while (File.Exists(destinationPath))
         {
-            MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
-                MessageBoxButton.OK, MessageBoxImage.Error);
+            destinationPath = Path.Combine(directory, $"{fileNameWithoutExtension} ({copyIndex}){extension}");
+            copyIndex++;
         }
+
+        return destinationPath;
     }
 
     private static void TryDeleteFileFromDisk(string path)
@@ -648,7 +682,9 @@ public partial class MainWindow : Window
 
     private void ShowCurrentPanel()
     {
-        if (_viewModel.SelectedCourse != null)
+        if (TaskDetailView.Visibility == Visibility.Visible && _viewModel.SelectedTask != null)
+            ShowTaskDetailsPanel(_viewModel.SelectedTask);
+        else if (_viewModel.SelectedCourse != null)
             ShowTasksPanel(_viewModel.SelectedCourse);
         else
             ShowCoursesPanel();
@@ -660,6 +696,7 @@ public partial class MainWindow : Window
     {
         CoursesView.Visibility = Visibility.Visible;
         TasksView.Visibility = Visibility.Collapsed;
+        TaskDetailView.Visibility = Visibility.Collapsed;
         ShowSummarySidebar();
         CheckDeadlineReminders();
     }
@@ -668,7 +705,19 @@ public partial class MainWindow : Window
     {
         CoursesView.Visibility = Visibility.Collapsed;
         TasksView.Visibility = Visibility.Visible;
+        TaskDetailView.Visibility = Visibility.Collapsed;
         ShowCourseSidebar(course);
+    }
+
+    private void ShowTaskDetailsPanel(ParacTask task)
+    {
+        CoursesView.Visibility = Visibility.Collapsed;
+        TasksView.Visibility = Visibility.Collapsed;
+        TaskDetailView.Visibility = Visibility.Visible;
+        SummaryPanel.Visibility = Visibility.Collapsed;
+        SelectedCoursePanel.Visibility = Visibility.Collapsed;
+        SelectedTaskPanel.Visibility = Visibility.Visible;
+        _viewModel.ShowTaskDetails(task);
     }
 
     private void ShowSaveMessage()
@@ -682,10 +731,19 @@ public partial class MainWindow : Window
 
     private void ApplySettings(SettingsWindow dialog)
     {
+        bool wasTaskDetailsOpen = TaskDetailView.Visibility == Visibility.Visible;
+        ParacTask? selectedTask = _viewModel.SelectedTask;
+
         _viewModel.UpdateSettings(dialog.ExportDirectory, dialog.SelectedTheme, dialog.ReminderEnabled, dialog.GamblingApps);
         ThemeManager.ApplyTheme(dialog.SelectedTheme);
-        _viewModel.RefreshCurrentView();
-        ShowCurrentPanel();
+
+        if (wasTaskDetailsOpen && selectedTask != null)
+            ShowTaskDetailsPanel(selectedTask);
+        else
+        {
+            _viewModel.RefreshCurrentView();
+            ShowCurrentPanel();
+        }
     }
 
     private IEnumerable<string>? SelectTagFilters(IEnumerable<string> tags)
@@ -765,7 +823,7 @@ public partial class MainWindow : Window
     {
         if (_viewModel.GamblingApps.Count == 0)
         {
-            MessageBox.Show("Додайте програми в Settings → Gambling Apps.",
+            MessageBox.Show("Якщо ви не заєте з чого почати, хай це зробить рандом.Додайте .exe файли програм в Settings → Gambling Apps, і хай вам допоможе Фортуна.",
                 "Gambling", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }

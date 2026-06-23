@@ -21,7 +21,6 @@ public partial class GamblingWindow : Window
     private bool _spinning = false;
     private GamblingApp? _winner;
     private DateTime _lastFrame = DateTime.Now;
-    private int _targetIndex = 0;
 
     private const double ItemWidth = 100;
     private const double SlowdownRate = 0.994;
